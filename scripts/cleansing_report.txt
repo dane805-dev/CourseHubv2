@@ -1,0 +1,52 @@
+================================================================================
+COURSE DATA CLEANSING REPORT
+================================================================================
+Generated: 2026-01-26T22:47:51.170583
+
+INPUT DATA:
+--------------------------------------------------------------------------------
+Fall WM Sections: 442
+Spring WM Sections: 465
+Total WM Sections: 907
+
+OUTPUT DATA:
+--------------------------------------------------------------------------------
+Unique Courses: 266
+Fall Only: 84
+Spring Only: 117
+Both Terms: 65
+Departments: 14
+
+QUALITY METRICS:
+--------------------------------------------------------------------------------
+Crosslisted Courses: 266
+Missing Ratings (Fall): 175 (65.8%)
+Missing Ratings (Spring): 165 (62.0%)
+Avg Sections/Course: 3.4
+
+VALIDATION CHECKS:
+--------------------------------------------------------------------------------
+✓ PASS: No duplicate Course_IDs
+✓ PASS: All Course_IDs valid format
+✓ PASS: Valid Term_Availability values
+✗ FAIL: Valid CU values
+✗ FAIL: No nulls in required fields
+✓ PASS: CU consistency across terms
+
+WARNINGS:
+--------------------------------------------------------------------------------
+⚠ Fall: Null values in critical fields: {'Section ID': 0, 'Course Title': 0, 'Division': 0, 'CU': 15}
+⚠ Spring: Null values in critical fields: {'Section ID': 0, 'Course Title': 0, 'Division': 0, 'CU': 21}
+⚠ Fall: 79 rows with invalid Section ID format
+⚠ Spring: 70 rows with invalid Section ID format
+⚠ Some CU values outside expected range (0-2)
+
+ERRORS:
+--------------------------------------------------------------------------------
+✗ Fall: 8 rows failed Course ID extraction
+✗ Spring: 5 rows failed Course ID extraction
+✗ Null values found in required fields
+
+================================================================================
+END OF REPORT
+================================================================================
