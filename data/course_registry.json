@@ -1,0 +1,2918 @@
+[
+  {
+    "course_id": "ACCT6110",
+    "course_title": "Financial Accounting",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT6130",
+    "course_title": "Fin and Mngl Acct",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7060",
+    "course_title": "Cost Management",
+    "department": "ACCT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7300",
+    "course_title": "International Accounting",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "ACCT7420",
+    "course_title": "Fin Report & Bus Analys",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7430",
+    "course_title": "Acct For Complx Fin Stru",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7470",
+    "course_title": "Fin Disclosure Analytics",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7640",
+    "course_title": "Climate and Financial Markets",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7900",
+    "course_title": "Accounting for Entrepreneurs",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "ACCT7970",
+    "course_title": "Taxes and Bus Strategy",
+    "department": "ACCT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP6110",
+    "course_title": "Microeconomics for Managers",
+    "department": "BEPP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP6120",
+    "course_title": "Microeconomics for Mgrs Advanc",
+    "department": "BEPP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP6130",
+    "course_title": "Business Analytics",
+    "department": "BEPP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7040",
+    "course_title": "Applied Economics for Bus Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7080",
+    "course_title": "Housing Markets",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7100",
+    "course_title": "International Trade",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7300",
+    "course_title": "Urban Fiscal Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7610",
+    "course_title": "Climate Risks and Opportunitie",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7630",
+    "course_title": "Climate and Energy Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7640",
+    "course_title": "Climate and Financial Markets",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7650",
+    "course_title": "Economics of Diversity",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7700",
+    "course_title": "American Public Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7720",
+    "course_title": "Energy Markets and Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7730",
+    "course_title": "Urban Fiscal Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7880",
+    "course_title": "International Competitive Strategy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP7890",
+    "course_title": "Economic Globalization",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP7980",
+    "course_title": "Global Business and Economy",
+    "department": "BEPP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8050",
+    "course_title": "Risk Management",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP8110",
+    "course_title": "Political Risk Analysis",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8120",
+    "course_title": "Network Econ and Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8230",
+    "course_title": "Health Econ and Public Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8240",
+    "course_title": "Econ of Health Care Delivery",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8360",
+    "course_title": "Int'l Housing Comparisns",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "BEPP8530",
+    "course_title": "Competition and Antitrust Policy",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8930",
+    "course_title": "Advanced Study Project",
+    "department": "BEPP",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "BEPP8970",
+    "course_title": "Special Topics",
+    "department": "BEPP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "CBE505",
+    "course_title": "Nanotechnology and Biomolecular Engineering",
+    "department": "CBE5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIS5190",
+    "course_title": "Applied Machine Learning",
+    "department": "CIS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIS5200",
+    "course_title": "Machine Learning",
+    "department": "CIS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIS5450",
+    "course_title": "Big Data Analytics",
+    "department": "CIS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIS5500",
+    "course_title": "Database and Information Systems",
+    "department": "CIS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIT5900",
+    "course_title": "Programming Languages and Techniques",
+    "department": "CIT5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIT5910",
+    "course_title": "Introduction to Software Development",
+    "department": "CIT5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIT5930",
+    "course_title": "Introduction to Computer Systems",
+    "department": "CIT5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIT5940",
+    "course_title": "Data Structures and Software Design",
+    "department": "CIT5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "CIT5950",
+    "course_title": "Computer Systems Programming",
+    "department": "CIT5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS301",
+    "course_title": "Climate Policy and Technology",
+    "department": "EAS3",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS306",
+    "course_title": "Engineering Entrepreneurship II",
+    "department": "EAS3",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS402",
+    "course_title": "Senior Design Project",
+    "department": "EAS4",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS502",
+    "course_title": "Climate and Energy Policy",
+    "department": "EAS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS505",
+    "course_title": "Engineering Negotiation",
+    "department": "EAS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EAS506",
+    "course_title": "Engineering Entrepreneurship",
+    "department": "EAS5",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EDUC5760",
+    "course_title": "Applied Statistics and Data Analysis",
+    "department": "EDUC",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EDUC6683",
+    "course_title": "Introduction to Educational Data Mining",
+    "department": "EDUC",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EDUC7667",
+    "course_title": "Causal Inference and Program Evaluation",
+    "department": "EDUC",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EDUC7668",
+    "course_title": "Multilevel Statistical Models",
+    "department": "EDUC",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "EDUC7677",
+    "course_title": "Applied Bayesian Data Analysis",
+    "department": "EDUC",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "ENVS644",
+    "course_title": "Energy Policy and the Environment",
+    "department": "ENVS",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "ENVS673",
+    "course_title": "Environmental Law and Policy",
+    "department": "ENVS",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "ENVS674",
+    "course_title": "Environmental Risk and Regulation",
+    "department": "ENVS",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "FNCE6110",
+    "course_title": "Corporate Finance",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE6130",
+    "course_title": "Macroecn & Global Econom",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE6210",
+    "course_title": "Corporate Finance (Half CU)",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE6230",
+    "course_title": "Macroeconomics (Half CU)",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7030",
+    "course_title": "Advanced Corp Finance",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7050",
+    "course_title": "Investment Management",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7070",
+    "course_title": "Valuation",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7170",
+    "course_title": "Financial Derivatives",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7190",
+    "course_title": "Intl Financial Markets/Crypto",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7210",
+    "course_title": "Real Estate Investments",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7250",
+    "course_title": "Fixed Income Securities",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7300",
+    "course_title": "Urban Fiscal Policy",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7310",
+    "course_title": "Global Val and Risk Analysis",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7320",
+    "course_title": "International Banking",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7370",
+    "course_title": "Data Science For Finance",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7380",
+    "course_title": "Capital Markets",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7390",
+    "course_title": "Behavioral Finance",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7400",
+    "course_title": "Central Banks, Macro, Markets",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7401",
+    "course_title": "Central Banks, Macro, Markets",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE7450",
+    "course_title": "Hedge Funds",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7500",
+    "course_title": "Vent Cap & Fnce Innovat",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7510",
+    "course_title": "Fnce of Buyouts & Acqs",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7530",
+    "course_title": "Distressed Investing",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7540",
+    "course_title": "ESG and Impact Investing",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7560",
+    "course_title": "Climate Finance",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE7570",
+    "course_title": "Foundations of Asset Pricing",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7610",
+    "course_title": "Climate Risks and Opportunitie",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7680",
+    "course_title": "Trading Securities",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7800",
+    "course_title": "FinTech",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7830",
+    "course_title": "Strategic Equity Finance",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7850",
+    "course_title": "FinTech and Blockchain",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE7910",
+    "course_title": "Corporate Restructuring",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE7970",
+    "course_title": "Taxes and Bus Strategy",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE8010",
+    "course_title": "Advanced Topics in PE",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE8020",
+    "course_title": "Shareholder Activism",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE8120",
+    "course_title": "Fnce Econ Law of Fiscal Crises",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE8160",
+    "course_title": "Economic Policy Global Markets",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE8920",
+    "course_title": "Financial Engineering",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE8950",
+    "course_title": "Global Business Week",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE8960",
+    "course_title": "Global Modular Course",
+    "department": "FNCE",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "FNCE8970",
+    "course_title": "Finance Emerging Markets",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "FNCE8990",
+    "course_title": "Independent Study",
+    "department": "FNCE",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG6530",
+    "course_title": "HCMG Field App Project",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8410",
+    "course_title": "Intro Health Mgmt & Econ",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8450",
+    "course_title": "US Payer Provider Strat",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8500",
+    "course_title": "Health Care Reform",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8520",
+    "course_title": "Health Services Delivery",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "HCMG8530",
+    "course_title": "Mgmt & Strategy in Med Devices",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8550",
+    "course_title": "Mgmt of HC for the Elderly",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8570",
+    "course_title": "Hc Data and Analytics",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8580",
+    "course_title": "Health AI",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8590",
+    "course_title": "Comparative HC Systems",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "HCMG8600",
+    "course_title": "Leading HC Orgs",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "HCMG8630",
+    "course_title": "Mgmt&Econofpharm&Biotech",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8660",
+    "course_title": "Digital Transformation of HC",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8670",
+    "course_title": "Hc Entrepreneurship",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8680",
+    "course_title": "Priv Sec Role Glob Hlth",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8700",
+    "course_title": "Bus of Behavioral Health",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8740",
+    "course_title": "Bldg Value-Oriented HC Serv Co",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8770",
+    "course_title": "Funding Biotech",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8900",
+    "course_title": "Advanced Study Project",
+    "department": "HCMG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "HCMG8980",
+    "course_title": "Global Modular Course",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "HCMG8990",
+    "course_title": "Independent Study",
+    "department": "HCMG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LAW613",
+    "course_title": "Environmental Law",
+    "department": "LAW6",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "LAW919",
+    "course_title": "Climate Change, Law and Policy",
+    "department": "LAW9",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "LGST6110",
+    "course_title": "Resp in Global Mgmt",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6120",
+    "course_title": "Responsibility in Bus.",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6130",
+    "course_title": "Bus, Soc Resp&Environmt",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6410",
+    "course_title": "Business Enterprise",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "LGST6420",
+    "course_title": "Big Data, Big Responsibilities",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6430",
+    "course_title": "Other People's Money",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6470",
+    "course_title": "Bus and Governance of Water",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST6920",
+    "course_title": "Advanced Negotiation",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST7620",
+    "course_title": "Envrnmtl Sus&Val Crtn",
+    "department": "LGST",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8020",
+    "course_title": "Global Corp Law & Mgmt",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8040",
+    "course_title": "Real Estate Law",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8060",
+    "course_title": "Negotiations",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8080",
+    "course_title": "Employment Law",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8130",
+    "course_title": "Leg Asp Entreprenrshp",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "LGST8150",
+    "course_title": "Envtl Mgmt Law and Pol",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "LGST8200",
+    "course_title": "Corp Gov and Board Effectiveness",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "LGST8300",
+    "course_title": "Corruption, Compliance and Governance",
+    "department": "LGST",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT6100",
+    "course_title": "Found of Teamwrk & Ldrsh",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6110",
+    "course_title": "Managing Est Enterprise",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6120",
+    "course_title": "Managing Emerg Entrprse",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6240",
+    "course_title": "Leading Across Cul & Rel Diff",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6250",
+    "course_title": "Corp. Governance Exec",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6560",
+    "course_title": "Global Immersion Program",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6710",
+    "course_title": "Executive Leadership",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6900",
+    "course_title": "Manag Decsn Making",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6910",
+    "course_title": "Negotiations",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT6920",
+    "course_title": "Advanced Negotiation",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7010",
+    "course_title": "Strat & Compet Advantage",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7110",
+    "course_title": "Competitive Strategy",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7120",
+    "course_title": "New Product Development",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7140",
+    "course_title": "Value Creation and Val Cap",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7150",
+    "course_title": "Pol and Soc Environ of Mm",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7170",
+    "course_title": "Deals: Econ Struc Trans",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7200",
+    "course_title": "Corporate Diplomacy",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7210",
+    "course_title": "Corp Dev: Merg & Acquis",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7230",
+    "course_title": "Strat and Environ Sustainability",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7280",
+    "course_title": "Navigating Difficult Conversat",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7290",
+    "course_title": "Intel Property Strategy",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7310",
+    "course_title": "Technology Strategy",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7400",
+    "course_title": "Leading Effective Teams",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7430",
+    "course_title": "Wrk & Tech:Choices & Out",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7480",
+    "course_title": "How To Be the Boss",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7510",
+    "course_title": "HR Strategy",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7640",
+    "course_title": "Tech in the SF Bay Area",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7720",
+    "course_title": "Power and Pol in Organiz",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7730",
+    "course_title": "Managing Org Change",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7820",
+    "course_title": "Strategic Implementation",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7860",
+    "course_title": "Reforming Mass Incarceration",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7870",
+    "course_title": "Global Mgmt Digital Business",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7880",
+    "course_title": "Mnging & Compet in China",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7900",
+    "course_title": "WORKS Immer - Prison Education",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7920",
+    "course_title": "Global Capstone",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7930",
+    "course_title": "People Analytics",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7940",
+    "course_title": "Understanding Careers",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT7980",
+    "course_title": "Managing and Motivating",
+    "department": "MGMT",
+    "credit_units": 0.25,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT7990",
+    "course_title": "Special Topics MGMT",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8010",
+    "course_title": "Entrepreneurship",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8020",
+    "course_title": "Innov, Chg and Ent",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8040",
+    "course_title": "Venture Cap & Ent Mgmt",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8090",
+    "course_title": "Priv. Equity Emerg. Mar",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8110",
+    "course_title": "Entrep Through Acquis.",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8120",
+    "course_title": "Social Entrepreneurship",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8130",
+    "course_title": "Vibefounding",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8140",
+    "course_title": "Search Fund Entrepreneurship",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8150",
+    "course_title": "Sports Business Mgmt",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8160",
+    "course_title": "Bldg. Hum Assets",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8170",
+    "course_title": "Global Growth of Emerg",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8310",
+    "course_title": "Entrepreneurship Launchpad",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8320",
+    "course_title": "Bus Mod Innov Strategy",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8330",
+    "course_title": "Strat & Prac of Family",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8400",
+    "course_title": "Social Impact Consulting Pract",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8710",
+    "course_title": "Adv Global Strategy",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8750",
+    "course_title": "Comparative Capitalism",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8880",
+    "course_title": "Venture Acceleration Lab",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8900",
+    "course_title": "Strategic Management II",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8910",
+    "course_title": "Advanced Study-Smgt",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8920",
+    "course_title": "Adv Study-Organ Effect",
+    "department": "MGMT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8930",
+    "course_title": "Global Modular Course",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8940",
+    "course_title": "Global Modular Course B",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8950",
+    "course_title": "Global Business",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MGMT8960",
+    "course_title": "Decision Making Ldrship",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8970",
+    "course_title": "Global Modular Course A",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MGMT8980",
+    "course_title": "Global Modular Course B",
+    "department": "MGMT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG6110",
+    "course_title": "Marketing Management",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG6120",
+    "course_title": "Dynamic Mktg Strategy",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG6130",
+    "course_title": "Stratgic Mktg Simulation",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7110",
+    "course_title": "Consumer Behavior",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7120",
+    "course_title": "Data & Anlz For Mktg Dec",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7210",
+    "course_title": "New Product Mngt",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG7250",
+    "course_title": "Principles of Retailing",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7270",
+    "course_title": "Digital Marketing with AI",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7330",
+    "course_title": "Mktg Ethics and Social Impact",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG7340",
+    "course_title": "Creativity",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7370",
+    "course_title": "Neuroscience for Bus Decisions",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7380",
+    "course_title": "Consumer Neuroscience",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7390",
+    "course_title": "Visual Marketing",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7410",
+    "course_title": "Adv Mktg Research",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG7470",
+    "course_title": "Mktg Strgy Tech Platform",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7520",
+    "course_title": "Marketing Analytics",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7540",
+    "course_title": "Pricing Policy",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7600",
+    "course_title": "Antitrust and Big Tech",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7680",
+    "course_title": "Contagious",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7700",
+    "course_title": "Digital Marketing and Electronic Commerce",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG7710",
+    "course_title": "Models For Mktg Strategy",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7750",
+    "course_title": "Customer Analytics",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG7760",
+    "course_title": "Appl Prob Models Mktg",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7770",
+    "course_title": "Marketing Strategy",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7780",
+    "course_title": "Strategic Brand Mgmt",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7790",
+    "course_title": "AI in Our Lives",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG7890",
+    "course_title": "Mktg in Global Markets",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8060",
+    "course_title": "Retail Merchandising",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG8090",
+    "course_title": "Experiments for Business Dec",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8500",
+    "course_title": "Special Topics",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8520",
+    "course_title": "Marketing Research",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8550",
+    "course_title": "Special Topics in Marketing",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8900",
+    "course_title": "Advanced Study Project",
+    "department": "MKTG",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8930",
+    "course_title": "Global Modular Course",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8950",
+    "course_title": "Global Business Week",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8960",
+    "course_title": "Global Modular Course",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG8970",
+    "course_title": "Advanced Study",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG8990",
+    "course_title": "Independent Study",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "MKTG9400",
+    "course_title": "Meas Data Analys Mktg A",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG9410",
+    "course_title": "Meas Data Analys Mktg B",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG9420",
+    "course_title": "Research Methods Mktg A",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG9430",
+    "course_title": "Research Methods Mktg B",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MKTG9560",
+    "course_title": "Empirical Models Mktg A",
+    "department": "MKTG",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "MUSA5000",
+    "course_title": "Spatial Statistics and Data Analysis",
+    "department": "MUSA",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "MUSA5090",
+    "course_title": "Geospatial Data Science with Python",
+    "department": "MUSA",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "MUSA5500",
+    "course_title": "Geospatial Cloud Computing and Visualization",
+    "department": "MUSA",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "NPLD7200",
+    "course_title": "Nonprofit Administration and Leadership",
+    "department": "NPLD",
+    "credit_units": 1.0,
+    "is_wharton": false,
+    "currently_offered": false,
+    "catalog_source": "non_wharton"
+  },
+  {
+    "course_id": "OIDD5150",
+    "course_title": "Product Design",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD5250",
+    "course_title": "Thinking with Models",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD5810",
+    "course_title": "Conv Optim Stat Data Sci",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6110",
+    "course_title": "Quality and Productivity",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6120",
+    "course_title": "Business Analytics",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6130",
+    "course_title": "Online Business Models",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6140",
+    "course_title": "Innovation",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6150",
+    "course_title": "Operations Strategy",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6360",
+    "course_title": "Scaling Operations",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6420",
+    "course_title": "Simulation Modeling",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6430",
+    "course_title": "Analy For Revenue Mgmt",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6520",
+    "course_title": "Product Design and Dvlpmt",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6530",
+    "course_title": "Math Mdlng Appl in Fnce",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6540",
+    "course_title": "Product Management",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6580",
+    "course_title": "Predictive Analytics Bus Strategy",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6590",
+    "course_title": "Advanced Topics: Supply Chain",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6620",
+    "course_title": "Enabling Technologies",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6670",
+    "course_title": "A.I., Business & Society",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6730",
+    "course_title": "Global Supply Chain Mgmt",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6750",
+    "course_title": "Financial Services Management",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6800",
+    "course_title": "Ops Strategy Practicum",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD6900",
+    "course_title": "Manag Decsn Making",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6910",
+    "course_title": "Negotiations",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6920",
+    "course_title": "Advanced Negotiation",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6930",
+    "course_title": "Influence",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6950",
+    "course_title": "Ssf Regional Seminar",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD6970",
+    "course_title": "Retail Supp Chain Mgmt",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD7050",
+    "course_title": "Leading with Grit",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD7610",
+    "course_title": "Climate Risks and Opportunitie",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD7620",
+    "course_title": "Envrnmtl Sus&Val Crtn",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD7630",
+    "course_title": "Environ Sustainability and Val Creation",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD7770",
+    "course_title": "Intro To Python Data Sci",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD7820",
+    "course_title": "Ops Management Practicum",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD7930",
+    "course_title": "People Analytics",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD8050",
+    "course_title": "Risk Management",
+    "department": "OIDD",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD8950",
+    "course_title": "Advanced Study Project",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "OIDD8970",
+    "course_title": "Global Modular Course",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "OIDD8980",
+    "course_title": "Global Modular Course B",
+    "department": "OIDD",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "REAL7050",
+    "course_title": "Global Real Estate",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL7080",
+    "course_title": "Housing Markets",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL7210",
+    "course_title": "Real Estate Investments",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL7240",
+    "course_title": "Urban Real Estate Econ",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL7300",
+    "course_title": "Urban Fiscal Policy",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8040",
+    "course_title": "Real Estate Law",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8210",
+    "course_title": "Real Estate Development",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8360",
+    "course_title": "Int'l Housing Comparisns",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8400",
+    "course_title": "Adv Real Est Inv, Analys",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8700",
+    "course_title": "Real Estate Data Analytics",
+    "department": "REAL",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8750",
+    "course_title": "Real Estate Disruptions",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "REAL8900",
+    "course_title": "Advanced Study Project",
+    "department": "REAL",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "REAL8910",
+    "course_title": "Real Estate Entrepreneur",
+    "department": "REAL",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT5810",
+    "course_title": "Conv Optim Stat Data Sci",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "STAT5850",
+    "course_title": "Foundations of Deep Learning",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "STAT6130",
+    "course_title": "Regr Analysis For Bus",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT6210",
+    "course_title": "Acc Regression Analysis",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7010",
+    "course_title": "Modern Data Mining",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "STAT7050",
+    "course_title": "Stat Computing with R",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7100",
+    "course_title": "Data Collect & Acquisit",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7110",
+    "course_title": "Forecasting Methods Mgmt",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7220",
+    "course_title": "Predictive Analytics",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7230",
+    "course_title": "Machine Learning in Business",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7240",
+    "course_title": "Text Analytics",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "STAT7250",
+    "course_title": "Sports and Gaming Analytics",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "STAT7700",
+    "course_title": "Data Analy & Stat Comp",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7730",
+    "course_title": "Data Science Using ChatGPT",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT7770",
+    "course_title": "Intro To Python Data Sci",
+    "department": "STAT",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "STAT9740",
+    "course_title": "Statistical Methods Econ",
+    "department": "STAT",
+    "credit_units": 1.0,
+    "is_wharton": true,
+    "currently_offered": false,
+    "catalog_source": "manual"
+  },
+  {
+    "course_id": "WHCP6160",
+    "course_title": "Management Communication",
+    "department": "WHCP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  },
+  {
+    "course_id": "WHCP6180",
+    "course_title": "Entrepreneurial Communication",
+    "department": "WHCP",
+    "credit_units": 0.5,
+    "is_wharton": true,
+    "currently_offered": true,
+    "catalog_source": "catalog"
+  }
+]

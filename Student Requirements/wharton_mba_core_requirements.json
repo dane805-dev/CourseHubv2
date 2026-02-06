@@ -1,0 +1,238 @@
+{
+  "program": "Wharton MBA",
+  "class": "Class of 2027",
+  "total_core_credits_required": 9.5,
+  "core_requirements": [
+    {
+      "core_code": "MGMT_FOUNDATION",
+      "core_name": "Foundations of Teamwork and Leadership",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["MGMT6100"],
+      "notes": "Non-waivable. Required for all students. Taken in Fall Q1 of first year."
+    },
+    {
+      "core_code": "MKTG_FIXED",
+      "core_name": "Marketing Management",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["MKTG6110"],
+      "notes": "Fixed core marketing course. Taken in Fall of first year."
+    },
+    {
+      "core_code": "BEPP_MICRO_FOUNDATIONS",
+      "core_name": "Microeconomics for Managers: Foundations",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["BEPP6110"],
+      "notes": "Covers microeconomic foundations: demand estimation, cost minimization, pricing, market equilibrium, and game theory. Taken in Fall Q1."
+    },
+    {
+      "core_code": "BEPP_MICRO_ADVANCED",
+      "core_name": "Microeconomics for Managers: Advanced Applications",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["BEPP6120"],
+      "notes": "Covers oligopoly, advanced pricing strategies, risk management, asymmetric information, and principal-agent theory. Taken in Fall Q2."
+    },
+    {
+      "core_code": "STAT_CORE",
+      "core_name": "Regression Analysis",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": true,
+      "courses": ["STAT6130", "STAT6210"],
+      "notes": "STAT6130 is 1.0 CU, STAT6210 (accelerated) is 0.5 CU. Students can place into STAT6210 via exam. Core requirement is 0.5 CU minimum."
+    },
+    {
+      "core_code": "WHCP",
+      "core_name": "Wharton Communication Program",
+      "core_type": "fixed",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["WHCP6160", "WHCP6180"],
+      "notes": "Students complete WHCP through one 0.5 CU course in Fall or Spring, assigned by cohort. WHCP6160 (Management Communication) or WHCP6180 (Entrepreneurial Communication, requires pre-approval)."
+    },
+    {
+      "core_code": "ACCT_FLEX",
+      "core_name": "Accounting",
+      "core_type": "flex",
+      "credits_required": 1.0,
+      "waivable": true,
+      "substitutable": true,
+      "placement_available": false,
+      "courses": ["ACCT6110", "ACCT6130"],
+      "waiver_details": {
+        "waiver_method": "credential_or_exam",
+        "substitution_requirement": {
+          "credits_required": 1.0,
+          "description": "Upper-level ACCT elective",
+          "eligible_course_prefixes": ["ACCT7"]
+        }
+      },
+      "notes": "Students select one 1.0 CU course. ACCT6110 focuses on financial accounting; ACCT6130 covers both financial and managerial accounting. Can be waived with substitution."
+    },
+    {
+      "core_code": "FNCE_CORP_FLEX",
+      "core_name": "Corporate Finance",
+      "core_type": "flex",
+      "credits_required": 1.0,
+      "waivable": true,
+      "substitutable": true,
+      "placement_available": false,
+      "courses": ["FNCE6110", "FNCE6210"],
+      "waiver_details": {
+        "waiver_method": "credential",
+        "substitution_requirement": {
+          "credits_required": 1.0,
+          "description": "Upper-level FNCE elective",
+          "eligible_course_prefixes": ["FNCE7", "FNCE8"]
+        }
+      },
+      "notes": "Students select one course. FNCE6110 is 1.0 CU (full course), FNCE6210 is 0.5 CU (abbreviated for non-majors). Finance/Quant Finance majors must take FNCE6110. Can be waived with substitution."
+    },
+    {
+      "core_code": "FNCE_MACRO_FLEX",
+      "core_name": "Macroeconomics",
+      "core_type": "flex",
+      "credits_required": 1.0,
+      "waivable": true,
+      "substitutable": true,
+      "placement_available": false,
+      "courses": ["FNCE6130", "FNCE6230"],
+      "waiver_details": {
+        "waiver_method": "credential",
+        "substitution_requirement": {
+          "credits_required": 1.0,
+          "description": "Upper-level FNCE or BEPP elective",
+          "eligible_course_prefixes": ["FNCE7", "FNCE8", "BEPP7"]
+        }
+      },
+      "notes": "Students select one course. FNCE6130 is 1.0 CU (full course), FNCE6230 is 0.5 CU (abbreviated for non-majors). Finance/Quant Finance majors must take FNCE6130. Cannot take both FNCE6210 and FNCE6230. Can be waived with substitution."
+    },
+    {
+      "core_code": "LGST_FLEX",
+      "core_name": "Legal Studies & Business Ethics",
+      "core_type": "flex",
+      "credits_required": 0.5,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["LGST6110", "LGST6120", "LGST6130"],
+      "notes": "Students select one 0.5 CU course from the three options."
+    },
+    {
+      "core_code": "MGMT_FLEX",
+      "core_name": "Management",
+      "core_type": "flex",
+      "credits_required": 1.0,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["MGMT6110", "MGMT6120"],
+      "notes": "Students select one 1.0 CU course. MGMT6110 focuses on large established firms; MGMT6120 focuses on startups and emerging enterprises."
+    },
+    {
+      "core_code": "MKTG_FLEX",
+      "core_name": "Marketing Flexible Core",
+      "core_type": "flex",
+      "credits_required": 0.5,
+      "waivable": true,
+      "substitutable": true,
+      "placement_available": false,
+      "courses": ["MKTG6120", "MKTG6130"],
+      "waiver_details": {
+        "waiver_method": "credential",
+        "substitution_requirement": {
+          "credits_required": 0.5,
+          "description": "Upper-level MKTG elective",
+          "eligible_course_prefixes": ["MKTG7", "MKTG8"]
+        }
+      },
+      "notes": "Students select one 0.5 CU course. Both build on MKTG6110. Can be waived with substitution."
+    },
+    {
+      "core_code": "OIDD_FLEX",
+      "core_name": "Operations, Information & Decisions",
+      "core_type": "flex",
+      "credits_required": 1.0,
+      "waivable": false,
+      "substitutable": false,
+      "placement_available": false,
+      "courses": ["OIDD6110", "OIDD6120", "OIDD6130", "OIDD6140", "OIDD6150", "OIDD6620", "OIDD6900"],
+      "notes": "Students must complete 1.0 CU total. Can take two 0.5 CU courses or one 1.0 CU course (OIDD6900 alone fulfills requirement). All courses except OIDD6900 are 0.5 CU."
+    }
+  ],
+  "validation_rules": {
+    "fixed_core": {
+      "description": "All fixed core requirements must be met through completion or placement",
+      "total_credits": 3.0,
+      "note": "STAT6130 is 1.0 CU but only 0.5 CU required; STAT6210 (accelerated) is 0.5 CU"
+    },
+    "flex_core": {
+      "description": "All flexible core requirements must be met by selecting from available courses to fulfill credit requirements",
+      "total_credits": 6.5,
+      "note": "Some flex cores can be waived with required substitutions"
+    },
+    "total_credits": {
+      "minimum": 9.5,
+      "description": "Total core curriculum must equal at least 9.5 CU including any required substitutions"
+    },
+    "finance_major_requirements": {
+      "description": "Finance and Quantitative Finance majors must complete 2.0 CU from Finance flexible core",
+      "requirements": ["Must take FNCE6110 (1.0 CU)", "Must take FNCE6130 (1.0 CU)"]
+    },
+    "prohibited_combinations": {
+      "description": "Certain course combinations are not allowed",
+      "rules": [
+        {
+          "prohibited": ["FNCE6210", "FNCE6230"],
+          "reason": "Cannot enroll in both FNCE6210 and FNCE6230"
+        }
+      ]
+    },
+    "waiver_timing": {
+      "description": "Waiver requests must be submitted during summer before Pre-Term"
+    },
+    "substitution_timing": {
+      "description": "Substitution courses can be taken any semester after waiver approval"
+    },
+    "letter_grade_requirement": {
+      "description": "All core courses must be taken for a letter grade unless specifically exempted"
+    },
+    "placement_rules": {
+      "description": "If placed into an accelerated version, must take that version instead of default"
+    }
+  },
+  "summary": {
+    "fixed_core_count": 6,
+    "flex_core_count": 7,
+    "total_core_requirements": 13,
+    "waivable_requirements": 4,
+    "placement_available": 1,
+    "total_fixed_credits": 3.0,
+    "total_flex_credits": 6.5
+  },
+  "metadata": {
+    "created_date": "2026-02-03",
+    "source_document": "WHARTON MBA CORE CURRICULUM GUIDE - CLASS OF 2027",
+    "version": "3.0",
+    "notes": "Corrected version: (1) Removed course names and credits from course arrays - these should be referenced from master database. (2) Added BEPP6110 and BEPP6120 as fixed core microeconomics courses. (3) Moved FNCE6130/6230 (Macroeconomics) to flexible core. (4) Adjusted STAT core to 0.5 CU requirement since STAT6210 (accelerated) is only 0.5 CU. (5) Total core credits now 9.5 CU."
+  }
+}
