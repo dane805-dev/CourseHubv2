@@ -23,7 +23,7 @@
     "Crosslist_With": "ACCT6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876946",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=ACCT6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "ACCT6130",
@@ -49,7 +49,7 @@
     "Crosslist_With": "ACCT6130001; ACCT6130001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877888",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=ACCT6130",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "ACCT7060",
@@ -75,7 +75,7 @@
     "Crosslist_With": "ACCT7060002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "ACCT7420",
@@ -101,7 +101,7 @@
     "Crosslist_With": "ACCT7420401; ACCT7420401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876955",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=ACCT7420",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "ACCT7430",
@@ -127,7 +127,7 @@
     "Crosslist_With": "ACCT7430401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "ACCT7470",
@@ -153,7 +153,7 @@
     "Crosslist_With": "ACCT7470001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "ACCT7640",
@@ -179,7 +179,7 @@
     "Crosslist_With": "BEPP2640401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "ACCT7900",
@@ -205,7 +205,7 @@
     "Crosslist_With": "ACCT2900401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "ACCT7970",
@@ -231,7 +231,7 @@
     "Crosslist_With": "ACCT7970401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "ACCT8990",
@@ -257,7 +257,7 @@
     "Crosslist_With": "ACCT8990001; ACCT8990007",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=ACCT8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "BEPP6110",
@@ -283,7 +283,7 @@
     "Crosslist_With": "BEPP6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880669",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=BEPP6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "BEPP6120",
@@ -309,7 +309,7 @@
     "Crosslist_With": "BEPP6120001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883680",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=BEPP6120",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "BEPP6200",
@@ -335,7 +335,7 @@
     "Crosslist_With": "BEPP6200001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "BEPP7080",
@@ -361,7 +361,7 @@
     "Crosslist_With": "REAL2080401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "BEPP7610",
@@ -387,7 +387,7 @@
     "Crosslist_With": "FNCE2610401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "BEPP7640",
@@ -413,7 +413,7 @@
     "Crosslist_With": "BEPP2640401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "BEPP7700",
@@ -439,7 +439,7 @@
     "Crosslist_With": "BEPP7700001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "BEPP7730",
@@ -465,7 +465,7 @@
     "Crosslist_With": "REAL7300401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878173",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=BEPP7730",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "BEPP7840",
@@ -491,7 +491,7 @@
     "Crosslist_With": "MGMT7840401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879419",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=BEPP7840",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "BEPP7890",
@@ -517,7 +517,7 @@
     "Crosslist_With": "BEPP7890001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "BEPP8050",
@@ -543,7 +543,7 @@
     "Crosslist_With": "BEPP3050401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "BEPP8360",
@@ -569,7 +569,7 @@
     "Crosslist_With": "REAL2360401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE6110",
@@ -595,7 +595,7 @@
     "Crosslist_With": "FNCE6110001; FNCE6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876607",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "FNCE6130",
@@ -621,7 +621,7 @@
     "Crosslist_With": "FNCE6130001; FNCE6130001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862728",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE6130",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "FNCE6210",
@@ -647,7 +647,7 @@
     "Crosslist_With": "FNCE6210001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "FNCE6230",
@@ -673,7 +673,7 @@
     "Crosslist_With": "FNCE6230001; FNCE6230001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863936",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE6230",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "FNCE7030",
@@ -699,7 +699,7 @@
     "Crosslist_With": "FNCE7030001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1864857",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7030",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "FNCE7050",
@@ -725,7 +725,7 @@
     "Crosslist_With": "FNCE7050401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862790",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7050",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "FNCE7070",
@@ -751,7 +751,7 @@
     "Crosslist_With": "FNCE7070001; FNCE7070001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1853236",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7070",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "FNCE7170",
@@ -777,7 +777,7 @@
     "Crosslist_With": "FNCE7170401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862999",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7170",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "FNCE7190",
@@ -803,7 +803,7 @@
     "Crosslist_With": "FNCE7190001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "FNCE7210",
@@ -829,7 +829,7 @@
     "Crosslist_With": "REAL7210401; REAL7210401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879450",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7210",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "FNCE7250",
@@ -855,7 +855,7 @@
     "Crosslist_With": "FNCE7250001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "FNCE7300",
@@ -881,7 +881,7 @@
     "Crosslist_With": "REAL7300401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878173",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7300",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7310",
@@ -907,7 +907,7 @@
     "Crosslist_With": "FNCE7310401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7320",
@@ -933,7 +933,7 @@
     "Crosslist_With": "FNCE7320401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7370",
@@ -959,7 +959,7 @@
     "Crosslist_With": "FNCE7370001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863088",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7370",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7380",
@@ -985,7 +985,7 @@
     "Crosslist_With": "FNCE7380003; FNCE7380001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867739",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7380",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7390",
@@ -1011,7 +1011,7 @@
     "Crosslist_With": "FNCE7390001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "FNCE7400",
@@ -1037,7 +1037,7 @@
     "Crosslist_With": "FNCE7400001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1853293",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7400",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "FNCE7450",
@@ -1063,7 +1063,7 @@
     "Crosslist_With": "FNCE7450401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "FNCE7500",
@@ -1089,7 +1089,7 @@
     "Crosslist_With": "FNCE7500001; FNCE7500001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862998",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7500",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "FNCE7510",
@@ -1115,7 +1115,7 @@
     "Crosslist_With": "FNCE7510001; FNCE7510001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863251",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7510",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "FNCE7530",
@@ -1141,7 +1141,7 @@
     "Crosslist_With": "FNCE7530001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863069",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7530",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "FNCE7540",
@@ -1167,7 +1167,7 @@
     "Crosslist_With": "FNCE7540001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "FNCE7570",
@@ -1193,7 +1193,7 @@
     "Crosslist_With": "FNCE7570401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "FNCE7610",
@@ -1219,7 +1219,7 @@
     "Crosslist_With": "FNCE2610401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "FNCE7680",
@@ -1245,7 +1245,7 @@
     "Crosslist_With": "FNCE7680401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "FNCE7800",
@@ -1271,7 +1271,7 @@
     "Crosslist_With": "FNCE7800001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863085",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7800",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "FNCE7830",
@@ -1297,7 +1297,7 @@
     "Crosslist_With": "FNCE7830002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "FNCE7910",
@@ -1323,7 +1323,7 @@
     "Crosslist_With": "FNCE7910401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867013",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE7910",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "FNCE7970",
@@ -1349,7 +1349,7 @@
     "Crosslist_With": "ACCT7970401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "FNCE8010",
@@ -1375,7 +1375,7 @@
     "Crosslist_With": "FNCE8010001; FNCE8010001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867003",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE8010",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "FNCE8020",
@@ -1401,7 +1401,7 @@
     "Crosslist_With": "FNCE8020001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863080",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE8020",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "FNCE8960",
@@ -1427,7 +1427,7 @@
     "Crosslist_With": "FNCE8960401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "FNCE8990",
@@ -1453,7 +1453,7 @@
     "Crosslist_With": "FNCE8990001; FNCE8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=FNCE8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "HCMG6530",
@@ -1479,7 +1479,7 @@
     "Crosslist_With": "HCMG6530001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8410",
@@ -1505,7 +1505,7 @@
     "Crosslist_With": "HCMG8410001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876669",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8410",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "HCMG8450",
@@ -1531,7 +1531,7 @@
     "Crosslist_With": "HCMG8450001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "HCMG8500",
@@ -1557,7 +1557,7 @@
     "Crosslist_With": "HCMG8500401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878191",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8500",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8530",
@@ -1583,7 +1583,7 @@
     "Crosslist_With": "HCMG8530001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879936",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8530",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8550",
@@ -1609,7 +1609,7 @@
     "Crosslist_With": "HCMG8550002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880709",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8550",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8570",
@@ -1635,7 +1635,7 @@
     "Crosslist_With": "HCMG8570001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867495",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8570",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8580",
@@ -1661,7 +1661,7 @@
     "Crosslist_With": "HCMG8580001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867766",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8580",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "HCMG8630",
@@ -1687,7 +1687,7 @@
     "Crosslist_With": "HCMG8630001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "HCMG8660",
@@ -1713,7 +1713,7 @@
     "Crosslist_With": "HCMG8660001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "HCMG8670",
@@ -1739,7 +1739,7 @@
     "Crosslist_With": "HCMG8670001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "HCMG8680",
@@ -1765,7 +1765,7 @@
     "Crosslist_With": "HCMG8680001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "HCMG8700",
@@ -1791,7 +1791,7 @@
     "Crosslist_With": "HCMG8700001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878501",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8700",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "HCMG8740",
@@ -1817,7 +1817,7 @@
     "Crosslist_With": "HCMG8740001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "HCMG8770",
@@ -1843,7 +1843,7 @@
     "Crosslist_With": "HCMG8770001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862722",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8770",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "HCMG8900",
@@ -1869,7 +1869,7 @@
     "Crosslist_With": "HCMG8900001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862734",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8900",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "HCMG8990",
@@ -1895,7 +1895,7 @@
     "Crosslist_With": "HCMG8990004; HCMG8990002",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=HCMG8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS5820",
@@ -1921,7 +1921,7 @@
     "Crosslist_With": "INTS5820001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877893",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS5820",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "INTS5830",
@@ -1947,7 +1947,7 @@
     "Crosslist_With": "INTS5830001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "INTS5920",
@@ -1973,7 +1973,7 @@
     "Crosslist_With": "INTS5920001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878948",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS5920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS5930",
@@ -1999,7 +1999,7 @@
     "Crosslist_With": "INTS5930001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS5940",
@@ -2025,7 +2025,7 @@
     "Crosslist_With": "INTS5940001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878952",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS5940",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS6020",
@@ -2051,7 +2051,7 @@
     "Crosslist_With": "INTS6020001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880671",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6020",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "INTS6030",
@@ -2077,7 +2077,7 @@
     "Crosslist_With": "INTS6030002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "INTS6120",
@@ -2103,7 +2103,7 @@
     "Crosslist_With": "INTS6120001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878476",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6120",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "INTS6130",
@@ -2129,7 +2129,7 @@
     "Crosslist_With": "INTS6130001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "INTS6220",
@@ -2155,7 +2155,7 @@
     "Crosslist_With": "INTS6220001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879009",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6220",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "INTS6230",
@@ -2181,7 +2181,7 @@
     "Crosslist_With": "INTS6230001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "INTS6320",
@@ -2207,7 +2207,7 @@
     "Crosslist_With": "INTS6320001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877738",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6320",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "INTS6330",
@@ -2233,7 +2233,7 @@
     "Crosslist_With": "INTS6330001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "INTS6420",
@@ -2259,7 +2259,7 @@
     "Crosslist_With": "INTS6420001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880683",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6420",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "INTS6430",
@@ -2285,7 +2285,7 @@
     "Crosslist_With": "INTS6430001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "INTS6520",
@@ -2311,7 +2311,7 @@
     "Crosslist_With": "INTS6520001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880649",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6520",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "INTS6530",
@@ -2337,7 +2337,7 @@
     "Crosslist_With": "INTS6530001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "INTS6620",
@@ -2363,7 +2363,7 @@
     "Crosslist_With": "INTS6620001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880743",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6620",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "INTS6630",
@@ -2389,7 +2389,7 @@
     "Crosslist_With": "INTS6630001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "INTS6720",
@@ -2415,7 +2415,7 @@
     "Crosslist_With": "INTS6720001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880694",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6720",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "INTS6730",
@@ -2441,7 +2441,7 @@
     "Crosslist_With": "INTS6730001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "INTS6820",
@@ -2467,7 +2467,7 @@
     "Crosslist_With": "INTS6820001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1881569",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6820",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "INTS6830",
@@ -2493,7 +2493,7 @@
     "Crosslist_With": "INTS6830001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "INTS6920",
@@ -2519,7 +2519,7 @@
     "Crosslist_With": "INTS6920001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879915",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS6920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS6930",
@@ -2545,7 +2545,7 @@
     "Crosslist_With": "INTS6930001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "INTS7210",
@@ -2571,33 +2571,7 @@
     "Crosslist_With": "INTS7210301",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877746",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS7210",
-    "Course_Level": 2.0
-  },
-  {
-    "Course_ID": "INTS7410",
-    "Course_Title": "Ldrshp & Intrcltrl Lrng",
-    "Department": "INTS",
-    "Credit_Units": 0.13,
-    "Description": "Updating course to multi-term course",
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Both",
-    "Instructors_Fall": "Maria Lozada-Cerna",
-    "Instructors_Spring": "Maria Lozada-Cerna, Jules Van Binsbergen",
-    "Section_Count_Fall": 2,
-    "Section_Count_Spring": 3,
-    "Total_Capacity": 330,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": "NRN 00",
-    "Locations_Spring": "NRN 00",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "INTS7410B001; INTS7410C001",
-    "Canvas_URL": null,
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS7410B",
-    "Course_Level": 4.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "INTS7500",
@@ -2623,7 +2597,7 @@
     "Crosslist_With": "INTS7500001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "INTS7620",
@@ -2649,7 +2623,7 @@
     "Crosslist_With": "INTS7620001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867859",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS7620",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "INTS7630",
@@ -2675,7 +2649,7 @@
     "Crosslist_With": "INTS7630001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "INTS7640",
@@ -2701,7 +2675,7 @@
     "Crosslist_With": "INTS7640001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867860",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS7640",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "INTS8990",
@@ -2727,85 +2701,7 @@
     "Crosslist_With": "INTS8990001; INTS8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS8990",
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "INTS9900",
-    "Course_Title": "Masters Research",
-    "Department": "INTS",
-    "Credit_Units": 0.0,
-    "Description": "Masters Research",
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Both",
-    "Instructors_Fall": "Ecaterina Locoman",
-    "Instructors_Spring": "Ecaterina Locoman",
-    "Section_Count_Fall": 1,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 20,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": null,
-    "Locations_Spring": null,
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "INTS9900025; INTS9900025",
-    "Canvas_URL": null,
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS9900",
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "INTS9910",
-    "Course_Title": "Masters Research",
-    "Department": "INTS",
-    "Credit_Units": 0.0,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Both",
-    "Instructors_Fall": "Ecaterina Locoman",
-    "Instructors_Spring": "Ecaterina Locoman",
-    "Section_Count_Fall": 2,
-    "Section_Count_Spring": 2,
-    "Total_Capacity": 240,
-    "Meeting_Times_Fall": "08/25/2025 - 10/13/2025 T 0830AM - 0959AM; 08/25/2025 - 10/13/2025 M 0330PM - 0459PM",
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": "WHRT RM",
-    "Locations_Spring": null,
-    "Average_Rating_Fall": 1.905,
-    "Average_Rating_Spring": 1.905,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "INTS9910002; INTS9910002",
-    "Canvas_URL": "https://canvas.upenn.edu/courses/1854578",
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=INTS9910",
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "KSOG6000",
-    "Course_Title": "Kennedy School of Government",
-    "Department": "KSOG",
-    "Credit_Units": 4.0,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Both",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 1,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 73,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": null,
-    "Locations_Spring": null,
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "KSOG6000001; KSOG6000001",
-    "Canvas_URL": null,
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=KSOG6000",
-    "Course_Level": 0.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "LGST6110",
@@ -2831,7 +2727,7 @@
     "Crosslist_With": "LGST6110001; LGST6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879025",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "LGST6120",
@@ -2857,7 +2753,7 @@
     "Crosslist_With": "LGST6120001; LGST6120001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880330",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6120",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "LGST6130",
@@ -2883,7 +2779,7 @@
     "Crosslist_With": "LGST6130001; LGST6130001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867777",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6130",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "LGST6420",
@@ -2909,7 +2805,7 @@
     "Crosslist_With": "LGST6420002; LGST6420001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880689",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6420",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "LGST6430",
@@ -2935,7 +2831,7 @@
     "Crosslist_With": "LGST6430001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "LGST6440",
@@ -2961,7 +2857,7 @@
     "Crosslist_With": "LGST6440001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1863390",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6440",
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "LGST6470",
@@ -2987,7 +2883,7 @@
     "Crosslist_With": "LGST6470001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "LGST6920",
@@ -3013,7 +2909,7 @@
     "Crosslist_With": "OIDD6920402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888086",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "LGST6930",
@@ -3039,7 +2935,7 @@
     "Crosslist_With": "OIDD6930402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883320",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST6930",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "LGST7290",
@@ -3065,7 +2961,7 @@
     "Crosslist_With": "MGMT7290401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "LGST7500",
@@ -3091,7 +2987,7 @@
     "Crosslist_With": "LGST7500001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879028",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST7500",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "LGST7620",
@@ -3117,7 +3013,7 @@
     "Crosslist_With": "LGST7620401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1866177",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST7620",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "LGST8020",
@@ -3143,7 +3039,7 @@
     "Crosslist_With": "LGST2020401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8040",
@@ -3169,7 +3065,7 @@
     "Crosslist_With": "REAL2040401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867768",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST8040",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8050",
@@ -3195,7 +3091,7 @@
     "Crosslist_With": "LGST2050401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8060",
@@ -3221,7 +3117,7 @@
     "Crosslist_With": "LGST8060401; LGST8060401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878903",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST8060",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8080",
@@ -3247,7 +3143,7 @@
     "Crosslist_With": "LGST2080401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8090",
@@ -3273,7 +3169,7 @@
     "Crosslist_With": "LGST8090401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "LGST8130",
@@ -3299,7 +3195,7 @@
     "Crosslist_With": "LGST8130001; LGST8130001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880542",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST8130",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "LGST8140",
@@ -3325,7 +3221,7 @@
     "Crosslist_With": "LGST2140401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880115",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST8140",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "LGST8980",
@@ -3351,7 +3247,7 @@
     "Crosslist_With": "LGST8980001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "LGST8990",
@@ -3377,215 +3273,7 @@
     "Crosslist_With": "LGST8990002; LGST8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=LGST8990",
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0910",
-    "Course_Title": "Wharton Connect 0900 AM - 1035 AM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 2,
-    "Total_Capacity": 120,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0900AM - 1035AM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0910001",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0920",
-    "Course_Title": "Wharton Connect 1045 AM - 1150 AM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 2,
-    "Total_Capacity": 120,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 1045AM - 1150AM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0920002",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0930",
-    "Course_Title": "Wharton Connect 1200 PM - 1250 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 1200PM - 1250PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0930003",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0940",
-    "Course_Title": "Wharton Connect 0100 PM - 0235 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0100PM - 0235PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0940004",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0950",
-    "Course_Title": "Wharton Connect 0245 PM - 0420 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0245PM - 0420PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0950005",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0960",
-    "Course_Title": "Wharton Connect 0430 PM - 0550 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0430PM - 0550PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0960006",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0970",
-    "Course_Title": "Wharton Connect 0600 PM - 0850 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0600PM - 0850PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0970007",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MBAP0980",
-    "Course_Title": "Wharton Connect 0900 PM - 1150 PM",
-    "Department": "MBAP",
-    "Credit_Units": null,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Spring",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 0,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 60,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": "12/19/2025 - 06/30/2026 MTWRF 0900PM - 1150PM",
-    "Locations_Fall": null,
-    "Locations_Spring": "JMHH 270",
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MBAP0980008",
-    "Canvas_URL": null,
-    "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT6100",
@@ -3611,7 +3299,7 @@
     "Crosslist_With": "MGMT6100001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878019",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6100",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT6110",
@@ -3637,7 +3325,7 @@
     "Crosslist_With": "MGMT6110001; MGMT6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879033",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT6120",
@@ -3663,7 +3351,7 @@
     "Crosslist_With": "MGMT6120001; MGMT6120001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876789",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6120",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT6240",
@@ -3689,7 +3377,7 @@
     "Crosslist_With": "MGMT6240002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883551",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6240",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT6250",
@@ -3715,7 +3403,7 @@
     "Crosslist_With": "MGMT6250002; MGMT6250002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1889228",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6250",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT6560",
@@ -3741,7 +3429,7 @@
     "Crosslist_With": "MGMT6560005; MGMT6560002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876544",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6560",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "MGMT6710",
@@ -3767,7 +3455,7 @@
     "Crosslist_With": "MGMT6710001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MGMT6900",
@@ -3793,7 +3481,7 @@
     "Crosslist_With": "OIDD6900401; OIDD6900401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878256",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6900",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT6910",
@@ -3819,7 +3507,7 @@
     "Crosslist_With": "LGST8060401; LGST8060401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878903",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6910",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT6920",
@@ -3845,7 +3533,7 @@
     "Crosslist_With": "OIDD6920402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888086",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT6920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT7010",
@@ -3871,7 +3559,7 @@
     "Crosslist_With": "MGMT7010002; MGMT7010001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878157",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7010",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "MGMT7200",
@@ -3897,7 +3585,7 @@
     "Crosslist_With": "MGMT7200001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT7210",
@@ -3923,7 +3611,7 @@
     "Crosslist_With": "MGMT7210001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT7280",
@@ -3949,7 +3637,7 @@
     "Crosslist_With": "MGMT7280002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT7290",
@@ -3975,7 +3663,7 @@
     "Crosslist_With": "MGMT7290401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MGMT7310",
@@ -4001,7 +3689,7 @@
     "Crosslist_With": "MGMT7310001; MGMT7310001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876270",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7310",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MGMT7430",
@@ -4027,7 +3715,7 @@
     "Crosslist_With": "MGMT7430001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "MGMT7480",
@@ -4053,7 +3741,7 @@
     "Crosslist_With": "MGMT7480001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "MGMT7820",
@@ -4079,7 +3767,7 @@
     "Crosslist_With": "MGMT7820001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "MGMT7840",
@@ -4105,7 +3793,7 @@
     "Crosslist_With": "MGMT7840401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879419",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7840",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "MGMT7860",
@@ -4131,7 +3819,7 @@
     "Crosslist_With": "MGMT7860002; MGMT7860002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883689",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7860",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "MGMT7880",
@@ -4157,7 +3845,7 @@
     "Crosslist_With": "MGMT2880401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1869321",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7880",
-    "Course_Level": 8.0
+    "Course_Level": 8
   },
   {
     "Course_ID": "MGMT7900",
@@ -4183,7 +3871,7 @@
     "Crosslist_With": "MGMT7900001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT7930",
@@ -4209,7 +3897,7 @@
     "Crosslist_With": "MGMT7930402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883439",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7930",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT7940",
@@ -4235,33 +3923,7 @@
     "Crosslist_With": "MGMT7940002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "MGMT7980",
-    "Course_Title": "Managing and Motivating",
-    "Department": "MGMT",
-    "Credit_Units": 0.25,
-    "Description": "People are the most valuable asset of any business, but they are also the most unpredictable, and the most difficult, asset to manage. And although managing people well is critical to the health of any organization, most managers don't get the training they need to make good management decisions. Now, award-winning authors and renowned management Professors Mike Useem and Peter Cappelli of the Wharton School have designed this course to introduce you to the key elements of managing people. Based on their popular course at Wharton, this course will teach you how to motivate individual performance and design reward systems, how to design jobs and organize work for high performance, how to make good and timely management decisions, and how to design and change the your organization's architecture. By the end of this course, you'll have developed the skills you need to start motivating, organizing, and rewarding people in your organization so that you can thrive as a business and as a social organization. This course can also only be applied towards unrestricted electives at the undergraduate level.",
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Fall",
-    "Instructors_Fall": "Lisa Rudi, Michael Useem, Peter Cappelli",
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 1,
-    "Section_Count_Spring": 0,
-    "Total_Capacity": 40,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": "ONL 0",
-    "Locations_Spring": null,
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "MGMT7980003",
-    "Canvas_URL": "https://canvas.upenn.edu/courses/1867144",
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7980",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT7990",
@@ -4287,7 +3949,7 @@
     "Crosslist_With": "MGMT7990001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876925",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT7990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8010",
@@ -4313,7 +3975,7 @@
     "Crosslist_With": "MGMT8010001; MGMT8010001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880301",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8010",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "MGMT8040",
@@ -4339,7 +4001,7 @@
     "Crosslist_With": "MGMT8040001; MGMT8040001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1848203",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8040",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "MGMT8090",
@@ -4365,7 +4027,7 @@
     "Crosslist_With": "MGMT8090001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "MGMT8110",
@@ -4391,7 +4053,7 @@
     "Crosslist_With": "MGMT8110001; MGMT8110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878892",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT8120",
@@ -4417,7 +4079,7 @@
     "Crosslist_With": "MGMT8120001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT8140",
@@ -4443,7 +4105,7 @@
     "Crosslist_With": "MGMT8140001; MGMT8140002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880276",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8140",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT8150",
@@ -4469,7 +4131,7 @@
     "Crosslist_With": "LGST8090401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT8170",
@@ -4495,7 +4157,7 @@
     "Crosslist_With": "MGMT8170001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MGMT8310",
@@ -4521,7 +4183,7 @@
     "Crosslist_With": "MGMT8310401; MGMT8310402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888609",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8310",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MGMT8330",
@@ -4547,7 +4209,7 @@
     "Crosslist_With": "MGMT2330401; MGMT2330401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1865017",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8330",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MGMT8710",
@@ -4573,7 +4235,7 @@
     "Crosslist_With": "MGMT8710002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1882410",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8710",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MGMT8750",
@@ -4599,7 +4261,7 @@
     "Crosslist_With": "MGMT2750401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MGMT8910",
@@ -4625,7 +4287,7 @@
     "Crosslist_With": "MGMT8910001; MGMT8910001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878153",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8910",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8920",
@@ -4651,7 +4313,7 @@
     "Crosslist_With": "MGMT8920001; MGMT8920001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879421",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8960",
@@ -4677,7 +4339,7 @@
     "Crosslist_With": "MGMT8960001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8970",
@@ -4703,7 +4365,7 @@
     "Crosslist_With": "MGMT8970001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8980",
@@ -4729,7 +4391,7 @@
     "Crosslist_With": "LGST8980406",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MGMT8990",
@@ -4755,7 +4417,7 @@
     "Crosslist_With": "MGMT8990001; MGMT8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MGMT8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MKTG6110",
@@ -4781,7 +4443,7 @@
     "Crosslist_With": "MKTG6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879488",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MKTG6120",
@@ -4807,7 +4469,7 @@
     "Crosslist_With": "MKTG6120002; MKTG6120001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1882923",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG6120",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MKTG6130",
@@ -4833,7 +4495,7 @@
     "Crosslist_With": "MKTG6130001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MKTG7110",
@@ -4859,7 +4521,7 @@
     "Crosslist_With": "MKTG7110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879384",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MKTG7120",
@@ -4885,7 +4547,7 @@
     "Crosslist_With": "MKTG7120401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "MKTG7250",
@@ -4911,7 +4573,7 @@
     "Crosslist_With": "MKTG7250001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877892",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7250",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MKTG7270",
@@ -4937,7 +4599,7 @@
     "Crosslist_With": "MKTG7270401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "MKTG7340",
@@ -4963,7 +4625,7 @@
     "Crosslist_With": "MKTG7340402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888657",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7340",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MKTG7370",
@@ -4989,7 +4651,7 @@
     "Crosslist_With": "MKTG7370001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879749",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7370",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MKTG7380",
@@ -5015,7 +4677,7 @@
     "Crosslist_With": "MKTG7380406",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888942",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7380",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MKTG7390",
@@ -5041,7 +4703,7 @@
     "Crosslist_With": "MKTG7390401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "MKTG7470",
@@ -5067,7 +4729,7 @@
     "Crosslist_With": "MKTG7470002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "MKTG7520",
@@ -5093,7 +4755,7 @@
     "Crosslist_With": "MKTG7520402",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "MKTG7540",
@@ -5119,7 +4781,7 @@
     "Crosslist_With": "MKTG7540002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "MKTG7600",
@@ -5145,7 +4807,7 @@
     "Crosslist_With": "LGST2050401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "MKTG7680",
@@ -5171,7 +4833,7 @@
     "Crosslist_With": "MKTG7680402",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "MKTG7710",
@@ -5197,7 +4859,7 @@
     "Crosslist_With": "MKTG2710401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1877846",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG7710",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MKTG7760",
@@ -5223,7 +4885,7 @@
     "Crosslist_With": "MKTG4760401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MKTG7770",
@@ -5249,7 +4911,7 @@
     "Crosslist_With": "MKTG2770401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MKTG7780",
@@ -5275,7 +4937,7 @@
     "Crosslist_With": "MKTG7780001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MKTG7790",
@@ -5301,7 +4963,7 @@
     "Crosslist_With": "MKTG7790001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "MKTG8060",
@@ -5327,7 +4989,7 @@
     "Crosslist_With": "MKTG8060401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "MKTG8960",
@@ -5353,7 +5015,7 @@
     "Crosslist_With": "MKTG8960001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "MKTG8990",
@@ -5379,7 +5041,7 @@
     "Crosslist_With": "MKTG8990007; MKTG8990033",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=MKTG8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD5110",
@@ -5405,7 +5067,7 @@
     "Crosslist_With": "MEAM4110401; MEAM4110401",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD5110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD5150",
@@ -5431,7 +5093,7 @@
     "Crosslist_With": "OIDD4150401; OIDD4150401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878778",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD5150",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD5250",
@@ -5457,7 +5119,7 @@
     "Crosslist_With": "OIDD5250001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876892",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD5250",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "OIDD6110",
@@ -5483,7 +5145,7 @@
     "Crosslist_With": "OIDD6110001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867122",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD6120",
@@ -5509,7 +5171,7 @@
     "Crosslist_With": "OIDD6120006",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD6130",
@@ -5535,7 +5197,7 @@
     "Crosslist_With": "OIDD6130002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD6140",
@@ -5561,7 +5223,7 @@
     "Crosslist_With": "OIDD6140001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867930",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6140",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD6150",
@@ -5587,7 +5249,7 @@
     "Crosslist_With": "OIDD6150001; OIDD6150001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878058",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6150",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "OIDD6360",
@@ -5613,7 +5275,7 @@
     "Crosslist_With": "OIDD6360401; OIDD6360001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880255",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6360",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "OIDD6540",
@@ -5639,7 +5301,7 @@
     "Crosslist_With": "OIDD6540002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888219",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6540",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "OIDD6590",
@@ -5665,7 +5327,7 @@
     "Crosslist_With": "OIDD6590001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1881497",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6590",
-    "Course_Level": 5.0
+    "Course_Level": 5
   },
   {
     "Course_ID": "OIDD6620",
@@ -5691,7 +5353,7 @@
     "Crosslist_With": "OIDD6620001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879020",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6620",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "OIDD6630",
@@ -5717,7 +5379,7 @@
     "Crosslist_With": "OIDD6630002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "OIDD6670",
@@ -5743,7 +5405,7 @@
     "Crosslist_With": "OIDD6670001; OIDD6670003",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880152",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6670",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "OIDD6730",
@@ -5769,7 +5431,7 @@
     "Crosslist_With": "OIDD6730002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "OIDD6750",
@@ -5795,7 +5457,7 @@
     "Crosslist_With": "OIDD6750001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "OIDD6900",
@@ -5821,7 +5483,7 @@
     "Crosslist_With": "OIDD6900401; OIDD6900401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878256",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6900",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD6910",
@@ -5847,7 +5509,7 @@
     "Crosslist_With": "LGST8060401; LGST8060401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878903",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6910",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD6920",
@@ -5873,7 +5535,7 @@
     "Crosslist_With": "OIDD6920402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888086",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6920",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD6930",
@@ -5899,7 +5561,7 @@
     "Crosslist_With": "OIDD6930402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883320",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6930",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD6950",
@@ -5925,7 +5587,7 @@
     "Crosslist_With": "OIDD6950001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1850435",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6950",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD6970",
@@ -5951,7 +5613,7 @@
     "Crosslist_With": "OIDD6970002",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1888212",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD6970",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD7050",
@@ -5977,7 +5639,7 @@
     "Crosslist_With": "OIDD7050001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "OIDD7610",
@@ -6003,7 +5665,7 @@
     "Crosslist_With": "FNCE2610401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "OIDD7620",
@@ -6029,7 +5691,7 @@
     "Crosslist_With": "LGST7620401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1866177",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD7620",
-    "Course_Level": 6.0
+    "Course_Level": 6
   },
   {
     "Course_ID": "OIDD7770",
@@ -6055,7 +5717,7 @@
     "Crosslist_With": "STAT7770401; STAT7770401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878248",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD7770",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "OIDD7930",
@@ -6081,7 +5743,7 @@
     "Crosslist_With": "MGMT7930402",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1883439",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD7930",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD8050",
@@ -6107,7 +5769,7 @@
     "Crosslist_With": "BEPP3050401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "OIDD8970",
@@ -6133,7 +5795,7 @@
     "Crosslist_With": "OIDD8970001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "OIDD8990",
@@ -6159,7 +5821,7 @@
     "Crosslist_With": "OIDD8990001; OIDD8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=OIDD8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "REAL7050",
@@ -6185,7 +5847,7 @@
     "Crosslist_With": "REAL7050401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876898",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL7050",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "REAL7080",
@@ -6211,7 +5873,7 @@
     "Crosslist_With": "REAL2080401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "REAL7210",
@@ -6237,7 +5899,7 @@
     "Crosslist_With": "REAL7210401; REAL7210401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1879450",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL7210",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "REAL7240",
@@ -6263,7 +5925,7 @@
     "Crosslist_With": "REAL7240401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "REAL7300",
@@ -6289,7 +5951,7 @@
     "Crosslist_With": "REAL7300401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878173",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL7300",
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "REAL8040",
@@ -6315,7 +5977,7 @@
     "Crosslist_With": "REAL2040401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867768",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL8040",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "REAL8210",
@@ -6341,7 +6003,7 @@
     "Crosslist_With": "REAL3210401; REAL8210401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1849331",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL8210",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "REAL8360",
@@ -6367,7 +6029,7 @@
     "Crosslist_With": "REAL2360401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 3.0
+    "Course_Level": 3
   },
   {
     "Course_ID": "REAL8400",
@@ -6393,7 +6055,7 @@
     "Crosslist_With": "REAL8400401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 4.0
+    "Course_Level": 4
   },
   {
     "Course_ID": "REAL8700",
@@ -6419,7 +6081,7 @@
     "Crosslist_With": "REAL8700001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "REAL8750",
@@ -6445,7 +6107,7 @@
     "Crosslist_With": "REAL8750401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "REAL8910",
@@ -6471,7 +6133,7 @@
     "Crosslist_With": "REAL3960401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867140",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=REAL8910",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "REAL8990",
@@ -6497,33 +6159,7 @@
     "Crosslist_With": "REAL8990001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 9.0
-  },
-  {
-    "Course_ID": "SAIS6000",
-    "Course_Title": "Courses at SAIS",
-    "Department": "SAIS",
-    "Credit_Units": 4.0,
-    "Description": null,
-    "Prerequisites": null,
-    "Corequisites": null,
-    "Term_Availability": "Both",
-    "Instructors_Fall": null,
-    "Instructors_Spring": null,
-    "Section_Count_Fall": 1,
-    "Section_Count_Spring": 1,
-    "Total_Capacity": 4,
-    "Meeting_Times_Fall": null,
-    "Meeting_Times_Spring": null,
-    "Locations_Fall": null,
-    "Locations_Spring": null,
-    "Average_Rating_Fall": null,
-    "Average_Rating_Spring": null,
-    "Is_Crosslisted": true,
-    "Crosslist_With": "SAIS6000001; SAIS6000001",
-    "Canvas_URL": null,
-    "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=SAIS6000",
-    "Course_Level": 0.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "STAT6130",
@@ -6549,7 +6185,7 @@
     "Crosslist_With": "STAT6130001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1862413",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT6130",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "STAT6210",
@@ -6575,7 +6211,7 @@
     "Crosslist_With": "STAT6210001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1880546",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT6210",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "STAT7050",
@@ -6601,7 +6237,7 @@
     "Crosslist_With": "STAT7050001; STAT7050001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878934",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7050",
-    "Course_Level": 0.0
+    "Course_Level": 0
   },
   {
     "Course_ID": "STAT7100",
@@ -6627,7 +6263,7 @@
     "Crosslist_With": "STAT7100002",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "STAT7110",
@@ -6653,7 +6289,7 @@
     "Crosslist_With": "STAT5350401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878016",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7110",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "STAT7220",
@@ -6679,7 +6315,7 @@
     "Crosslist_With": "STAT7220001; STAT7220401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878185",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7220",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "STAT7230",
@@ -6705,7 +6341,7 @@
     "Crosslist_With": "STAT7230001; STAT4230401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1867980",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7230",
-    "Course_Level": 2.0
+    "Course_Level": 2
   },
   {
     "Course_ID": "STAT7700",
@@ -6731,7 +6367,7 @@
     "Crosslist_With": "STAT4700401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1868009",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7700",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "STAT7730",
@@ -6757,7 +6393,7 @@
     "Crosslist_With": "STAT7730001",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "STAT7760",
@@ -6783,7 +6419,7 @@
     "Crosslist_With": "MKTG4760401",
     "Canvas_URL": null,
     "Syllabi_URL": null,
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "STAT7770",
@@ -6809,7 +6445,7 @@
     "Crosslist_With": "STAT7770401; STAT7770401",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1878248",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT7770",
-    "Course_Level": 7.0
+    "Course_Level": 7
   },
   {
     "Course_ID": "STAT8990",
@@ -6835,7 +6471,7 @@
     "Crosslist_With": "STAT8990001; STAT8990001",
     "Canvas_URL": null,
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=STAT8990",
-    "Course_Level": 9.0
+    "Course_Level": 9
   },
   {
     "Course_ID": "WHCP6160",
@@ -6861,7 +6497,7 @@
     "Crosslist_With": "WHCP6160001; WHCP6160001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876801",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=WHCP6160",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "WHCP6180",
@@ -6887,7 +6523,7 @@
     "Crosslist_With": "WHCP6180001; WHCP6180001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876824",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=WHCP6180",
-    "Course_Level": 1.0
+    "Course_Level": 1
   },
   {
     "Course_ID": "WHCP6210",
@@ -6913,6 +6549,6 @@
     "Crosslist_With": "WHCP6210001",
     "Canvas_URL": "https://canvas.upenn.edu/courses/1876826",
     "Syllabi_URL": "https://apps.wharton.upenn.edu/syllabi/?term=202530&course=WHCP6210",
-    "Course_Level": 2.0
+    "Course_Level": 2
   }
 ]
