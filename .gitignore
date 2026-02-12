@@ -3,8 +3,9 @@
 .AppleDouble
 .LSOverride
 
-# Claude
-.claude/
+# Claude (keep shared commands, ignore user-specific config)
+.claude/*
+!.claude/commands/
 
 # Python
 __pycache__/
