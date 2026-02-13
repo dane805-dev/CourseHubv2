@@ -21,6 +21,7 @@ interface PlanState {
   // Actions
   loadPlan: (planId: string, placements: Placement[]) => void;
   addToStaging: (courseId: string, creditUnits?: number) => void;
+  addToQuarter: (courseId: string, quarterId: QuarterId, creditUnits?: number, index?: number) => void;
   moveToQuarter: (courseId: string, quarterId: QuarterId, index?: number) => void;
   moveToStaging: (courseId: string) => void;
   removeCourse: (courseId: string) => void;
@@ -97,6 +98,33 @@ export const usePlanStore = create<PlanState>()(
           creditUnits: cu,
         };
         state.stagingOrder.push(courseId);
+        state.isDirty = true;
+      });
+    },
+
+    addToQuarter: (courseId, quarterId, creditUnits, index) => {
+      set((state) => {
+        if (state.placements[courseId]) return; // Already in plan
+
+        const cu = creditUnits ?? getCreditUnits(courseId) ?? 1.0;
+        const targetOrder = state.quarterOrder[quarterId];
+        const insertAt = index !== undefined ? index : targetOrder.length;
+
+        state.placements[courseId] = {
+          courseId,
+          location: quarterId,
+          sortOrder: insertAt,
+          creditUnits: cu,
+        };
+        targetOrder.splice(insertAt, 0, courseId);
+
+        // Reindex sort orders
+        targetOrder.forEach((id, i) => {
+          if (state.placements[id]) {
+            state.placements[id].sortOrder = i;
+          }
+        });
+
         state.isDirty = true;
       });
     },

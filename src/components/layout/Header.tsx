@@ -41,6 +41,14 @@ export function Header() {
         >
           Progress
         </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setRightPanelView("profile")}
+          className={rightPanelOpen ? "" : "text-muted-foreground"}
+        >
+          Profile
+        </Button>
         <ExportMenu />
         <Button variant="ghost" size="sm" onClick={toggleRightPanel}>
           {rightPanelOpen ? "Close Panel" : "Open Panel"}

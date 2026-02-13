@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { useDraggable } from "@dnd-kit/core";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
@@ -13,10 +14,90 @@ import { getOfferedCourses } from "@/lib/data/course-resolver";
 import { DEPARTMENTS } from "@/lib/data/constants";
 import { findCoreRequirementsForCourse } from "@/lib/data/requirements";
 
-export function CatalogBrowser() {
-  const catalogStore = useCatalogStore();
+function CatalogRow({
+  courseId,
+  title,
+  creditUnits,
+  inPlan,
+}: {
+  courseId: string;
+  title: string;
+  creditUnits: number;
+  inPlan: boolean;
+}) {
   const openCourseModal = useUIStore((s) => s.openCourseModal);
   const addToStaging = usePlanStore((s) => s.addToStaging);
+  const coreReqs = findCoreRequirementsForCourse(courseId);
+
+  const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
+    id: `catalog:${courseId}`,
+    data: { courseId, creditUnits, source: "catalog" },
+    disabled: inPlan,
+  });
+
+  return (
+    <div
+      ref={setNodeRef}
+      {...attributes}
+      {...listeners}
+      className={`flex items-center gap-2 p-2 rounded-md border transition-colors ${
+        inPlan
+          ? "border-primary/30 bg-primary/5 cursor-default"
+          : "border-transparent hover:border-border hover:bg-accent/50 cursor-grab active:cursor-grabbing"
+      }`}
+      style={{ opacity: isDragging ? 0.5 : 1 }}
+      onClick={() => openCourseModal(courseId)}
+    >
+      <div className="flex-1 min-w-0">
+        <div className="flex items-center gap-1.5">
+          <span className="text-xs font-mono font-semibold">
+            {courseId}
+          </span>
+          {coreReqs.length > 0 && (
+            <Badge
+              variant="secondary"
+              className="text-[10px] px-1 py-0 h-4"
+            >
+              {coreReqs[0].core_type === "fixed" ? "Core" : "Flex"}
+            </Badge>
+          )}
+          {inPlan && (
+            <Badge
+              variant="outline"
+              className="text-[10px] px-1 py-0 h-4 text-primary"
+            >
+              In Plan
+            </Badge>
+          )}
+        </div>
+        <div className="text-xs text-muted-foreground truncate">
+          {title}
+        </div>
+      </div>
+      <div className="flex items-center gap-2 shrink-0">
+        <span className="text-xs font-mono text-muted-foreground">
+          {creditUnits.toFixed(1)}
+        </span>
+        {!inPlan && (
+          <Button
+            variant="ghost"
+            size="sm"
+            className="h-6 text-xs px-2"
+            onClick={(e) => {
+              e.stopPropagation();
+              addToStaging(courseId, creditUnits);
+            }}
+          >
+            + Add
+          </Button>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export function CatalogBrowser() {
+  const catalogStore = useCatalogStore();
   const isInPlan = usePlanStore((s) => s.isInPlan);
 
   // Load courses on mount
@@ -91,67 +172,15 @@ export function CatalogBrowser() {
 
       <ScrollArea className="flex-1">
         <div className="p-2 space-y-1">
-          {filtered.map((course) => {
-            const inPlan = isInPlan(course.courseId);
-            const coreReqs = findCoreRequirementsForCourse(course.courseId);
-
-            return (
-              <div
-                key={course.courseId}
-                className={`flex items-center gap-2 p-2 rounded-md border cursor-pointer transition-colors ${
-                  inPlan
-                    ? "border-primary/30 bg-primary/5"
-                    : "border-transparent hover:border-border hover:bg-accent/50"
-                }`}
-                onClick={() => openCourseModal(course.courseId)}
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-1.5">
-                    <span className="text-xs font-mono font-semibold">
-                      {course.courseId}
-                    </span>
-                    {coreReqs.length > 0 && (
-                      <Badge
-                        variant="secondary"
-                        className="text-[10px] px-1 py-0 h-4"
-                      >
-                        {coreReqs[0].core_type === "fixed" ? "Core" : "Flex"}
-                      </Badge>
-                    )}
-                    {inPlan && (
-                      <Badge
-                        variant="outline"
-                        className="text-[10px] px-1 py-0 h-4 text-primary"
-                      >
-                        In Plan
-                      </Badge>
-                    )}
-                  </div>
-                  <div className="text-xs text-muted-foreground truncate">
-                    {course.title}
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 shrink-0">
-                  <span className="text-xs font-mono text-muted-foreground">
-                    {course.creditUnits.toFixed(1)}
-                  </span>
-                  {!inPlan && (
-                    <Button
-                      variant="ghost"
-                      size="sm"
-                      className="h-6 text-xs px-2"
-                      onClick={(e) => {
-                        e.stopPropagation();
-                        addToStaging(course.courseId, course.creditUnits);
-                      }}
-                    >
-                      + Add
-                    </Button>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+          {filtered.map((course) => (
+            <CatalogRow
+              key={course.courseId}
+              courseId={course.courseId}
+              title={course.title}
+              creditUnits={course.creditUnits}
+              inPlan={isInPlan(course.courseId)}
+            />
+          ))}
         </div>
       </ScrollArea>
     </div>
