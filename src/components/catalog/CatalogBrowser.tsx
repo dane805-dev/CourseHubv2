@@ -10,9 +10,10 @@ import { ScrollArea } from "@/components/ui/scroll-area";
 import { useCatalogStore } from "@/stores/catalog-store";
 import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
+import { useProfileStore } from "@/stores/profile-store";
 import { getOfferedCourses } from "@/lib/data/course-resolver";
 import { DEPARTMENTS } from "@/lib/data/constants";
-import { findCoreRequirementsForCourse } from "@/lib/data/requirements";
+import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/requirements";
 
 function CatalogRow({
   courseId,
@@ -27,7 +28,10 @@ function CatalogRow({
 }) {
   const openCourseModal = useUIStore((s) => s.openCourseModal);
   const addToStaging = usePlanStore((s) => s.addToStaging);
+  const declaredMajors = useProfileStore((s) => s.majors);
   const coreReqs = findCoreRequirementsForCourse(courseId);
+  const courseMajors = findMajorsForCourse(courseId);
+  const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
 
   const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
     id: `catalog:${courseId}`,
@@ -58,7 +62,15 @@ function CatalogRow({
               variant="secondary"
               className="text-[10px] px-1 py-0 h-4"
             >
-              {coreReqs[0].core_type === "fixed" ? "Core" : "Flex"}
+              {coreReqs[0].core_type === "fixed" ? "Fixed" : "Flex"}
+            </Badge>
+          )}
+          {isForMajor && (
+            <Badge
+              variant="secondary"
+              className="text-[10px] px-1 py-0 h-4"
+            >
+              Major
             </Badge>
           )}
           {inPlan && (

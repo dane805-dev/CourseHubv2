@@ -21,16 +21,18 @@ import { ProfilePanel } from "@/components/profile/ProfilePanel";
 import { CourseModal } from "@/components/course/CourseModal";
 import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
+import { useProfileStore } from "@/stores/profile-store";
 import { QUARTER_IDS } from "@/types/plan";
 import type { QuarterId } from "@/types/plan";
 import { Badge } from "@/components/ui/badge";
 import { resolveCourse } from "@/lib/data/course-resolver";
-import { findCoreRequirementsForCourse } from "@/lib/data/requirements";
+import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/requirements";
 
 export default function PlanPage() {
   const rightPanelView = useUIStore((s) => s.rightPanelView);
   const [activeId, setActiveId] = useState<string | null>(null);
   const planStore = usePlanStore();
+  const declaredMajors = useProfileStore((s) => s.majors);
 
   const sensors = useSensors(
     useSensor(PointerSensor, {
@@ -148,6 +150,8 @@ export default function PlanPage() {
     const coreReqs = findCoreRequirementsForCourse(courseId);
     const isCore = coreReqs.length > 0;
     const isFlex = coreReqs.some((r) => r.core_type === "flex");
+    const courseMajors = findMajorsForCourse(courseId);
+    const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
 
     return (
       <div className="flex items-center gap-2 p-2 rounded-md border border-border bg-card shadow-lg cursor-grabbing w-64">
@@ -158,7 +162,12 @@ export default function PlanPage() {
             </span>
             {isCore && (
               <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
-                {isFlex ? "Flex" : "Core"}
+                {isFlex ? "Flex" : "Fixed"}
+              </Badge>
+            )}
+            {isForMajor && (
+              <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+                Major
               </Badge>
             )}
           </div>
