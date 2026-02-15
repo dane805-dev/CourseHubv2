@@ -88,6 +88,7 @@ export interface ElectiveCourses {
 export interface RequiredCourses {
   credits_required: number;
   courses: string[];
+  selection_type?: "all" | "choose";
 }
 
 export interface Pillar {

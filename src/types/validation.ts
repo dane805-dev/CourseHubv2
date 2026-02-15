@@ -54,6 +54,7 @@ export interface MajorProgress {
     creditsSatisfied: number;
     satisfyingCourses: string[];
     missingCourses: string[];
+    selectionType?: "all" | "choose";
   };
   electiveCoursesProgress?: {
     creditsRequired: number;

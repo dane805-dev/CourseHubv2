@@ -140,7 +140,8 @@ function MajorProgressView({ progress }: { progress: MajorProgress }) {
             <div className="text-[10px] text-muted-foreground">
               {progress.requiredCoursesProgress.creditsSatisfied.toFixed(1)} / {progress.requiredCoursesProgress.creditsRequired.toFixed(1)} CU
             </div>
-            {progress.requiredCoursesProgress.missingCourses.length > 0 && (
+            {progress.requiredCoursesProgress.selectionType !== "choose" &&
+              progress.requiredCoursesProgress.missingCourses.length > 0 && (
               <div className="text-[10px] text-destructive mt-1">
                 Missing: {progress.requiredCoursesProgress.missingCourses.join(", ")}
               </div>

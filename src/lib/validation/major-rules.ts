@@ -133,24 +133,40 @@ function validateCombined(
   const reqs = major.requirements as CombinedRequirements;
 
   // Required courses
+  const selectionType = reqs.required_courses.selection_type ?? "all";
   const reqMatching = findMatchingCourses(
     input.allCourseIds,
     reqs.required_courses.courses
   );
   const reqCU = sumCreditUnits(reqMatching);
-  const reqMissing = reqs.required_courses.courses.filter(
-    (c) => !input.allCourseIds.includes(c)
-  );
+  let reqMissing: string[] = [];
 
-  // For BUAN: required_courses.credits_required is 0.0 (they are prerequisites, not major CU)
-  // We still want to check they're present
-  if (reqs.required_courses.credits_required > 0 && reqCU < reqs.required_courses.credits_required) {
-    errors.push({
-      type: "missing_major_required",
-      message: `${major.major_name}: required courses incomplete (${reqCU}/${reqs.required_courses.credits_required} CU)`,
-      requirementCode: major.major_code,
-      courseIds: reqMissing,
-    });
+  if (selectionType === "all") {
+    // "all" mode: report each missing course by name
+    reqMissing = reqs.required_courses.courses.filter(
+      (c) => !input.allCourseIds.includes(c)
+    );
+
+    // For BUAN: required_courses.credits_required is 0.0 (they are prerequisites, not major CU)
+    // We still want to check they're present
+    if (reqs.required_courses.credits_required > 0 && reqCU < reqs.required_courses.credits_required) {
+      errors.push({
+        type: "missing_major_required",
+        message: `${major.major_name}: required courses incomplete (${reqCU}/${reqs.required_courses.credits_required} CU)`,
+        requirementCode: major.major_code,
+        courseIds: reqMissing,
+      });
+    }
+  } else {
+    // "choose" mode: only check CU threshold, no per-course missing list
+    if (reqs.required_courses.credits_required > 0 && reqCU < reqs.required_courses.credits_required) {
+      const needed = reqs.required_courses.credits_required - reqCU;
+      errors.push({
+        type: "missing_major_required",
+        message: `${major.major_name}: need ${needed} more CU of required courses`,
+        requirementCode: major.major_code,
+      });
+    }
   }
 
   // Elective courses
@@ -209,6 +225,7 @@ function validateCombined(
         creditsSatisfied: reqCU,
         satisfyingCourses: reqMatching,
         missingCourses: reqMissing,
+        selectionType,
       },
       electiveCoursesProgress: {
         creditsRequired: reqs.elective_courses.credits_required,
@@ -311,22 +328,36 @@ function validateCombinedPillars(
   const reqs = major.requirements as CombinedPillarsRequirements;
 
   // Required courses
+  const selectionType = reqs.required_courses.selection_type ?? "all";
   const reqMatching = findMatchingCourses(
     input.allCourseIds,
     reqs.required_courses.courses
   );
   const reqCU = sumCreditUnits(reqMatching);
-  const reqMissing = reqs.required_courses.courses.filter(
-    (c) => !input.allCourseIds.includes(c)
-  );
+  let reqMissing: string[] = [];
 
-  if (reqCU < reqs.required_courses.credits_required) {
-    errors.push({
-      type: "missing_major_required",
-      message: `${major.major_name}: required courses incomplete (${reqCU}/${reqs.required_courses.credits_required} CU)`,
-      requirementCode: major.major_code,
-      courseIds: reqMissing,
-    });
+  if (selectionType === "all") {
+    reqMissing = reqs.required_courses.courses.filter(
+      (c) => !input.allCourseIds.includes(c)
+    );
+
+    if (reqCU < reqs.required_courses.credits_required) {
+      errors.push({
+        type: "missing_major_required",
+        message: `${major.major_name}: required courses incomplete (${reqCU}/${reqs.required_courses.credits_required} CU)`,
+        requirementCode: major.major_code,
+        courseIds: reqMissing,
+      });
+    }
+  } else {
+    if (reqCU < reqs.required_courses.credits_required) {
+      const needed = reqs.required_courses.credits_required - reqCU;
+      errors.push({
+        type: "missing_major_required",
+        message: `${major.major_name}: need ${needed} more CU of required courses`,
+        requirementCode: major.major_code,
+      });
+    }
   }
 
   // Pillars
@@ -378,6 +409,7 @@ function validateCombinedPillars(
         creditsSatisfied: reqCU,
         satisfyingCourses: reqMatching,
         missingCourses: reqMissing,
+        selectionType,
       },
       pillarProgress,
     },
