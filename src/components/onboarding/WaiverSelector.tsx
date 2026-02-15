@@ -3,8 +3,8 @@
 import { Checkbox } from "@/components/ui/checkbox";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Label } from "@/components/ui/label";
-import { WAIVABLE_CORE_CODES } from "@/types/user";
-import { getCoreRequirement } from "@/lib/data/requirements";
+import { getWaivableCoreRequirements } from "@/lib/data/requirements";
+import type { CoreRequirement } from "@/types/requirements";
 import type { WaiverConfig, WaiverType } from "@/types/user";
 
 interface WaiverSelectorProps {
@@ -13,10 +13,21 @@ interface WaiverSelectorProps {
 }
 
 const WAIVER_TYPE_LABELS: Record<WaiverType, string> = {
-  full: "Full Waiver",
-  half_credit: "Half-Credit Waiver",
+  waiver: "Waiver",
   substitution: "Substitution",
+  placement: "Placement",
 };
+
+/** Get available waiver types for a core requirement based on its waiver_details */
+function getAvailableTypes(req: CoreRequirement): WaiverType[] {
+  const types: WaiverType[] = [];
+  if (req.waiver_details?.waiver) types.push("waiver");
+  if (req.waiver_details?.substitution) types.push("substitution");
+  if (req.waiver_details?.placement) types.push("placement");
+  return types;
+}
+
+const waivableCores = getWaivableCoreRequirements();
 
 export function WaiverSelector({ selected, onSelect }: WaiverSelectorProps) {
   function isWaived(coreCode: string): boolean {
@@ -24,16 +35,17 @@ export function WaiverSelector({ selected, onSelect }: WaiverSelectorProps) {
   }
 
   function getWaiverType(coreCode: string): WaiverType {
-    return selected.find((w) => w.coreCode === coreCode)?.waiverType ?? "full";
+    return selected.find((w) => w.coreCode === coreCode)?.waiverType ?? "waiver";
   }
 
-  function toggleWaiver(coreCode: string) {
+  function toggleWaiver(coreCode: string, req: CoreRequirement) {
     if (isWaived(coreCode)) {
       onSelect(selected.filter((w) => w.coreCode !== coreCode));
     } else {
+      const types = getAvailableTypes(req);
       onSelect([
         ...selected,
-        { coreCode, waiverType: "full", cuImpact: 0 },
+        { coreCode, waiverType: types[0], cuImpact: 0 },
       ]);
     }
   }
@@ -49,17 +61,15 @@ export function WaiverSelector({ selected, onSelect }: WaiverSelectorProps) {
   return (
     <div className="space-y-4">
       <p className="text-sm text-muted-foreground">
-        Select any core courses you have waived. This is optional.
+        Select any core courses you have waived, substituted, or placed into. This is optional.
       </p>
-      {WAIVABLE_CORE_CODES.map((coreCode) => {
-        const req = getCoreRequirement(coreCode);
-        if (!req) return null;
-
-        const waived = isWaived(coreCode);
+      {waivableCores.map((req) => {
+        const waived = isWaived(req.core_code);
+        const availableTypes = getAvailableTypes(req);
 
         return (
           <div
-            key={coreCode}
+            key={req.core_code}
             className={`p-4 rounded-lg border space-y-3 ${
               waived ? "border-primary bg-primary/5" : "border-border"
             }`}
@@ -67,7 +77,7 @@ export function WaiverSelector({ selected, onSelect }: WaiverSelectorProps) {
             <label className="flex items-center gap-3 cursor-pointer">
               <Checkbox
                 checked={waived}
-                onCheckedChange={() => toggleWaiver(coreCode)}
+                onCheckedChange={() => toggleWaiver(req.core_code, req)}
               />
               <div>
                 <div className="font-medium text-sm">{req.core_name}</div>
@@ -77,26 +87,34 @@ export function WaiverSelector({ selected, onSelect }: WaiverSelectorProps) {
               </div>
             </label>
 
-            {waived && (
+            {waived && availableTypes.length > 1 && (
               <div className="pl-8 space-y-2">
-                <Label className="text-xs">Waiver Type</Label>
+                <Label className="text-xs">Type</Label>
                 <Select
-                  value={getWaiverType(coreCode)}
+                  value={getWaiverType(req.core_code)}
                   onValueChange={(v) =>
-                    setWaiverType(coreCode, v as WaiverType)
+                    setWaiverType(req.core_code, v as WaiverType)
                   }
                 >
                   <SelectTrigger className="w-full">
                     <SelectValue />
                   </SelectTrigger>
                   <SelectContent>
-                    {Object.entries(WAIVER_TYPE_LABELS).map(([value, label]) => (
-                      <SelectItem key={value} value={value}>
-                        {label}
+                    {availableTypes.map((type) => (
+                      <SelectItem key={type} value={type}>
+                        {WAIVER_TYPE_LABELS[type]}
                       </SelectItem>
                     ))}
                   </SelectContent>
                 </Select>
+              </div>
+            )}
+
+            {waived && availableTypes.length === 1 && (
+              <div className="pl-8">
+                <span className="text-xs text-muted-foreground">
+                  {WAIVER_TYPE_LABELS[availableTypes[0]]}
+                </span>
               </div>
             )}
           </div>

@@ -131,7 +131,7 @@ function handleWaivedCore(
   errors: ValidationError[],
   warnings: ValidationWarning[]
 ): { progress: CoreProgress; errors: ValidationError[]; warnings: ValidationWarning[] } {
-  if (waiver.waiverType === "full") {
+  if (waiver.waiverType === "waiver") {
     // Full waiver — requirement satisfied, no course needed
     return {
       progress: {
@@ -147,15 +147,16 @@ function handleWaivedCore(
     };
   }
 
-  if (waiver.waiverType === "substitution" && req.waiver_details) {
-    // Substitution — student must take an upper-level course from eligible prefixes
-    const eligiblePrefixes = req.waiver_details.substitution_requirement.eligible_course_prefixes;
-    const subCreditsRequired = req.waiver_details.substitution_requirement.credits_required;
+  if (waiver.waiverType === "substitution" && req.waiver_details?.substitution) {
+    const sub = req.waiver_details.substitution;
+    const subCreditsRequired = sub.credits_required;
 
-    // Find substitution courses in the plan
-    const subCourses = input.allCourseIds.filter((cId) =>
-      eligiblePrefixes.some((prefix) => cId.startsWith(prefix))
-    );
+    // Find substitution courses in the plan by prefix or specific course list
+    const subCourses = input.allCourseIds.filter((cId) => {
+      if (sub.eligible_courses && sub.eligible_courses.includes(cId)) return true;
+      if (sub.eligible_course_prefixes && sub.eligible_course_prefixes.some((prefix) => cId.startsWith(prefix))) return true;
+      return false;
+    });
 
     // Also check if the student specified a specific substitution course
     if (waiver.substitutionCourseId && input.allCourseIds.includes(waiver.substitutionCourseId)) {
@@ -181,10 +182,14 @@ function handleWaivedCore(
       };
     }
 
-    // Substitution course not yet in plan
+    // Build descriptive message about eligible substitutions
+    const eligibleDesc = sub.eligible_courses
+      ? sub.eligible_courses.join(", ")
+      : (sub.eligible_course_prefixes ?? []).join("/") + " courses";
+
     errors.push({
       type: "missing_core",
-      message: `${req.core_name} waived but substitution not complete: need ${subCreditsRequired} CU from ${eligiblePrefixes.join("/")} courses`,
+      message: `${req.core_name} substitution not complete: need ${subCreditsRequired} CU from ${eligibleDesc}`,
       requirementCode: req.core_code,
     });
 
@@ -202,8 +207,9 @@ function handleWaivedCore(
     };
   }
 
-  if (waiver.waiverType === "half_credit") {
-    // Half-credit waiver — student takes half-credit version
+  if (waiver.waiverType === "placement") {
+    // Placement — student takes the accelerated/placed version
+    // Check if any matching course is in the plan
     const matchingCourses = req.courses.filter((c) => input.allCourseIds.includes(c));
     const totalCU = matchingCourses.reduce((sum, cId) => sum + (getCreditUnits(cId) ?? 0), 0);
 
@@ -212,7 +218,7 @@ function handleWaivedCore(
         coreCode: req.core_code,
         coreName: req.core_name,
         status: matchingCourses.length > 0 ? "satisfied" : "partial",
-        creditsRequired: req.credits_required / 2,
+        creditsRequired: req.credits_required,
         creditsSatisfied: totalCU,
         satisfyingCourses: matchingCourses,
       },

@@ -65,19 +65,30 @@ interface GeneratePlanInput {
  */
 export function generateInitialPlan(input: GeneratePlanInput): Placement[] {
   const placements: Placement[] = [];
-  const waiveredCoreCodes = new Set(input.waivers.map((w) => w.coreCode));
+  const waiverMap = new Map(input.waivers.map((w) => [w.coreCode, w]));
 
   // Check if finance major — need FNCE6110 and FNCE6130 specifically
   const isFinanceMajor = input.majors.includes("FNCE") || input.majors.includes("QFNC");
 
-  // 1. Place fixed cores (non-waivable)
+  // 1. Place fixed cores (skip waived/substituted ones)
   for (const fixed of FIXED_CORE_PLACEMENTS) {
+    const waiver = waiverMap.get(fixed.coreCode);
+    if (waiver && (waiver.waiverType === "waiver" || waiver.waiverType === "substitution")) continue;
     addPlacement(placements, fixed.courseId, fixed.quarter);
   }
 
-  // 2. Place flex cores (skip waived ones)
+  // 2. Place flex cores (skip waived/substituted ones, handle placements)
   for (const flex of FLEX_CORE_DEFAULTS) {
-    if (waiveredCoreCodes.has(flex.coreCode)) continue;
+    const waiver = waiverMap.get(flex.coreCode);
+
+    // Skip waived or substituted cores
+    if (waiver && (waiver.waiverType === "waiver" || waiver.waiverType === "substitution")) continue;
+
+    // Handle STAT placement: use STAT6210 instead of STAT6130
+    if (waiver?.waiverType === "placement" && flex.coreCode === "STAT_CORE") {
+      addPlacement(placements, "STAT6210", flex.quarter);
+      continue;
+    }
 
     // Finance major overrides
     if (isFinanceMajor) {

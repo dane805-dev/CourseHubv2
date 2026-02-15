@@ -1,12 +1,26 @@
 // ─── Core Requirements ───
 
+export interface WaiverMethodOption {
+  methods: ("credential" | "exam")[];
+}
+
+export interface SubstitutionOption {
+  methods: ("credential" | "exam")[];
+  credits_required: number;
+  description: string;
+  eligible_courses?: string[];
+  eligible_course_prefixes?: string[];
+}
+
+export interface PlacementOption {
+  methods: ("exam")[];
+  description: string;
+}
+
 export interface WaiverDetails {
-  waiver_method: string;
-  substitution_requirement: {
-    credits_required: number;
-    description: string;
-    eligible_course_prefixes: string[];
-  };
+  waiver?: WaiverMethodOption;
+  substitution?: SubstitutionOption;
+  placement?: PlacementOption;
 }
 
 export interface CoreRequirement {

@@ -118,7 +118,7 @@ export function ProfilePanel() {
                 <div key={w.coreCode} className="flex items-center gap-2">
                   <Badge variant="outline">{w.coreCode}</Badge>
                   <span className="text-xs text-muted-foreground capitalize">
-                    {w.waiverType.replace("_", " ")}
+                    {w.waiverType}
                   </span>
                 </div>
               ))}
