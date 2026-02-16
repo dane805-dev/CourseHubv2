@@ -891,7 +891,7 @@
             "pillar_name": "General Electives",
             "pillar_code": "GEN",
             "credits_required": 4.0,
-            "credits_type": "combined_with_other_pillars",
+            "credits_type": "minimum",
             "courses": [
               "ACCT7300",
               "BEPP7880",
