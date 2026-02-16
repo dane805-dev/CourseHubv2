@@ -81,6 +81,7 @@ export function getMajorCourseIds(majorCode: string): string[] {
   if ("elective_courses" in reqs) {
     reqs.elective_courses.courses.forEach((c) => courseIds.add(c));
     reqs.elective_courses.non_wharton_courses?.forEach((c) => courseIds.add(c));
+    reqs.elective_courses.additional_courses?.courses.forEach((c) => courseIds.add(c));
   }
   if ("pillars" in reqs) {
     reqs.pillars.forEach((p) => p.courses.forEach((c) => courseIds.add(c)));

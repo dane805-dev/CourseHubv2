@@ -78,11 +78,18 @@ export interface CoreRequirementsFile {
 
 export type RequirementStructure = "ELECTIVES" | "COMBINED" | "PILLARS" | "COMBINED_PILLARS";
 
+export interface AdditionalCourses {
+  courses: string[];
+  max_credits?: number;
+  description?: string;
+}
+
 export interface ElectiveCourses {
   credits_required: number;
   courses: string[];
   non_wharton_max_credits?: number;
   non_wharton_courses?: string[];
+  additional_courses?: AdditionalCourses;
 }
 
 export interface RequiredCourses {

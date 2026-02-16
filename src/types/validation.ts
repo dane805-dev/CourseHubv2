@@ -68,6 +68,7 @@ export interface MajorProgress {
     creditsSatisfied: number;
     creditsType?: string;
     satisfyingCourses: string[];
+    missingCourses?: string[];
   }[];
 }
 

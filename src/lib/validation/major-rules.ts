@@ -83,6 +83,9 @@ function validateElectives(
     matching.push(...nonWhartonMatching);
   }
 
+  // Handle additional courses pool
+  handleAdditionalCourses(input.allCourseIds, reqs.elective_courses, matching, major, warnings);
+
   const totalCU = sumCreditUnits(matching);
 
   // Check ISP/Global Modular cap
@@ -158,7 +161,10 @@ function validateCombined(
       });
     }
   } else {
-    // "choose" mode: only check CU threshold, no per-course missing list
+    // "choose" mode: report remaining options (not yet taken)
+    reqMissing = reqs.required_courses.courses.filter(
+      (c) => !input.allCourseIds.includes(c)
+    );
     if (reqs.required_courses.credits_required > 0 && reqCU < reqs.required_courses.credits_required) {
       const needed = reqs.required_courses.credits_required - reqCU;
       errors.push({
@@ -193,6 +199,9 @@ function validateCombined(
     }
     electMatching.push(...nonWhartonMatching);
   }
+
+  // Handle additional courses pool
+  handleAdditionalCourses(input.allCourseIds, reqs.elective_courses, electMatching, major, warnings);
 
   const electCU = sumCreditUnits(electMatching);
 
@@ -254,6 +263,7 @@ function validatePillars(
   for (const pillar of reqs.pillars) {
     const matching = findMatchingCourses(input.allCourseIds, pillar.courses);
     const pillarCU = sumCreditUnits(matching);
+    const missing = pillar.courses.filter((c) => !input.allCourseIds.includes(c));
 
     pillarProgress.push({
       pillarCode: pillar.pillar_code,
@@ -262,6 +272,7 @@ function validatePillars(
       creditsSatisfied: pillarCU,
       creditsType: pillar.credits_type,
       satisfyingCourses: matching,
+      missingCourses: missing,
     });
 
     if (pillar.credits_type === "minimum" && pillarCU < pillar.credits_required) {
@@ -350,6 +361,10 @@ function validateCombinedPillars(
       });
     }
   } else {
+    // "choose" mode: report remaining options (not yet taken)
+    reqMissing = reqs.required_courses.courses.filter(
+      (c) => !input.allCourseIds.includes(c)
+    );
     if (reqCU < reqs.required_courses.credits_required) {
       const needed = reqs.required_courses.credits_required - reqCU;
       errors.push({
@@ -367,6 +382,7 @@ function validateCombinedPillars(
   for (const pillar of reqs.pillars) {
     const matching = findMatchingCourses(input.allCourseIds, pillar.courses);
     const pillarCU = sumCreditUnits(matching);
+    const missing = pillar.courses.filter((c) => !input.allCourseIds.includes(c));
 
     pillarProgress.push({
       pillarCode: pillar.pillar_code,
@@ -375,6 +391,7 @@ function validateCombinedPillars(
       creditsSatisfied: pillarCU,
       creditsType: pillar.credits_type,
       satisfyingCourses: matching,
+      missingCourses: missing,
     });
 
     if (pillarCU < pillar.credits_required) {
@@ -419,6 +436,39 @@ function validateCombinedPillars(
 }
 
 // ─── Helper Functions ───
+
+/**
+ * Handle additional_courses pool for elective requirements.
+ * Pushes non-overlapping matches into the matching array and warns if cap exceeded.
+ */
+function handleAdditionalCourses(
+  allCourseIds: string[],
+  elective: { additional_courses?: { courses: string[]; max_credits?: number; description?: string } },
+  existingMatching: string[],
+  major: MajorRequirement,
+  warnings: ValidationWarning[]
+): void {
+  if (!elective.additional_courses) return;
+
+  const additionalMatching = findMatchingCourses(
+    allCourseIds,
+    elective.additional_courses.courses
+  );
+  // Cap check uses ALL matches from the pool (including courses also on primary list)
+  const additionalCU = sumCreditUnits(additionalMatching);
+
+  if (elective.additional_courses.max_credits != null && additionalCU > elective.additional_courses.max_credits) {
+    warnings.push({
+      type: "isp_cap",
+      message: `${major.major_name}: additional-pool courses exceed ${elective.additional_courses.max_credits} CU limit (${additionalCU} CU used)`,
+      severity: "medium",
+    });
+  }
+
+  // Only push courses not already counted via the primary list
+  const newCourses = additionalMatching.filter((c) => !existingMatching.includes(c));
+  existingMatching.push(...newCourses);
+}
 
 function findMatchingCourses(planCourseIds: string[], requirementCourseIds: string[]): string[] {
   return planCourseIds.filter((id) => requirementCourseIds.includes(id));

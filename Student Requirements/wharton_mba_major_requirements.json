@@ -17,17 +17,10 @@
       "major_name": "Accounting",
       "major_code": "ACCT",
       "total_credits_required": 4.0,
-      "requirement_structure": "COMBINED",
+      "requirement_structure": "ELECTIVES",
       "requirements": {
-        "required_courses": {
-          "credits_required": 1.0,
-          "courses": [
-            "ACCT7420"
-          ],
-          "selection_type": "all"
-        },
         "elective_courses": {
-          "credits_required": 3.0,
+          "credits_required": 4.0,
           "courses": [
             "ACCT7060",
             "ACCT7420",
@@ -106,15 +99,13 @@
       "requirement_structure": "COMBINED",
       "requirements": {
         "required_courses": {
-          "credits_required": 0.0,
+          "credits_required": 1.0,
           "courses": [
-            "STAT6130",
-            "STAT6210",
             "OIDD6120",
             "OIDD6110",
             "OIDD6150"
           ],
-          "selection_type": "all"
+          "selection_type": "choose"
         },
         "elective_courses": {
           "credits_required": 4.0,
@@ -704,130 +695,233 @@
       "major_name": "Marketing and Operations Management",
       "major_code": "MKOP",
       "total_credits_required": 7.0,
-      "requirement_structure": "COMBINED",
+      "requirement_structure": "PILLARS",
       "requirements": {
-        "required_courses": {
-          "credits_required": 3.0,
-          "courses": [
-            "MKTG6110",
-            "MKTG6120",
-            "MKTG6130",
-            "OIDD6110",
-            "OIDD6120",
-            "OIDD6130",
-            "OIDD6140",
-            "OIDD6150",
-            "OIDD6620",
-            "OIDD6900",
-            "MKTG7120",
-            "MKTG7710",
-            "MKTG7760",
-            "MKTG8090",
-            "MKTG9400",
-            "MKTG9410",
-            "MKTG9420",
-            "MKTG9430"
-          ],
-          "selection_type": "choose"
-        },
-        "elective_courses": {
-          "credits_required": 4.0,
-          "courses": [
-            "MKTG7110",
-            "MKTG7120",
-            "MKTG7250",
-            "MKTG7270",
-            "MKTG7340",
-            "MKTG7370",
-            "MKTG7380",
-            "MKTG7390",
-            "MKTG7470",
-            "MKTG7520",
-            "MKTG7540",
-            "MKTG7600",
-            "MKTG7680",
-            "MKTG7710",
-            "MKTG7760",
-            "MKTG7770",
-            "MKTG7780",
-            "MKTG7790",
-            "MKTG8060",
-            "MKTG8090",
-            "MKTG8500",
-            "MKTG8520",
-            "MKTG8550",
-            "MKTG8900",
-            "MKTG8950",
-            "MKTG8960",
-            "MKTG8970",
-            "MKTG8990",
-            "OIDD6360",
-            "OIDD6420",
-            "OIDD6430",
-            "OIDD6530",
-            "OIDD6540",
-            "OIDD6590",
-            "OIDD6670",
-            "OIDD6730",
-            "OIDD6750",
-            "OIDD6800",
-            "OIDD6910",
-            "OIDD6920",
-            "OIDD6930",
-            "OIDD6950",
-            "OIDD6970",
-            "OIDD7050",
-            "OIDD7610",
-            "OIDD7620",
-            "OIDD7630",
-            "OIDD7770",
-            "OIDD7820",
-            "OIDD7930",
-            "OIDD8050",
-            "OIDD8950",
-            "OIDD8970"
-          ]
-        }
+        "pillar_count": 6,
+        "pillars": [
+          {
+            "pillar_name": "Marketing Core",
+            "pillar_code": "MKTG_CORE",
+            "credits_required": 1.0,
+            "credits_type": "minimum",
+            "courses": [
+              "MKTG6110",
+              "MKTG6120",
+              "MKTG6130"
+            ]
+          },
+          {
+            "pillar_name": "OID Core",
+            "pillar_code": "OIDD_CORE",
+            "credits_required": 1.0,
+            "credits_type": "minimum",
+            "courses": [
+              "OIDD6110",
+              "OIDD6120",
+              "OIDD6130",
+              "OIDD6140",
+              "OIDD6150",
+              "OIDD6620",
+              "OIDD6900"
+            ]
+          },
+          {
+            "pillar_name": "Marketing Research Course",
+            "pillar_code": "MKTG_RES",
+            "credits_required": 1.0,
+            "credits_type": "minimum",
+            "courses": [
+              "MKTG7120",
+              "MKTG7710",
+              "MKTG7760",
+              "MKTG8090",
+              "MKTG9400",
+              "MKTG9410",
+              "MKTG9420",
+              "MKTG9430"
+            ]
+          },
+          {
+            "pillar_name": "Marketing Electives",
+            "pillar_code": "MKTG_ELEC",
+            "credits_required": 1.0,
+            "credits_type": "minimum",
+            "courses": [
+              "MKTG7110",
+              "MKTG7250",
+              "MKTG7270",
+              "MKTG7340",
+              "MKTG7370",
+              "MKTG7380",
+              "MKTG7390",
+              "MKTG7470",
+              "MKTG7520",
+              "MKTG7540",
+              "MKTG7600",
+              "MKTG7680",
+              "MKTG7770",
+              "MKTG7780",
+              "MKTG7790",
+              "MKTG8060",
+              "MKTG8500",
+              "MKTG8520",
+              "MKTG8550",
+              "MKTG8900",
+              "MKTG8950",
+              "MKTG8960",
+              "MKTG8970",
+              "MKTG8990"
+            ]
+          },
+          {
+            "pillar_name": "OIDD Electives",
+            "pillar_code": "OIDD_ELEC",
+            "credits_required": 2.0,
+            "credits_type": "minimum",
+            "courses": [
+              "OIDD6360",
+              "OIDD6420",
+              "OIDD6430",
+              "OIDD6530",
+              "OIDD6540",
+              "OIDD6590",
+              "OIDD6670",
+              "OIDD6730",
+              "OIDD6750",
+              "OIDD6800",
+              "OIDD6910",
+              "OIDD6920",
+              "OIDD6930",
+              "OIDD6950",
+              "OIDD6970",
+              "OIDD7050",
+              "OIDD7610",
+              "OIDD7620",
+              "OIDD7630",
+              "OIDD7770",
+              "OIDD7820",
+              "OIDD7930",
+              "OIDD8050",
+              "OIDD8950",
+              "OIDD8970"
+            ]
+          },
+          {
+            "pillar_name": "OIDD/Marketing Elective",
+            "pillar_code": "FLEX_ELEC",
+            "credits_required": 1.0,
+            "credits_type": "minimum",
+            "courses": [
+              "MKTG7110",
+              "MKTG7250",
+              "MKTG7270",
+              "MKTG7340",
+              "MKTG7370",
+              "MKTG7380",
+              "MKTG7390",
+              "MKTG7470",
+              "MKTG7520",
+              "MKTG7540",
+              "MKTG7600",
+              "MKTG7680",
+              "MKTG7770",
+              "MKTG7780",
+              "MKTG7790",
+              "MKTG8060",
+              "MKTG8500",
+              "MKTG8520",
+              "MKTG8550",
+              "MKTG8900",
+              "MKTG8950",
+              "MKTG8960",
+              "MKTG8970",
+              "MKTG8990",
+              "OIDD6360",
+              "OIDD6420",
+              "OIDD6430",
+              "OIDD6530",
+              "OIDD6540",
+              "OIDD6590",
+              "OIDD6670",
+              "OIDD6730",
+              "OIDD6750",
+              "OIDD6800",
+              "OIDD6910",
+              "OIDD6920",
+              "OIDD6930",
+              "OIDD6950",
+              "OIDD6970",
+              "OIDD7050",
+              "OIDD7610",
+              "OIDD7620",
+              "OIDD7630",
+              "OIDD7770",
+              "OIDD7820",
+              "OIDD7930",
+              "OIDD8050",
+              "OIDD8950",
+              "OIDD8970"
+            ]
+          }
+        ]
       },
-      "special_notes": "Core requirements: Must take MKTG6110 AND (MKTG6120 OR MKTG6130). Must complete 1.0 CU OIDD flex core from: OIDD6110, OIDD6120, OIDD6130, OIDD6140, OIDD6150, OIDD6620, or OIDD6900. Must take one MKTG research course: MKTG7120 OR MKTG7710 OR MKTG7760 OR MKTG8090 OR both (MKTG9400 AND MKTG9410) OR both (MKTG9420 AND MKTG9430). Elective requirements: Minimum 1.0 CU from MKTG department, minimum 2.0 CU from OIDD department. Cannot declare MAOM with MKTG or OIDD major. Students who waive core MKTG or OIDD course must replace with elective from that department. MKTG course taken for research requirement cannot also count toward MKTG elective requirement. Maximum 1.0 CU from MKTG 8900/8930/8950/8970/8990. MKTG9400/9410/9420/9430 require instructor permission. Courses cannot be taken pass/fail."
+      "special_notes": "Marketing Core: Must take MKTG6110 AND (MKTG6120 OR MKTG6130). OID Core: 1.0 CU from OIDD flex-core courses. Marketing Research: one research course required (MKTG9400/9410 and MKTG9420/9430 must be taken as pairs). Electives: minimum 1.0 CU MKTG + minimum 2.0 CU OIDD, remaining 1.0 CU from either department. Research course cannot also count as MKTG elective. Cannot declare MAOM with MKTG or OIDD major. Maximum 1.0 CU from MKTG 8900/8930/8950/8970/8990. MKTG9400/9410/9420/9430 require instructor permission. Courses cannot be taken pass/fail."
     },
     "MNMG": {
       "major_name": "Multinational Management",
       "major_code": "MNMG",
       "total_credits_required": 4.0,
-      "requirement_structure": "ELECTIVES",
+      "requirement_structure": "PILLARS",
       "requirements": {
-        "elective_courses": {
-          "credits_required": 4.0,
-          "courses": [
-            "ACCT7300",
-            "BEPP7880",
-            "BEPP7890",
-            "BEPP7980",
-            "FNCE7310",
-            "FNCE7320",
-            "HCMG8590",
-            "HCMG8680",
-            "LGST8020",
-            "LGST8200",
-            "LGST8300",
-            "MGMT7150",
-            "MGMT7200",
-            "MGMT7870",
-            "MGMT7880",
-            "MGMT8090",
-            "MGMT8170",
-            "MGMT8710",
-            "MGMT8750",
-            "MKTG7890",
-            "OIDD6730",
-            "REAL7050",
-            "REAL8210",
-            "REAL8900"
-          ]
-        }
+        "pillar_count": 2,
+        "pillars": [
+          {
+            "pillar_name": "MNMG Electives",
+            "pillar_code": "MNMG",
+            "credits_required": 1.5,
+            "credits_type": "minimum",
+            "courses": [
+              "MGMT7150",
+              "MGMT7200",
+              "MGMT8170",
+              "MGMT8710"
+            ]
+          },
+          {
+            "pillar_name": "General Electives",
+            "pillar_code": "GEN",
+            "credits_required": 4.0,
+            "credits_type": "combined_with_other_pillars",
+            "courses": [
+              "ACCT7300",
+              "BEPP7880",
+              "BEPP7890",
+              "BEPP7980",
+              "MGMT7150",
+              "MGMT7200",
+              "MGMT8170",
+              "MGMT8710",
+              "FNCE7310",
+              "FNCE7320",
+              "HCMG8590",
+              "HCMG8680",
+              "LGST8020",
+              "LGST8200",
+              "LGST8300",
+              "MGMT7870",
+              "MGMT7880",
+              "MGMT8090",
+              "MGMT8750",
+              "MKTG7890",
+              "OIDD6730",
+              "REAL7050",
+              "REAL8210",
+              "REAL8900"
+            ]
+          }
+        ]
       },
-      "special_notes": "Core courses MGMT6100 and MGMT6110/6120/6130 are non-waivable. Focus on global strategy and cross-border management. Select 4 CU of MGMT and other courses with international/global focus. Maximum 1.0 CU from Global Modular, Advanced Study, or Independent Study combined. All courses must be taken for letter grade."
+      "special_notes": "Core courses MGMT6100 and MGMT6110/6120/6130 are non-waivable. At least 1.5 CU must come from MNMG-specific electives (MGMT7150, MGMT7200, MGMT8170, MGMT8710). Focus on global strategy and cross-border management. Maximum 1.0 CU from Global Modular, Advanced Study, or Independent Study combined. All courses must be taken for letter grade."
     },
     "OIDD": {
       "major_name": "Operations, Information and Decisions",
@@ -838,16 +932,23 @@
         "elective_courses": {
           "credits_required": 5.0,
           "courses": [
+            "OIDD6110",
+            "OIDD6120",
+            "OIDD6130",
+            "OIDD6140",
+            "OIDD6150",
             "OIDD6360",
             "OIDD6420",
             "OIDD6430",
             "OIDD6530",
             "OIDD6540",
             "OIDD6590",
+            "OIDD6620",
             "OIDD6670",
             "OIDD6730",
             "OIDD6750",
             "OIDD6800",
+            "OIDD6900",
             "OIDD6910",
             "OIDD6920",
             "OIDD6930",
@@ -895,7 +996,12 @@
             "MGMT8020",
             "MGMT8160",
             "MGMT8920"
-          ]
+          ],
+          "additional_courses": {
+            "courses": ["MGMT6920", "MGMT7820", "MGMT8020"],
+            "max_credits": 1.0,
+            "description": "No more than 1.0 CU from the following"
+          }
         }
       },
       "special_notes": "Core courses MGMT6100 and MGMT6110/6120/6130 are non-waivable. Focus on organizational behavior, HR, and culture. Select 4 CU of MGMT courses focused on people, culture, and organizational design. Maximum 1.0 CU from Global Modular, Advanced Study, or Independent Study combined. All courses must be taken for letter grade."
@@ -926,7 +1032,11 @@
             "FNCE7570",
             "FNCE8920",
             "OIDD6530"
-          ]
+          ],
+          "additional_courses": {
+            "courses": ["FNCE9210", "ACCT7470", "OIDD6530", "STAT5330", "STAT7110"],
+            "description": "Additional eligible courses for remaining elective CU"
+          }
         }
       },
       "special_notes": "FNCE6110 may be substituted with upper-level finance course for qualifying students. FNCE6130 may be substituted with FNCE7190, FNCE7320, or FNCE7400 for students with strong macro background. Choose 4 CU from upper-level FNCE courses with quantitative/analytical focus. Cannot declare both QFNC and FNCE majors. Emphasis on mathematical and statistical methods. Maximum 1 CU from ISP or Global Modular. Courses cannot be taken pass/fail."
@@ -1001,7 +1111,12 @@
             "REAL7300",
             "FNCE7300",
             "BEPP7300"
-          ]
+          ],
+          "additional_courses": {
+            "courses": ["BEPP7640", "BEPP7610", "BEPP7630", "FNCE7560", "LGST8150", "LGST6470", "LGST7620", "MGMT7230", "MGMT8970", "OIDD5250"],
+            "max_credits": 1.0,
+            "description": "Up to 1.0 CU from the Environmental class list"
+          }
         }
       },
       "special_notes": "Cannot declare both ESGB and SOGO majors. Focus on social impact and governance without environmental component. Courses cannot be taken pass/fail."
@@ -1058,7 +1173,12 @@
             "MGMT8320",
             "MGMT8710",
             "MGMT8750"
-          ]
+          ],
+          "additional_courses": {
+            "courses": ["LGST7290", "LGST8150", "MGMT6250", "MGMT7150", "MGMT7200", "MGMT7730", "MGMT8020", "MGMT8110", "MGMT8140", "MGMT8320", "MGMT8920", "MKTG7770", "OIDD6360"],
+            "max_credits": 1.0,
+            "description": "No more than 1.0 CU from the following"
+          }
         }
       },
       "special_notes": "Core courses MGMT6100 and MGMT6110/6120/6130 are non-waivable. Focus on competitive strategy and corporate strategy. Select 4 CU of MGMT courses focused on strategy formulation and implementation. Maximum 1.0 CU from Global Modular, Advanced Study, or Independent Study combined. All courses must be taken for letter grade."
