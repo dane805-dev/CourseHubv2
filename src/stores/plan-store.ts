@@ -3,7 +3,7 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { Placement, PlanLocation, QuarterId } from "@/types/plan";
-import { QUARTER_IDS } from "@/types/plan";
+import { QUARTER_IDS, normalizeQuarterForCourse } from "@/types/plan";
 import { getCreditUnits } from "@/lib/data/course-resolver";
 
 interface PlanState {
@@ -107,12 +107,13 @@ export const usePlanStore = create<PlanState>()(
         if (state.placements[courseId]) return; // Already in plan
 
         const cu = creditUnits ?? getCreditUnits(courseId) ?? 1.0;
-        const targetOrder = state.quarterOrder[quarterId];
+        const normalizedQuarterId = normalizeQuarterForCourse(quarterId, cu);
+        const targetOrder = state.quarterOrder[normalizedQuarterId];
         const insertAt = index !== undefined ? index : targetOrder.length;
 
         state.placements[courseId] = {
           courseId,
-          location: quarterId,
+          location: normalizedQuarterId,
           sortOrder: insertAt,
           creditUnits: cu,
         };
@@ -134,6 +135,8 @@ export const usePlanStore = create<PlanState>()(
         const existing = state.placements[courseId];
         if (!existing) return;
 
+        const normalizedQuarterId = normalizeQuarterForCourse(quarterId, existing.creditUnits);
+
         // Remove from current location
         if (existing.location === "staging") {
           state.stagingOrder = state.stagingOrder.filter((id) => id !== courseId);
@@ -145,12 +148,12 @@ export const usePlanStore = create<PlanState>()(
         }
 
         // Add to new quarter
-        const targetOrder = state.quarterOrder[quarterId];
+        const targetOrder = state.quarterOrder[normalizedQuarterId];
         const insertAt = index !== undefined ? index : targetOrder.length;
         targetOrder.splice(insertAt, 0, courseId);
 
         // Update placement
-        existing.location = quarterId;
+        existing.location = normalizedQuarterId;
         existing.sortOrder = insertAt;
 
         // Reindex sort orders

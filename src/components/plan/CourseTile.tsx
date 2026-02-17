@@ -9,6 +9,7 @@ import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
 import { useProfileStore } from "@/stores/profile-store";
 import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/requirements";
+import { isSemesterLong } from "@/types/plan";
 
 interface CourseTileProps {
   courseId: string;
@@ -47,6 +48,7 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
   const isFlex = coreReqs.some((r) => r.core_type === "flex");
   const courseMajors = findMajorsForCourse(courseId);
   const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
+  const isSemester = isSemesterLong(course.creditUnits);
 
   return (
     <div
@@ -88,6 +90,11 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
           <span className="text-xs font-mono font-semibold truncate">
             {courseId}
           </span>
+          {isSemester && (
+            <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+              Semester
+            </Badge>
+          )}
           {isCore && (
             <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
               {isFlex ? "Flex" : "Fixed"}
