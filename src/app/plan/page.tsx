@@ -64,6 +64,16 @@ export default function PlanPage() {
     const activeIdStr = active.id as string;
     const overId = over.id as string;
 
+    // Resolve semester-long zone droppable IDs (e.g. "semester-long:Y1F_Q1") to the Q1 quarter ID
+    function resolveSemesterLongDrop(id: string): string {
+      if (id.startsWith("semester-long:")) {
+        return id.replace("semester-long:", "");
+      }
+      return id;
+    }
+
+    const resolvedOverId = resolveSemesterLongDrop(overId);
+
     // Branch A: Catalog drag (new course from catalog)
     if (activeIdStr.startsWith("catalog:")) {
       const courseId = activeIdStr.replace("catalog:", "");
@@ -74,10 +84,10 @@ export default function PlanPage() {
 
       // Determine target container
       let targetContainer: string | null = null;
-      if (overId === "staging" || QUARTER_IDS.includes(overId as QuarterId)) {
-        targetContainer = overId;
+      if (resolvedOverId === "staging" || QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
+        targetContainer = resolvedOverId;
       } else {
-        targetContainer = findContainer(overId);
+        targetContainer = findContainer(resolvedOverId);
       }
       if (!targetContainer) return;
 
@@ -86,7 +96,7 @@ export default function PlanPage() {
       } else {
         const qId = targetContainer as QuarterId;
         const order = planStore.quarterOrder[qId];
-        const overIdx = order.indexOf(overId);
+        const overIdx = order.indexOf(resolvedOverId);
         const insertAt = overIdx !== -1 ? overIdx : order.length;
         planStore.addToQuarter(courseId, qId, creditUnits, insertAt);
       }
@@ -98,10 +108,10 @@ export default function PlanPage() {
 
     // Determine target container
     let targetContainer: string;
-    if (overId === "staging" || QUARTER_IDS.includes(overId as QuarterId)) {
-      targetContainer = overId;
+    if (resolvedOverId === "staging" || QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
+      targetContainer = resolvedOverId;
     } else {
-      const overContainer = findContainer(overId);
+      const overContainer = findContainer(resolvedOverId);
       if (!overContainer) return;
       targetContainer = overContainer;
     }
@@ -110,7 +120,7 @@ export default function PlanPage() {
       // Reorder within same container
       if (targetContainer === "staging") {
         const oldIdx = planStore.stagingOrder.indexOf(activeIdStr);
-        const newIdx = planStore.stagingOrder.indexOf(overId);
+        const newIdx = planStore.stagingOrder.indexOf(resolvedOverId);
         if (oldIdx !== -1 && newIdx !== -1 && oldIdx !== newIdx) {
           planStore.reorderInStaging(oldIdx, newIdx);
         }
@@ -118,7 +128,7 @@ export default function PlanPage() {
         const qId = targetContainer as QuarterId;
         const order = planStore.quarterOrder[qId];
         const oldIdx = order.indexOf(activeIdStr);
-        const newIdx = order.indexOf(overId);
+        const newIdx = order.indexOf(resolvedOverId);
         if (oldIdx !== -1 && newIdx !== -1 && oldIdx !== newIdx) {
           planStore.reorderInQuarter(qId, oldIdx, newIdx);
         }
@@ -130,7 +140,7 @@ export default function PlanPage() {
       } else {
         const qId = targetContainer as QuarterId;
         const order = planStore.quarterOrder[qId];
-        const overIdx = order.indexOf(overId);
+        const overIdx = order.indexOf(resolvedOverId);
         const insertAt = overIdx !== -1 ? overIdx : order.length;
         planStore.moveToQuarter(activeIdStr, qId, insertAt);
       }
