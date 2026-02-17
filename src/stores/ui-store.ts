@@ -3,7 +3,7 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 
-type RightPanelView = "catalog" | "progress" | "profile";
+type RightPanelView = "catalog" | "progress" | "profile" | "chat";
 
 interface UIState {
   // Modal
