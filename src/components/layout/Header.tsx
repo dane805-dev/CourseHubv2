@@ -11,6 +11,7 @@ export function Header() {
   const isSaving = usePlanStore((s) => s.isSaving);
   const toggleRightPanel = useUIStore((s) => s.toggleRightPanel);
   const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
+  const rightPanelView = useUIStore((s) => s.rightPanelView);
   const setRightPanelView = useUIStore((s) => s.setRightPanelView);
 
   return (
@@ -29,7 +30,7 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("catalog")}
-          className={rightPanelOpen ? "" : "text-muted-foreground"}
+          className={rightPanelOpen && rightPanelView === "catalog" ? "" : "text-muted-foreground"}
         >
           Catalog
         </Button>
@@ -37,7 +38,7 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("progress")}
-          className={rightPanelOpen ? "" : "text-muted-foreground"}
+          className={rightPanelOpen && rightPanelView === "progress" ? "" : "text-muted-foreground"}
         >
           Progress
         </Button>
@@ -45,9 +46,17 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("profile")}
-          className={rightPanelOpen ? "" : "text-muted-foreground"}
+          className={rightPanelOpen && rightPanelView === "profile" ? "" : "text-muted-foreground"}
         >
           Profile
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setRightPanelView("chat")}
+          className={rightPanelOpen && rightPanelView === "chat" ? "" : "text-muted-foreground"}
+        >
+          Chat
         </Button>
         <ExportMenu />
         <Button variant="ghost" size="sm" onClick={toggleRightPanel}>

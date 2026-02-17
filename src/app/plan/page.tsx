@@ -18,6 +18,7 @@ import { PlanGrid } from "@/components/plan/PlanGrid";
 import { CatalogBrowser } from "@/components/catalog/CatalogBrowser";
 import { ProgressDashboard } from "@/components/progress/ProgressDashboard";
 import { ProfilePanel } from "@/components/profile/ProfilePanel";
+import { ChatPanel } from "@/components/chat/ChatPanel";
 import { CourseModal } from "@/components/course/CourseModal";
 import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
@@ -187,6 +188,8 @@ export default function PlanPage() {
       <CatalogBrowser />
     ) : rightPanelView === "profile" ? (
       <ProfilePanel />
+    ) : rightPanelView === "chat" ? (
+      <ChatPanel />
     ) : (
       <ProgressDashboard />
     );
