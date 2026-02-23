@@ -9,6 +9,12 @@ import { useUIStore } from "@/stores/ui-store";
 import { MAJOR_OPTIONS } from "@/types/user";
 import type { CoreProgress, MajorProgress } from "@/types/validation";
 
+const CREDITS_TYPE_LABELS: Record<string, string> = {
+  minimum: "min",
+  maximum: "max",
+  combined_with_other_pillars: "total across pillars",
+};
+
 export function ProgressDashboard() {
   const validation = useValidation();
   const majors = useProfileStore((s) => s.majors);
@@ -140,10 +146,17 @@ function MajorProgressView({ progress }: { progress: MajorProgress }) {
             <div className="text-[10px] text-muted-foreground">
               {progress.requiredCoursesProgress.creditsSatisfied.toFixed(1)} / {progress.requiredCoursesProgress.creditsRequired.toFixed(1)} CU
             </div>
-            {progress.requiredCoursesProgress.missingCourses.length > 0 && (
-              <div className="text-[10px] text-destructive mt-1">
-                Missing: {progress.requiredCoursesProgress.missingCourses.join(", ")}
-              </div>
+            {progress.requiredCoursesProgress.creditsSatisfied < progress.requiredCoursesProgress.creditsRequired &&
+              progress.requiredCoursesProgress.missingCourses.length > 0 && (
+              progress.requiredCoursesProgress.selectionType === "choose" ? (
+                <div className="text-[10px] mt-1" style={{ color: "#eab308" }}>
+                  Options: {progress.requiredCoursesProgress.missingCourses.join(", ")}
+                </div>
+              ) : (
+                <div className="text-[10px] text-destructive mt-1">
+                  Missing: {progress.requiredCoursesProgress.missingCourses.join(", ")}
+                </div>
+              )
             )}
           </div>
         </div>
@@ -179,8 +192,14 @@ function MajorProgressView({ progress }: { progress: MajorProgress }) {
           >
             <div className="text-[10px] text-muted-foreground">
               {pp.creditsSatisfied.toFixed(1)} / {pp.creditsRequired.toFixed(1)} CU
-              {pp.creditsType && ` (${pp.creditsType})`}
+              {pp.creditsType && ` (${CREDITS_TYPE_LABELS[pp.creditsType] ?? pp.creditsType})`}
             </div>
+            {pp.creditsSatisfied < pp.creditsRequired &&
+              pp.missingCourses && pp.missingCourses.length > 0 && pp.missingCourses.length <= 2 && (
+              <div className="text-[10px] text-destructive mt-1">
+                Missing: {pp.missingCourses.join(", ")}
+              </div>
+            )}
           </div>
         </div>
       ))}

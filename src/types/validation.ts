@@ -6,7 +6,8 @@ export type WarningType =
   | "term_mismatch"
   | "double_count"
   | "isp_cap"
-  | "prohibited_combo";
+  | "prohibited_combo"
+  | "placement_mismatch";
 
 export type ErrorType =
   | "missing_core"
@@ -54,6 +55,7 @@ export interface MajorProgress {
     creditsSatisfied: number;
     satisfyingCourses: string[];
     missingCourses: string[];
+    selectionType?: "all" | "choose";
   };
   electiveCoursesProgress?: {
     creditsRequired: number;
@@ -67,6 +69,7 @@ export interface MajorProgress {
     creditsSatisfied: number;
     creditsType?: string;
     satisfyingCourses: string[];
+    missingCourses?: string[];
   }[];
 }
 

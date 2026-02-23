@@ -72,3 +72,20 @@ export const SEMESTER_INFO: Record<SemesterId, { label: string; quarters: [Quart
   Y2F: { label: "Year 2 Fall", quarters: ["Y2F_Q5", "Y2F_Q6"] },
   Y2S: { label: "Year 2 Spring", quarters: ["Y2S_Q7", "Y2S_Q8"] },
 };
+
+/** Returns true for semester-long courses (1.0+ CU). These courses span Q1+Q2 and are tracked in Q1. */
+export function isSemesterLong(creditUnits: number): boolean {
+  return creditUnits >= 1.0;
+}
+
+/**
+ * Normalizes a target quarter for semester-long courses.
+ * If a semester-long course is dropped onto Q2, redirects it to Q1 of the same semester.
+ */
+export function normalizeQuarterForCourse(quarterId: QuarterId, creditUnits: number): QuarterId {
+  const info = QUARTER_INFO[quarterId];
+  if (isSemesterLong(creditUnits) && info.quarterNumber === 2) {
+    return SEMESTER_INFO[info.semester].quarters[0];
+  }
+  return quarterId;
+}

@@ -1,5 +1,7 @@
 "use client";
 
+import { useTheme } from "next-themes";
+import { Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePlanStore } from "@/stores/plan-store";
 import { useUIStore } from "@/stores/ui-store";
@@ -11,7 +13,9 @@ export function Header() {
   const isSaving = usePlanStore((s) => s.isSaving);
   const toggleRightPanel = useUIStore((s) => s.toggleRightPanel);
   const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
+  const rightPanelView = useUIStore((s) => s.rightPanelView);
   const setRightPanelView = useUIStore((s) => s.setRightPanelView);
+  const { theme, setTheme } = useTheme();
 
   return (
     <header className="h-14 border-b flex items-center justify-between px-4 bg-card shrink-0">
@@ -29,7 +33,7 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("catalog")}
-          className={rightPanelOpen ? "" : "text-muted-foreground"}
+          className={rightPanelOpen && rightPanelView === "catalog" ? "" : "text-muted-foreground"}
         >
           Catalog
         </Button>
@@ -37,9 +41,37 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("progress")}
-          className={rightPanelOpen ? "" : "text-muted-foreground"}
+          className={rightPanelOpen && rightPanelView === "progress" ? "" : "text-muted-foreground"}
         >
           Progress
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setRightPanelView("profile")}
+          className={rightPanelOpen && rightPanelView === "profile" ? "" : "text-muted-foreground"}
+        >
+          Profile
+        </Button>
+        <Button
+          variant="ghost"
+          size="sm"
+          onClick={() => setRightPanelView("chat")}
+          className={rightPanelOpen && rightPanelView === "chat" ? "" : "text-muted-foreground"}
+        >
+          Chat
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          aria-label="Toggle theme"
+        >
+          {theme === "dark" ? (
+            <Sun className="size-4" />
+          ) : (
+            <Moon className="size-4" />
+          )}
         </Button>
         <ExportMenu />
         <Button variant="ghost" size="sm" onClick={toggleRightPanel}>

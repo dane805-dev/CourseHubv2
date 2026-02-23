@@ -1,12 +1,27 @@
 // ─── Core Requirements ───
 
+export interface WaiverMethodOption {
+  methods: ("credential" | "exam")[];
+}
+
+export interface SubstitutionOption {
+  methods: ("credential" | "exam")[];
+  credits_required: number;
+  description: string;
+  eligible_courses?: string[];
+  eligible_course_prefixes?: string[];
+}
+
+export interface PlacementOption {
+  methods: ("exam")[];
+  description: string;
+  placement_courses?: string[]; // courses expected when on placement path (e.g. ["STAT6210"])
+}
+
 export interface WaiverDetails {
-  waiver_method: string;
-  substitution_requirement: {
-    credits_required: number;
-    description: string;
-    eligible_course_prefixes: string[];
-  };
+  waiver?: WaiverMethodOption;
+  substitution?: SubstitutionOption;
+  placement?: PlacementOption;
 }
 
 export interface CoreRequirement {
@@ -64,16 +79,24 @@ export interface CoreRequirementsFile {
 
 export type RequirementStructure = "ELECTIVES" | "COMBINED" | "PILLARS" | "COMBINED_PILLARS";
 
+export interface AdditionalCourses {
+  courses: string[];
+  max_credits?: number;
+  description?: string;
+}
+
 export interface ElectiveCourses {
   credits_required: number;
   courses: string[];
   non_wharton_max_credits?: number;
   non_wharton_courses?: string[];
+  additional_courses?: AdditionalCourses;
 }
 
 export interface RequiredCourses {
   credits_required: number;
   courses: string[];
+  selection_type?: "all" | "choose";
 }
 
 export interface Pillar {

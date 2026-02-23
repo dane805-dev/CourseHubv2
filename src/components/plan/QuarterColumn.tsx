@@ -5,27 +5,28 @@ import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable"
 import { usePlanStore } from "@/stores/plan-store";
 import { CourseTile } from "./CourseTile";
 import type { QuarterId } from "@/types/plan";
-import { QUARTER_INFO } from "@/types/plan";
+import { QUARTER_INFO, isSemesterLong } from "@/types/plan";
 
 interface QuarterColumnProps {
   quarterId: QuarterId;
 }
 
 export function QuarterColumn({ quarterId }: QuarterColumnProps) {
-  const courseIds = usePlanStore((s) => s.quarterOrder[quarterId]);
-  const cu = usePlanStore((s) => s.getCUForQuarter(quarterId));
+  const allCourseIds = usePlanStore((s) => s.quarterOrder[quarterId]);
+  const placements = usePlanStore((s) => s.placements);
+  // Only show quarter-long courses (semester-long ones are shown in the spanning row above)
+  const courseIds = allCourseIds.filter(
+    (id) => !isSemesterLong(placements[id]?.creditUnits ?? 0)
+  );
   const info = QUARTER_INFO[quarterId];
 
   const { setNodeRef, isOver } = useDroppable({ id: quarterId });
 
   return (
     <div className="flex-1 min-w-0">
-      <div className="flex items-center justify-between mb-2 px-1">
+      <div className="mb-2 px-1">
         <span className="text-xs font-medium text-muted-foreground">
-          {info.label}
-        </span>
-        <span className="text-xs font-mono text-muted-foreground">
-          {cu.toFixed(1)} CU
+          Q{info.quarterNumber}
         </span>
       </div>
       <div

@@ -35,9 +35,9 @@ export function getFlexCoreRequirements(): CoreRequirement[] {
   return coreRequirements.core_requirements.filter((r) => r.core_type === "flex");
 }
 
-/** Get waivable core requirements */
+/** Get core requirements that have any waiver, substitution, or placement option */
 export function getWaivableCoreRequirements(): CoreRequirement[] {
-  return coreRequirements.core_requirements.filter((r) => r.waivable);
+  return coreRequirements.core_requirements.filter((r) => r.waiver_details);
 }
 
 /** Get total core credits required */
@@ -81,6 +81,7 @@ export function getMajorCourseIds(majorCode: string): string[] {
   if ("elective_courses" in reqs) {
     reqs.elective_courses.courses.forEach((c) => courseIds.add(c));
     reqs.elective_courses.non_wharton_courses?.forEach((c) => courseIds.add(c));
+    reqs.elective_courses.additional_courses?.courses.forEach((c) => courseIds.add(c));
   }
   if ("pillars" in reqs) {
     reqs.pillars.forEach((p) => p.courses.forEach((c) => courseIds.add(c)));

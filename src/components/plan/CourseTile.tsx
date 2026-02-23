@@ -2,11 +2,14 @@
 
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { resolveCourse } from "@/lib/data/course-resolver";
 import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
-import { findCoreRequirementsForCourse } from "@/lib/data/requirements";
+import { useProfileStore } from "@/stores/profile-store";
+import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/requirements";
+import { isSemesterLong } from "@/types/plan";
 
 interface CourseTileProps {
   courseId: string;
@@ -19,6 +22,8 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
   const removeCourse = usePlanStore((s) => s.removeCourse);
   const highlightedCourseIds = useUIStore((s) => s.highlightedCourseIds);
   const isHighlighted = highlightedCourseIds.includes(courseId);
+  const declaredMajors = useProfileStore((s) => s.majors);
+  const [hovered, setHovered] = useState(false);
 
   const {
     attributes,
@@ -37,10 +42,13 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
 
   if (!course) return null;
 
-  // Determine course type badge
+  // Determine course type badges
   const coreReqs = findCoreRequirementsForCourse(courseId);
   const isCore = coreReqs.length > 0;
   const isFlex = coreReqs.some((r) => r.core_type === "flex");
+  const courseMajors = findMajorsForCourse(courseId);
+  const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
+  const isSemester = isSemesterLong(course.creditUnits);
 
   return (
     <div
@@ -48,20 +56,53 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
       style={style}
       {...attributes}
       {...listeners}
-      className={`group flex items-center gap-2 p-2 rounded-md border cursor-grab active:cursor-grabbing transition-colors ${
+      className={`relative flex items-center gap-2 p-2 rounded-md border cursor-grab active:cursor-grabbing transition-colors ${
         isHighlighted
           ? "border-primary bg-primary/10 ring-1 ring-primary"
           : "border-border bg-card hover:border-muted-foreground"
       } ${isDragging ? "shadow-lg z-50" : ""}`}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
     >
+      <button
+        onPointerDown={(e) => e.stopPropagation()}
+        onClick={(e) => {
+          e.stopPropagation();
+          removeCourse(courseId);
+        }}
+        className="absolute top-1 right-1 flex items-center justify-center transition-opacity"
+        style={{
+          width: 18,
+          height: 18,
+          borderRadius: "50%",
+          backgroundColor: "#3f3f46",
+          color: "#d4d4d8",
+          fontSize: 10,
+          lineHeight: 1,
+          opacity: hovered ? 1 : 0,
+        }}
+        title="Remove"
+      >
+        ✕
+      </button>
       <div className="flex-1 min-w-0" onClick={() => openCourseModal(courseId)}>
         <div className="flex items-center gap-1.5">
           <span className="text-xs font-mono font-semibold truncate">
             {courseId}
           </span>
+          {isSemester && (
+            <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+              Semester
+            </Badge>
+          )}
           {isCore && (
             <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
-              {isFlex ? "Flex" : "Core"}
+              {isFlex ? "Flex" : "Fixed"}
+            </Badge>
+          )}
+          {isForMajor && (
+            <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+              Major
             </Badge>
           )}
         </div>
@@ -69,21 +110,9 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
           {course.title}
         </div>
       </div>
-      <div className="flex items-center gap-1 shrink-0">
-        <span className="text-xs font-mono text-muted-foreground">
-          {course.creditUnits.toFixed(1)}
-        </span>
-        <button
-          onClick={(e) => {
-            e.stopPropagation();
-            removeCourse(courseId);
-          }}
-          className="opacity-0 group-hover:opacity-100 text-muted-foreground hover:text-destructive transition-opacity text-xs p-0.5"
-          title="Remove"
-        >
-          ✕
-        </button>
-      </div>
+      <span className="text-xs font-mono text-muted-foreground shrink-0">
+        {course.creditUnits.toFixed(1)}
+      </span>
     </div>
   );
 }

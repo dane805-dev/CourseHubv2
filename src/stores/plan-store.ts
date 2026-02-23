@@ -3,7 +3,7 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import type { Placement, PlanLocation, QuarterId } from "@/types/plan";
-import { QUARTER_IDS } from "@/types/plan";
+import { QUARTER_IDS, normalizeQuarterForCourse } from "@/types/plan";
 import { getCreditUnits } from "@/lib/data/course-resolver";
 
 interface PlanState {
@@ -21,6 +21,7 @@ interface PlanState {
   // Actions
   loadPlan: (planId: string, placements: Placement[]) => void;
   addToStaging: (courseId: string, creditUnits?: number) => void;
+  addToQuarter: (courseId: string, quarterId: QuarterId, creditUnits?: number, index?: number) => void;
   moveToQuarter: (courseId: string, quarterId: QuarterId, index?: number) => void;
   moveToStaging: (courseId: string) => void;
   removeCourse: (courseId: string) => void;
@@ -63,6 +64,10 @@ export const usePlanStore = create<PlanState>()(
         );
 
         for (const p of placements) {
+          if (p.location !== "staging") {
+            const normalized = normalizeQuarterForCourse(p.location as QuarterId, p.creditUnits);
+            p.location = normalized;
+          }
           state.placements[p.courseId] = p;
           if (p.location === "staging") {
             state.stagingOrder.push(p.courseId);
@@ -101,10 +106,40 @@ export const usePlanStore = create<PlanState>()(
       });
     },
 
+    addToQuarter: (courseId, quarterId, creditUnits, index) => {
+      set((state) => {
+        if (state.placements[courseId]) return; // Already in plan
+
+        const cu = creditUnits ?? getCreditUnits(courseId) ?? 1.0;
+        const normalizedQuarterId = normalizeQuarterForCourse(quarterId, cu);
+        const targetOrder = state.quarterOrder[normalizedQuarterId];
+        const insertAt = index !== undefined ? index : targetOrder.length;
+
+        state.placements[courseId] = {
+          courseId,
+          location: normalizedQuarterId,
+          sortOrder: insertAt,
+          creditUnits: cu,
+        };
+        targetOrder.splice(insertAt, 0, courseId);
+
+        // Reindex sort orders
+        targetOrder.forEach((id, i) => {
+          if (state.placements[id]) {
+            state.placements[id].sortOrder = i;
+          }
+        });
+
+        state.isDirty = true;
+      });
+    },
+
     moveToQuarter: (courseId, quarterId, index) => {
       set((state) => {
         const existing = state.placements[courseId];
         if (!existing) return;
+
+        const normalizedQuarterId = normalizeQuarterForCourse(quarterId, existing.creditUnits);
 
         // Remove from current location
         if (existing.location === "staging") {
@@ -117,12 +152,12 @@ export const usePlanStore = create<PlanState>()(
         }
 
         // Add to new quarter
-        const targetOrder = state.quarterOrder[quarterId];
+        const targetOrder = state.quarterOrder[normalizedQuarterId];
         const insertAt = index !== undefined ? index : targetOrder.length;
         targetOrder.splice(insertAt, 0, courseId);
 
         // Update placement
-        existing.location = quarterId;
+        existing.location = normalizedQuarterId;
         existing.sortOrder = insertAt;
 
         // Reindex sort orders

@@ -21,7 +21,7 @@ export type MajorCode =
   | "STAT"
   | "STRA";
 
-export type WaiverType = "full" | "half_credit" | "substitution";
+export type WaiverType = "waiver" | "substitution" | "placement";
 
 export type CULoadPreference = "light" | "normal" | "heavy";
 
@@ -83,10 +83,3 @@ export const MAJOR_EXCLUSIONS: [MajorCode, MajorCode][] = [
  */
 export const MKOP_EXCLUSIONS: MajorCode[] = ["MKTG", "OIDD"];
 
-/** Waivable core requirement codes */
-export const WAIVABLE_CORE_CODES = [
-  "ACCT_FLEX",
-  "FNCE_CORP_FLEX",
-  "FNCE_MACRO_FLEX",
-  "MKTG_FLEX",
-] as const;
