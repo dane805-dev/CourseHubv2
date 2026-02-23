@@ -64,6 +64,10 @@ export const usePlanStore = create<PlanState>()(
         );
 
         for (const p of placements) {
+          if (p.location !== "staging") {
+            const normalized = normalizeQuarterForCourse(p.location as QuarterId, p.creditUnits);
+            p.location = normalized;
+          }
           state.placements[p.courseId] = p;
           if (p.location === "staging") {
             state.stagingOrder.push(p.courseId);

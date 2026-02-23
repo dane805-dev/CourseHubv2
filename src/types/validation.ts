@@ -6,7 +6,8 @@ export type WarningType =
   | "term_mismatch"
   | "double_count"
   | "isp_cap"
-  | "prohibited_combo";
+  | "prohibited_combo"
+  | "placement_mismatch";
 
 export type ErrorType =
   | "missing_core"

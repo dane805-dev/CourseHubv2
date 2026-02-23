@@ -15,6 +15,7 @@ export interface SubstitutionOption {
 export interface PlacementOption {
   methods: ("exam")[];
   description: string;
+  placement_courses?: string[]; // courses expected when on placement path (e.g. ["STAT6210"])
 }
 
 export interface WaiverDetails {

@@ -4,6 +4,7 @@ import type { CULoadPreference, WaiverConfig, MajorCode } from "@/types/user";
 import { getCreditUnits } from "@/lib/data/course-resolver";
 import { getCoreRequirements } from "@/lib/data/requirements";
 import { CU_LOAD_DEFAULTS } from "@/lib/data/constants";
+import { normalizeQuarterForCourse } from "@/types/plan";
 
 /**
  * Known fixed core placements based on Wharton MBA curriculum structure.
@@ -111,11 +112,12 @@ function addPlacement(
   if (placements.some((p) => p.courseId === courseId)) return;
 
   const cu = getCreditUnits(courseId) ?? 0.5;
-  const existingInQuarter = placements.filter((p) => p.location === quarter);
+  const normalizedQuarter = normalizeQuarterForCourse(quarter, cu);
+  const existingInQuarter = placements.filter((p) => p.location === normalizedQuarter);
 
   placements.push({
     courseId,
-    location: quarter,
+    location: normalizedQuarter,
     sortOrder: existingInQuarter.length,
     creditUnits: cu,
   });
