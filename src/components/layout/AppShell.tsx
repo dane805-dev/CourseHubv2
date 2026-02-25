@@ -18,7 +18,7 @@ export function AppShell({ planContent, rightPanel }: AppShellProps) {
       <div className="flex flex-1 overflow-hidden">
         {/* Plan View — 70% or 100% */}
         <main
-          className={`flex-1 overflow-y-auto p-4 transition-all duration-200 ${
+          className={`flex-1 overflow-y-auto p-4 transition-all duration-200 bg-background ${
             rightPanelOpen ? "w-[70%]" : "w-full"
           }`}
         >
@@ -27,7 +27,7 @@ export function AppShell({ planContent, rightPanel }: AppShellProps) {
 
         {/* Right Panel — 30% */}
         {rightPanelOpen && (
-          <aside className="w-[30%] min-w-[320px] max-w-[480px] border-l overflow-y-auto bg-card">
+          <aside className="w-[30%] min-w-[320px] max-w-[480px] border-l border-border overflow-y-auto bg-card relative z-10 shadow-[-4px_0_12px_0_rgb(0_0_0/0.06)] dark:shadow-[-4px_0_12px_0_rgb(0_0_0/0.18)]">
             {rightPanel}
           </aside>
         )}

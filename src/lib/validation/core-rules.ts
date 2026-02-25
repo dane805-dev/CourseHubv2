@@ -208,18 +208,51 @@ function handleWaivedCore(
   }
 
   if (waiver.waiverType === "placement") {
-    // Placement — student takes the accelerated/placed version
-    // Check if any matching course is in the plan
     const matchingCourses = req.courses.filter((c) => input.allCourseIds.includes(c));
     const totalCU = matchingCourses.reduce((sum, cId) => sum + (getCreditUnits(cId) ?? 0), 0);
+    const placementCourses = req.waiver_details?.placement?.placement_courses ?? [];
+
+    // Case 1: No course at all — error + missing status
+    if (matchingCourses.length === 0) {
+      errors.push({
+        type: "missing_core",
+        message: `Missing core requirement: ${req.core_name} — add STAT6210 (Placement path)`,
+        requirementCode: req.core_code,
+      });
+      return {
+        progress: {
+          coreCode: req.core_code,
+          coreName: req.core_name,
+          status: "missing",
+          creditsRequired: req.credits_required,
+          creditsSatisfied: 0,
+          satisfyingCourses: [],
+        },
+        errors,
+        warnings,
+      };
+    }
+
+    // Case 2: Has a course, but not the expected placement course → satisfied + warning
+    const hasPlacementCourse = placementCourses.length === 0 ||
+      placementCourses.some((c) => matchingCourses.includes(c));
+
+    if (!hasPlacementCourse) {
+      warnings.push({
+        type: "placement_mismatch",
+        message: `${req.core_name}: enrolled in standard version (${matchingCourses.join(", ")}) — placement path expects ${placementCourses.join(", ")}`,
+        severity: "medium",
+        relatedCourseIds: matchingCourses,
+      });
+    }
 
     return {
       progress: {
         coreCode: req.core_code,
         coreName: req.core_name,
-        status: matchingCourses.length > 0 ? "satisfied" : "partial",
+        status: "satisfied",
         creditsRequired: req.credits_required,
-        creditsSatisfied: totalCU,
+        creditsSatisfied: Math.min(totalCU, req.credits_required),
         satisfyingCourses: matchingCourses,
       },
       errors,

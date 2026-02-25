@@ -1,11 +1,14 @@
 "use client";
 
+import { useMemo } from "react";
 import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { usePlanStore } from "@/stores/plan-store";
+import { useValidation } from "@/hooks/useValidation";
 import { CourseTile } from "./CourseTile";
 import type { QuarterId } from "@/types/plan";
 import { QUARTER_INFO, isSemesterLong } from "@/types/plan";
+import type { ValidationWarning } from "@/types/validation";
 
 interface QuarterColumnProps {
   quarterId: QuarterId;
@@ -19,6 +22,18 @@ export function QuarterColumn({ quarterId }: QuarterColumnProps) {
     (id) => !isSemesterLong(placements[id]?.creditUnits ?? 0)
   );
   const info = QUARTER_INFO[quarterId];
+  const { warnings } = useValidation();
+
+  const warningsByCourse = useMemo(() => {
+    const map: Record<string, ValidationWarning[]> = {};
+    for (const id of courseIds) {
+      const matched = warnings.filter(
+        (w) => w.courseId === id || w.relatedCourseIds?.includes(id)
+      );
+      if (matched.length > 0) map[id] = matched;
+    }
+    return map;
+  }, [warnings, courseIds]);
 
   const { setNodeRef, isOver } = useDroppable({ id: quarterId });
 
@@ -41,7 +56,7 @@ export function QuarterColumn({ quarterId }: QuarterColumnProps) {
       >
         <SortableContext items={courseIds} strategy={verticalListSortingStrategy}>
           {courseIds.map((courseId) => (
-            <CourseTile key={courseId} courseId={courseId} />
+            <CourseTile key={courseId} courseId={courseId} warnings={warningsByCourse[courseId]} />
           ))}
         </SortableContext>
         {courseIds.length === 0 && (

@@ -3,20 +3,24 @@
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import { useState } from "react";
+import { AlertTriangle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 import { resolveCourse } from "@/lib/data/course-resolver";
 import { useUIStore } from "@/stores/ui-store";
 import { usePlanStore } from "@/stores/plan-store";
 import { useProfileStore } from "@/stores/profile-store";
 import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/requirements";
 import { isSemesterLong } from "@/types/plan";
+import type { ValidationWarning } from "@/types/validation";
 
 interface CourseTileProps {
   courseId: string;
   isStaging?: boolean;
+  warnings?: ValidationWarning[];
 }
 
-export function CourseTile({ courseId, isStaging }: CourseTileProps) {
+export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
   const course = resolveCourse(courseId);
   const openCourseModal = useUIStore((s) => s.openCourseModal);
   const removeCourse = usePlanStore((s) => s.removeCourse);
@@ -50,10 +54,17 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
   const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
   const isSemester = isSemesterLong(course.creditUnits);
 
+  const hasWarnings = warnings && warnings.length > 0;
+  const highSeverity = hasWarnings && warnings.some((w) => w.severity === "high");
+  const warningColor = highSeverity ? "#ef4444" : "#f59e0b";
+
   return (
     <div
       ref={setNodeRef}
-      style={style}
+      style={{
+        ...style,
+        ...(hasWarnings ? { borderLeftWidth: 3, borderLeftColor: warningColor } : {}),
+      }}
       {...attributes}
       {...listeners}
       className={`relative flex items-center gap-2 p-2 rounded-md border cursor-grab active:cursor-grabbing transition-colors ${
@@ -64,6 +75,25 @@ export function CourseTile({ courseId, isStaging }: CourseTileProps) {
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
+      {hasWarnings && (
+        <TooltipProvider>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <span
+                onPointerDown={(e) => e.stopPropagation()}
+                style={{ flexShrink: 0, display: "flex", cursor: "default" }}
+              >
+                <AlertTriangle size={14} style={{ color: warningColor }} />
+              </span>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              {warnings.map((w, i) => (
+                <div key={i}>{w.message}</div>
+              ))}
+            </TooltipContent>
+          </Tooltip>
+        </TooltipProvider>
+      )}
       <button
         onPointerDown={(e) => e.stopPropagation()}
         onClick={(e) => {

@@ -72,7 +72,8 @@
         "waiver": { "methods": ["credential", "exam"] },
         "placement": {
           "methods": ["exam"],
-          "description": "Place into accelerated STAT6210 (0.5 CU) instead of STAT6130 (1.0 CU)"
+          "description": "Place into accelerated STAT6210 (0.5 CU) instead of STAT6130 (1.0 CU)",
+          "placement_courses": ["STAT6210"]
         }
       },
       "notes": "STAT6130 is 1.0 CU (default), STAT6210 (accelerated) is 0.5 CU. Students can waive by credential or exam. Students can place into STAT6210 via exam. Core requirement is 0.5 CU minimum."

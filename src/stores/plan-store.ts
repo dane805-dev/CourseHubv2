@@ -2,6 +2,7 @@
 
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
+import { temporal } from "zundo";
 import type { Placement, PlanLocation, QuarterId } from "@/types/plan";
 import { QUARTER_IDS, normalizeQuarterForCourse } from "@/types/plan";
 import { getCreditUnits } from "@/lib/data/course-resolver";
@@ -41,6 +42,7 @@ interface PlanState {
 }
 
 export const usePlanStore = create<PlanState>()(
+  temporal(
   immer((set, get) => ({
     planId: null,
     placements: {},
@@ -64,6 +66,10 @@ export const usePlanStore = create<PlanState>()(
         );
 
         for (const p of placements) {
+          if (p.location !== "staging") {
+            const normalized = normalizeQuarterForCourse(p.location as QuarterId, p.creditUnits);
+            p.location = normalized;
+          }
           state.placements[p.courseId] = p;
           if (p.location === "staging") {
             state.stagingOrder.push(p.courseId);
@@ -84,6 +90,7 @@ export const usePlanStore = create<PlanState>()(
 
         state.isDirty = false;
       });
+      usePlanStore.temporal.getState().clear();
     },
 
     addToStaging: (courseId, creditUnits) => {
@@ -283,5 +290,19 @@ export const usePlanStore = create<PlanState>()(
     },
 
     getPlacementsArray: () => Object.values(get().placements),
-  }))
+  })),
+  {
+    partialize: (state) => ({
+      planId: state.planId,
+      placements: state.placements,
+      stagingOrder: state.stagingOrder,
+      quarterOrder: state.quarterOrder,
+    }),
+    equality: (pastState, currentState) =>
+      pastState.placements === currentState.placements &&
+      pastState.stagingOrder === currentState.stagingOrder &&
+      pastState.quarterOrder === currentState.quarterOrder,
+    limit: 50,
+  },
+  )
 );
