@@ -1,12 +1,15 @@
 "use client";
 
+import { useMemo } from "react";
 import { useDroppable } from "@dnd-kit/core";
 import { SortableContext, verticalListSortingStrategy } from "@dnd-kit/sortable";
 import { QuarterColumn } from "./QuarterColumn";
 import { CourseTile } from "./CourseTile";
 import { usePlanStore } from "@/stores/plan-store";
+import { useValidation } from "@/hooks/useValidation";
 import type { SemesterId } from "@/types/plan";
 import { SEMESTER_INFO, isSemesterLong } from "@/types/plan";
+import type { ValidationWarning } from "@/types/validation";
 
 interface SemesterTileProps {
   semesterId: SemesterId;
@@ -21,6 +24,18 @@ function SemesterLongZone({ semesterId }: { semesterId: SemesterId }) {
   const semesterLongIds = q1CourseIds.filter(
     (id) => isSemesterLong(placements[id]?.creditUnits ?? 0)
   );
+  const { warnings } = useValidation();
+
+  const warningsByCourse = useMemo(() => {
+    const map: Record<string, ValidationWarning[]> = {};
+    for (const id of semesterLongIds) {
+      const matched = warnings.filter(
+        (w) => w.courseId === id || w.relatedCourseIds?.includes(id)
+      );
+      if (matched.length > 0) map[id] = matched;
+    }
+    return map;
+  }, [warnings, semesterLongIds]);
 
   // This drop zone maps to a custom droppable ID; handleDragEnd resolves it to Q1
   const { setNodeRef, isOver } = useDroppable({ id: `semester-long:${q1Id}` });
@@ -46,7 +61,7 @@ function SemesterLongZone({ semesterId }: { semesterId: SemesterId }) {
       >
         <SortableContext items={semesterLongIds} strategy={verticalListSortingStrategy}>
           {semesterLongIds.map((courseId) => (
-            <CourseTile key={courseId} courseId={courseId} />
+            <CourseTile key={courseId} courseId={courseId} warnings={warningsByCourse[courseId]} />
           ))}
         </SortableContext>
         {isOver && isEmpty && (

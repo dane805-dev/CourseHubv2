@@ -1,10 +1,12 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon } from "lucide-react";
+import { Sun, Moon, Undo2, Redo2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePlanStore } from "@/stores/plan-store";
 import { useUIStore } from "@/stores/ui-store";
+import { useTemporalStore } from "@/hooks/useTemporalStore";
+import { useUndoRedoKeys } from "@/hooks/useUndoRedoKeys";
 import { ExportMenu } from "@/components/export/ExportMenu";
 
 export function Header() {
@@ -15,7 +17,21 @@ export function Header() {
   const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
   const rightPanelView = useUIStore((s) => s.rightPanelView);
   const setRightPanelView = useUIStore((s) => s.setRightPanelView);
+  const canUndo = useTemporalStore((s) => s.pastStates.length > 0);
+  const canRedo = useTemporalStore((s) => s.futureStates.length > 0);
   const { theme, setTheme } = useTheme();
+
+  useUndoRedoKeys();
+
+  function handleUndo() {
+    usePlanStore.temporal.getState().undo();
+    usePlanStore.setState({ isDirty: true });
+  }
+
+  function handleRedo() {
+    usePlanStore.temporal.getState().redo();
+    usePlanStore.setState({ isDirty: true });
+  }
 
   return (
     <header className="h-14 border-b flex items-center justify-between px-4 bg-card shrink-0">
@@ -27,6 +43,26 @@ export function Header() {
         <span className="text-xs text-muted-foreground">
           {isDirty ? (isSaving ? "Saving..." : "Unsaved changes") : "Saved"}
         </span>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={handleUndo}
+          disabled={!canUndo}
+          title="Undo (Ctrl+Z)"
+          className="size-8"
+        >
+          <Undo2 className="size-4" />
+        </Button>
+        <Button
+          variant="ghost"
+          size="icon"
+          onClick={handleRedo}
+          disabled={!canRedo}
+          title="Redo (Ctrl+Shift+Z)"
+          className="size-8"
+        >
+          <Redo2 className="size-4" />
+        </Button>
       </div>
       <div className="flex items-center gap-2">
         <Button
