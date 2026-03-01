@@ -5,7 +5,7 @@ import type { CatalogCourse, RegistryCourse, ResolvedCourse } from "@/types/cour
 import catalogData from "../../../scripts/cleaned_courses.json";
 import registryData from "../../../data/course_registry.json";
 
-const catalog = catalogData as CatalogCourse[];
+const catalog = catalogData as unknown as CatalogCourse[];
 const registry = registryData as RegistryCourse[];
 
 // Build lookup maps once at module load
@@ -86,10 +86,10 @@ export function getOfferedCourses(): ResolvedCourse[] {
  */
 export function getCreditUnits(courseId: string): number | null {
   const catalogEntry = catalogMap.get(courseId);
-  if (catalogEntry) return catalogEntry.Credit_Units;
+  if (catalogEntry) return Number(catalogEntry.Credit_Units);
 
   const registryEntry = registryMap.get(courseId);
-  if (registryEntry) return registryEntry.credit_units;
+  if (registryEntry) return Number(registryEntry.credit_units);
 
   return null;
 }
@@ -108,7 +108,7 @@ function catalogCourseToResolved(c: CatalogCourse): ResolvedCourse {
     courseId: c.Course_ID,
     title: c.Course_Title,
     department: c.Department,
-    creditUnits: c.Credit_Units,
+    creditUnits: Number(c.Credit_Units),
     isWharton: true,
     currentlyOffered: true,
     catalogSource: "catalog",
@@ -125,8 +125,8 @@ function catalogCourseToResolved(c: CatalogCourse): ResolvedCourse {
     meetingTimesSpring: c.Meeting_Times_Spring,
     locationsFall: c.Locations_Fall,
     locationsSpring: c.Locations_Spring,
-    averageRatingFall: c.Average_Rating_Fall,
-    averageRatingSpring: c.Average_Rating_Spring,
+    averageRatingFall: c.Average_Rating_Fall ? Number(c.Average_Rating_Fall) : null,
+    averageRatingSpring: c.Average_Rating_Spring ? Number(c.Average_Rating_Spring) : null,
     isCrosslisted: c.Is_Crosslisted,
     crosslistWith: c.Crosslist_With,
     canvasUrl: c.Canvas_URL,
