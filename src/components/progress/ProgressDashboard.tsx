@@ -8,6 +8,7 @@ import { useProfileStore } from "@/stores/profile-store";
 import { useUIStore } from "@/stores/ui-store";
 import { MAJOR_OPTIONS } from "@/types/user";
 import type { CoreProgress, MajorProgress } from "@/types/validation";
+import { AlertCircle, AlertTriangle, CheckCircle2 } from "lucide-react";
 
 const CREDITS_TYPE_LABELS: Record<string, string> = {
   minimum: "min",
@@ -51,6 +52,17 @@ export function ProgressDashboard() {
                 </TabsTrigger>
               );
             })}
+            <TabsTrigger value="issues" className="text-xs">
+              Issues
+              {(validation.errors.length + validation.warnings.length) > 0 && (
+                <Badge
+                  variant="outline"
+                  className={`ml-1 text-[10px] ${validation.errors.length > 0 ? "text-destructive" : "text-warning"}`}
+                >
+                  {validation.errors.length + validation.warnings.length}
+                </Badge>
+              )}
+            </TabsTrigger>
             <TabsTrigger value="overall" className="text-xs">Overall</TabsTrigger>
           </TabsList>
         </div>
@@ -70,6 +82,10 @@ export function ProgressDashboard() {
               </TabsContent>
             );
           })}
+
+          <TabsContent value="issues" className="p-4 space-y-3 mt-0">
+            <IssuesView validation={validation} />
+          </TabsContent>
 
           <TabsContent value="overall" className="p-4 space-y-3 mt-0">
             <OverallView validation={validation} />
@@ -207,6 +223,86 @@ function MajorProgressView({ progress }: { progress: MajorProgress }) {
   );
 }
 
+function IssuesView({ validation }: { validation: ReturnType<typeof useValidation> }) {
+  const setHighlightedCourses = useUIStore((s) => s.setHighlightedCourses);
+
+  if (validation.errors.length === 0 && validation.warnings.length === 0) {
+    return (
+      <div className="flex flex-col items-center justify-center py-12 text-muted-foreground">
+        <CheckCircle2 className="w-8 h-8 mb-2 text-success" />
+        <span className="text-sm">No Issues Found</span>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-3">
+      {validation.errors.length > 0 && (
+        <div className="space-y-1.5">
+          <div className="flex items-center gap-1.5">
+            <AlertCircle className="w-3.5 h-3.5 text-destructive" />
+            <h4 className="text-xs font-medium text-destructive">
+              Errors ({validation.errors.length})
+            </h4>
+          </div>
+          {validation.errors.map((err, i) => (
+            <button
+              key={i}
+              className="w-full text-left p-2.5 rounded-md border border-destructive/30 bg-destructive/5 hover:border-destructive/60 transition-colors"
+              onClick={() => setHighlightedCourses(err.courseIds ?? [])}
+            >
+              <div className="text-xs text-destructive">{err.message}</div>
+              {err.courseIds && err.courseIds.length > 0 && (
+                <div className="text-[10px] text-muted-foreground font-mono mt-1">
+                  {err.courseIds.join(", ")}
+                </div>
+              )}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {validation.warnings.length > 0 && (
+        <div className="space-y-1.5">
+          <div className="flex items-center gap-1.5">
+            <AlertTriangle className="w-3.5 h-3.5 text-warning" />
+            <h4 className="text-xs font-medium text-warning">
+              Warnings ({validation.warnings.length})
+            </h4>
+          </div>
+          {validation.warnings.map((warn, i) => {
+            const relatedCourses = [
+              ...(warn.courseId ? [warn.courseId] : []),
+              ...(warn.relatedCourseIds ?? []),
+            ];
+            return (
+              <button
+                key={i}
+                className="w-full text-left p-2.5 rounded-md border border-warning/30 bg-warning/5 hover:border-warning/60 transition-colors"
+                onClick={() => setHighlightedCourses(relatedCourses)}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <div className="text-xs" style={{ color: "#eab308" }}>{warn.message}</div>
+                  {warn.severity && (
+                    <Badge variant="outline" className="text-[10px] text-warning shrink-0">
+                      {warn.severity}
+                    </Badge>
+                  )}
+                </div>
+                {relatedCourses.length > 0 && (
+                  <div className="text-[10px] text-muted-foreground font-mono mt-1">
+                    {relatedCourses.join(", ")}
+                  </div>
+                )}
+              </button>
+            );
+          })}
+        </div>
+      )}
+    </div>
+  );
+}
+
 function OverallView({ validation }: { validation: ReturnType<typeof useValidation> }) {
   return (
     <div className="space-y-3">
@@ -223,28 +319,6 @@ function OverallView({ validation }: { validation: ReturnType<typeof useValidati
           </div>
         )}
       </div>
-
-      {validation.errors.length > 0 && (
-        <div className="space-y-1">
-          <h4 className="text-xs font-medium text-destructive">Errors</h4>
-          {validation.errors.map((err, i) => (
-            <div key={i} className="p-2 rounded-md border border-destructive/30 text-xs">
-              {err.message}
-            </div>
-          ))}
-        </div>
-      )}
-
-      {validation.warnings.length > 0 && (
-        <div className="space-y-1">
-          <h4 className="text-xs font-medium text-warning">Warnings</h4>
-          {validation.warnings.map((warn, i) => (
-            <div key={i} className="p-2 rounded-md border border-warning/30 text-xs">
-              {warn.message}
-            </div>
-          ))}
-        </div>
-      )}
     </div>
   );
 }

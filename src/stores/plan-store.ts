@@ -264,7 +264,7 @@ export const usePlanStore = create<PlanState>()(
       const state = get();
       return state.quarterOrder[quarterId].reduce((sum, courseId) => {
         const p = state.placements[courseId];
-        return sum + (p?.creditUnits ?? 0);
+        return sum + (Number(p?.creditUnits) || 0);
       }, 0);
     },
 
