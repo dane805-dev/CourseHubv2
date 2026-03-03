@@ -1,6 +1,10 @@
 import type { ValidationError, ValidationWarning } from "@/types/validation";
 import type { MajorCode } from "@/types/user";
-import { MAJOR_EXCLUSIONS, MKOP_EXCLUSIONS } from "@/types/user";
+import { MAJOR_EXCLUSIONS, MAJOR_OPTIONS, MKOP_EXCLUSIONS } from "@/types/user";
+
+function majorName(code: string): string {
+  return MAJOR_OPTIONS.find((m) => m.code === code)?.name ?? code;
+}
 
 interface CrossRulesInput {
   allCourseIds: string[];
@@ -40,7 +44,7 @@ function validateMutualMajorExclusions(
     if (majors.includes(a) && majors.includes(b)) {
       errors.push({
         type: "mutual_exclusion",
-        message: `Cannot declare both ${a} and ${b} majors`,
+        message: `Cannot declare both ${majorName(a)} and ${majorName(b)} majors`,
       });
     }
   }
@@ -51,7 +55,7 @@ function validateMutualMajorExclusions(
       if (majors.includes(excluded)) {
         errors.push({
           type: "mutual_exclusion",
-          message: `Cannot declare both MKOP and ${excluded} majors`,
+          message: `Cannot declare both ${majorName("MKOP")} and ${majorName(excluded)} majors`,
         });
       }
     }
@@ -89,7 +93,7 @@ function validateDoubleCountingRestrictions(
         warnings.push({
           type: "double_count",
           courseId,
-          message: `${courseId} cannot count toward both ${rule.major} major and ${rule.context}. It will count toward ${rule.major} major.`,
+          message: `${courseId} cannot count toward both ${majorName(rule.major)} major and ${rule.context}. It will count toward ${majorName(rule.major)} major.`,
           severity: "high",
           relatedCourseIds: [courseId],
         });

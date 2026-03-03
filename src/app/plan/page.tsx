@@ -44,8 +44,7 @@ export default function PlanPage() {
     })
   );
 
-  function findContainer(id: string): string | null {
-    if (planStore.stagingOrder.includes(id)) return "staging";
+  function findContainer(id: string): QuarterId | null {
     for (const qId of QUARTER_IDS) {
       if (planStore.quarterOrder[qId].includes(id)) return qId;
     }
@@ -64,7 +63,6 @@ export default function PlanPage() {
     const activeIdStr = active.id as string;
     const overId = over.id as string;
 
-    // Resolve semester-long zone droppable IDs (e.g. "semester-long:Y1F_Q1") to the Q1 quarter ID
     function resolveSemesterLongDrop(id: string): string {
       if (id.startsWith("semester-long:")) {
         return id.replace("semester-long:", "");
@@ -82,75 +80,53 @@ export default function PlanPage() {
         | undefined;
       const creditUnits = data?.creditUnits;
 
-      // Determine target container
-      let targetContainer: string | null = null;
-      if (resolvedOverId === "staging" || QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
-        targetContainer = resolvedOverId;
+      let targetContainer: QuarterId | null = null;
+      if (QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
+        targetContainer = resolvedOverId as QuarterId;
       } else {
         targetContainer = findContainer(resolvedOverId);
       }
       if (!targetContainer) return;
 
-      if (targetContainer === "staging") {
-        planStore.addToStaging(courseId, creditUnits);
-      } else {
-        const qId = targetContainer as QuarterId;
-        const order = planStore.quarterOrder[qId];
-        const overIdx = order.indexOf(resolvedOverId);
-        const insertAt = overIdx !== -1 ? overIdx : order.length;
-        planStore.addToQuarter(courseId, qId, creditUnits, insertAt);
-      }
+      const qId = targetContainer;
+      const order = planStore.quarterOrder[qId];
+      const overIdx = order.indexOf(resolvedOverId);
+      const insertAt = overIdx !== -1 ? overIdx : order.length;
+      planStore.addToQuarter(courseId, qId, creditUnits, insertAt);
       return;
     }
 
-    // Branch B: Existing plan-internal drag logic
+    // Branch B: Plan-internal drag
     const activeContainer = findContainer(activeIdStr);
 
-    // Determine target container
-    let targetContainer: string;
-    if (resolvedOverId === "staging" || QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
-      targetContainer = resolvedOverId;
+    let targetContainer: QuarterId | null;
+    if (QUARTER_IDS.includes(resolvedOverId as QuarterId)) {
+      targetContainer = resolvedOverId as QuarterId;
     } else {
-      const overContainer = findContainer(resolvedOverId);
-      if (!overContainer) return;
-      targetContainer = overContainer;
+      targetContainer = findContainer(resolvedOverId);
     }
+    if (!targetContainer) return;
 
     // Prevent MGMT6100 from leaving Y1F_Q1
     if (activeIdStr === "MGMT6100" && targetContainer !== "Y1F_Q1") return;
 
     if (activeContainer === targetContainer) {
-      // Reorder within same container
-      if (targetContainer === "staging") {
-        const oldIdx = planStore.stagingOrder.indexOf(activeIdStr);
-        const newIdx = planStore.stagingOrder.indexOf(resolvedOverId);
-        if (oldIdx !== -1 && newIdx !== -1 && oldIdx !== newIdx) {
-          planStore.reorderInStaging(oldIdx, newIdx);
-        }
-      } else {
-        const qId = targetContainer as QuarterId;
-        const order = planStore.quarterOrder[qId];
-        const oldIdx = order.indexOf(activeIdStr);
-        const newIdx = order.indexOf(resolvedOverId);
-        if (oldIdx !== -1 && newIdx !== -1 && oldIdx !== newIdx) {
-          planStore.reorderInQuarter(qId, oldIdx, newIdx);
-        }
+      const qId = targetContainer;
+      const order = planStore.quarterOrder[qId];
+      const oldIdx = order.indexOf(activeIdStr);
+      const newIdx = order.indexOf(resolvedOverId);
+      if (oldIdx !== -1 && newIdx !== -1 && oldIdx !== newIdx) {
+        planStore.reorderInQuarter(qId, oldIdx, newIdx);
       }
     } else {
-      // Move between containers
-      if (targetContainer === "staging") {
-        planStore.moveToStaging(activeIdStr);
-      } else {
-        const qId = targetContainer as QuarterId;
-        const order = planStore.quarterOrder[qId];
-        const overIdx = order.indexOf(resolvedOverId);
-        const insertAt = overIdx !== -1 ? overIdx : order.length;
-        planStore.moveToQuarter(activeIdStr, qId, insertAt);
-      }
+      const qId = targetContainer;
+      const order = planStore.quarterOrder[qId];
+      const overIdx = order.indexOf(resolvedOverId);
+      const insertAt = overIdx !== -1 ? overIdx : order.length;
+      planStore.moveToQuarter(activeIdStr, qId, insertAt);
     }
   }
 
-  // Render the drag overlay ghost
   function renderOverlay() {
     if (!activeId) return null;
 

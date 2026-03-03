@@ -19,6 +19,8 @@ const CREDITS_TYPE_LABELS: Record<string, string> = {
 export function ProgressDashboard() {
   const validation = useValidation();
   const majors = useProfileStore((s) => s.majors);
+  const progressTab = useUIStore((s) => s.progressTab);
+  const setProgressTab = useUIStore((s) => s.setProgressTab);
 
   return (
     <div className="flex flex-col h-full">
@@ -34,18 +36,17 @@ export function ProgressDashboard() {
             </Badge>
           ) : (
             <Badge variant="outline" className="text-[10px] text-destructive">
-              {validation.errors.length} issue{validation.errors.length !== 1 ? "s" : ""}
+              {validation.errors.length + validation.warnings.length} issue{validation.errors.length + validation.warnings.length !== 1 ? "s" : ""}
             </Badge>
           )}
         </div>
       </div>
 
-      <Tabs defaultValue="core" className="flex-1 flex flex-col">
+      <Tabs value={progressTab} onValueChange={setProgressTab} className="flex-1 flex flex-col">
         <div className="px-4 pt-2">
           <TabsList className="w-full justify-start">
             <TabsTrigger value="core" className="text-xs">Core</TabsTrigger>
             {majors.map((code) => {
-              const name = MAJOR_OPTIONS.find((m) => m.code === code)?.name ?? code;
               return (
                 <TabsTrigger key={code} value={code} className="text-xs">
                   {code}

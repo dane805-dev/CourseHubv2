@@ -5,7 +5,7 @@ import type { TemporalState } from "zundo";
 type PlanTemporalState = TemporalState<
   Pick<
     ReturnType<typeof usePlanStore.getState>,
-    "planId" | "placements" | "stagingOrder" | "quarterOrder"
+    "planId" | "placements" | "quarterOrder"
   >
 >;
 

@@ -13,11 +13,7 @@ function isQuarterId(val: string): val is QuarterId {
 
 function describeAction(action: SuggestedAction): string {
   const locationLabel = (loc: string) =>
-    loc === "staging"
-      ? "Staging"
-      : isQuarterId(loc)
-      ? QUARTER_INFO[loc].label
-      : loc;
+    isQuarterId(loc) ? QUARTER_INFO[loc as QuarterId].label : loc;
 
   switch (action.type) {
     case "add_course":
@@ -40,16 +36,12 @@ export function ActionCard({ action }: ActionCardProps) {
   function handleApply() {
     switch (action.type) {
       case "add_course":
-        if (action.location === "staging") {
-          planStore.addToStaging(action.courseId);
-        } else if (isQuarterId(action.location)) {
+        if (isQuarterId(action.location)) {
           planStore.addToQuarter(action.courseId, action.location);
         }
         break;
       case "move_course":
-        if (action.toLocation === "staging") {
-          planStore.moveToStaging(action.courseId);
-        } else if (isQuarterId(action.toLocation)) {
+        if (isQuarterId(action.toLocation)) {
           planStore.moveToQuarter(action.courseId, action.toLocation);
         }
         break;

@@ -19,7 +19,6 @@ export function CourseModal() {
   const courseId = useUIStore((s) => s.selectedCourseId);
   const isOpen = useUIStore((s) => s.isCourseModalOpen);
   const closeCourseModal = useUIStore((s) => s.closeCourseModal);
-  const addToStaging = usePlanStore((s) => s.addToStaging);
   const isInPlan = usePlanStore((s) => s.isInPlan);
 
   if (!courseId) return null;
@@ -31,11 +30,6 @@ export function CourseModal() {
   const majorCodes = findMajorsForCourse(courseId);
   const alreadyInPlan = isInPlan(courseId);
   const isPreTerm = courseId === "MGMT6100";
-
-  function handleAddToStaging() {
-    addToStaging(courseId!, course!.creditUnits);
-    closeCourseModal();
-  }
 
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && closeCourseModal()}>
@@ -150,12 +144,6 @@ export function CourseModal() {
         <div className="flex justify-end gap-2 pt-2">
           <Button variant="outline" onClick={closeCourseModal}>
             Close
-          </Button>
-          <Button
-            onClick={handleAddToStaging}
-            disabled={alreadyInPlan}
-          >
-            {alreadyInPlan ? "Already in Plan" : "Add to Staging"}
           </Button>
         </div>
       </DialogContent>

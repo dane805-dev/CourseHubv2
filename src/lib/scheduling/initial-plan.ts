@@ -51,7 +51,7 @@ const FLEX_CORE_DEFAULTS: { courseId: string; quarter: QuarterId; coreCode: stri
 
   // OIDD flex — two 0.5 CU courses in Year 2
   { courseId: "OIDD6110", quarter: "Y2F_Q5", coreCode: "OIDD_FLEX" },
-  { courseId: "OIDD6120", quarter: "Y2F_Q5", coreCode: "OIDD_FLEX" },
+  { courseId: "OIDD6120", quarter: "Y2S_Q7", coreCode: "OIDD_FLEX" },
 ];
 
 interface GeneratePlanInput {

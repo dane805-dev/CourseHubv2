@@ -17,14 +17,11 @@ export function useValidation(): ValidationResult {
   const waivers = useProfileStore((s) => s.waivers);
 
   const result = useMemo(() => {
-    const allCourseIds = Object.keys(placements);
-    const placedCourseIds = allCourseIds.filter(
-      (id) => placements[id]?.location !== "staging"
-    );
+    const courseIds = Object.keys(placements);
 
     return validatePlan({
-      placedCourseIds,
-      allCourseIds,
+      placedCourseIds: courseIds,
+      allCourseIds: courseIds,
       quarterOrder,
       majors,
       waivers,

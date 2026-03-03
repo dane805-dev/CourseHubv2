@@ -3,7 +3,7 @@
 import { create } from "zustand";
 import { immer } from "zustand/middleware/immer";
 import { temporal } from "zundo";
-import type { Placement, PlanLocation, QuarterId } from "@/types/plan";
+import type { Placement, QuarterId } from "@/types/plan";
 import { QUARTER_IDS, normalizeQuarterForCourse } from "@/types/plan";
 import { getCreditUnits } from "@/lib/data/course-resolver";
 
@@ -11,7 +11,6 @@ interface PlanState {
   // Data
   planId: string | null;
   placements: Record<string, Placement>; // courseId -> Placement
-  stagingOrder: string[]; // ordered courseIds in staging
   quarterOrder: Record<QuarterId, string[]>; // ordered courseIds per quarter
 
   // Save status
@@ -21,13 +20,10 @@ interface PlanState {
 
   // Actions
   loadPlan: (planId: string, placements: Placement[]) => void;
-  addToStaging: (courseId: string, creditUnits?: number) => void;
   addToQuarter: (courseId: string, quarterId: QuarterId, creditUnits?: number, index?: number) => void;
   moveToQuarter: (courseId: string, quarterId: QuarterId, index?: number) => void;
-  moveToStaging: (courseId: string) => void;
   removeCourse: (courseId: string) => void;
   reorderInQuarter: (quarterId: QuarterId, oldIndex: number, newIndex: number) => void;
-  reorderInStaging: (oldIndex: number, newIndex: number) => void;
   markSaving: () => void;
   markSaved: () => void;
   markDirty: () => void;
@@ -46,7 +42,6 @@ export const usePlanStore = create<PlanState>()(
   immer((set, get) => ({
     planId: null,
     placements: {},
-    stagingOrder: [],
     quarterOrder: QUARTER_IDS.reduce(
       (acc, qId) => ({ ...acc, [qId]: [] }),
       {} as Record<QuarterId, string[]>
@@ -59,29 +54,21 @@ export const usePlanStore = create<PlanState>()(
       set((state) => {
         state.planId = planId;
         state.placements = {};
-        state.stagingOrder = [];
         state.quarterOrder = QUARTER_IDS.reduce(
           (acc, qId) => ({ ...acc, [qId]: [] }),
           {} as Record<QuarterId, string[]>
         );
 
         for (const p of placements) {
-          if (p.location !== "staging") {
-            const normalized = normalizeQuarterForCourse(p.location as QuarterId, p.creditUnits);
-            p.location = normalized;
-          }
+          // Skip any legacy staging placements
+          if (p.location === "staging" as string) continue;
+
+          const normalized = normalizeQuarterForCourse(p.location as QuarterId, p.creditUnits);
+          p.location = normalized;
           state.placements[p.courseId] = p;
-          if (p.location === "staging") {
-            state.stagingOrder.push(p.courseId);
-          } else {
-            state.quarterOrder[p.location as QuarterId].push(p.courseId);
-          }
+          state.quarterOrder[p.location as QuarterId].push(p.courseId);
         }
 
-        // Sort by sortOrder within each container
-        state.stagingOrder.sort(
-          (a, b) => (state.placements[a]?.sortOrder ?? 0) - (state.placements[b]?.sortOrder ?? 0)
-        );
         for (const qId of QUARTER_IDS) {
           state.quarterOrder[qId].sort(
             (a, b) => (state.placements[a]?.sortOrder ?? 0) - (state.placements[b]?.sortOrder ?? 0)
@@ -91,22 +78,6 @@ export const usePlanStore = create<PlanState>()(
         state.isDirty = false;
       });
       usePlanStore.temporal.getState().clear();
-    },
-
-    addToStaging: (courseId, creditUnits) => {
-      set((state) => {
-        if (state.placements[courseId]) return; // Already in plan
-
-        const cu = creditUnits ?? getCreditUnits(courseId) ?? 1.0;
-        state.placements[courseId] = {
-          courseId,
-          location: "staging",
-          sortOrder: state.stagingOrder.length,
-          creditUnits: cu,
-        };
-        state.stagingOrder.push(courseId);
-        state.isDirty = true;
-      });
     },
 
     addToQuarter: (courseId, quarterId, creditUnits, index) => {
@@ -126,7 +97,6 @@ export const usePlanStore = create<PlanState>()(
         };
         targetOrder.splice(insertAt, 0, courseId);
 
-        // Reindex sort orders
         targetOrder.forEach((id, i) => {
           if (state.placements[id]) {
             state.placements[id].sortOrder = i;
@@ -144,26 +114,20 @@ export const usePlanStore = create<PlanState>()(
 
         const normalizedQuarterId = normalizeQuarterForCourse(quarterId, existing.creditUnits);
 
-        // Remove from current location
-        if (existing.location === "staging") {
-          state.stagingOrder = state.stagingOrder.filter((id) => id !== courseId);
-        } else {
-          const oldQuarter = existing.location as QuarterId;
-          state.quarterOrder[oldQuarter] = state.quarterOrder[oldQuarter].filter(
-            (id) => id !== courseId
-          );
-        }
+        // Remove from current quarter
+        const oldQuarter = existing.location as QuarterId;
+        state.quarterOrder[oldQuarter] = state.quarterOrder[oldQuarter].filter(
+          (id) => id !== courseId
+        );
 
         // Add to new quarter
         const targetOrder = state.quarterOrder[normalizedQuarterId];
         const insertAt = index !== undefined ? index : targetOrder.length;
         targetOrder.splice(insertAt, 0, courseId);
 
-        // Update placement
         existing.location = normalizedQuarterId;
         existing.sortOrder = insertAt;
 
-        // Reindex sort orders
         targetOrder.forEach((id, i) => {
           if (state.placements[id]) {
             state.placements[id].sortOrder = i;
@@ -174,43 +138,15 @@ export const usePlanStore = create<PlanState>()(
       });
     },
 
-    moveToStaging: (courseId) => {
-      set((state) => {
-        const existing = state.placements[courseId];
-        if (!existing) return;
-
-        // Remove from current location
-        if (existing.location !== "staging") {
-          const oldQuarter = existing.location as QuarterId;
-          state.quarterOrder[oldQuarter] = state.quarterOrder[oldQuarter].filter(
-            (id) => id !== courseId
-          );
-        }
-
-        // Add to staging
-        if (!state.stagingOrder.includes(courseId)) {
-          state.stagingOrder.push(courseId);
-        }
-
-        existing.location = "staging";
-        existing.sortOrder = state.stagingOrder.length - 1;
-        state.isDirty = true;
-      });
-    },
-
     removeCourse: (courseId) => {
       set((state) => {
         const existing = state.placements[courseId];
         if (!existing) return;
 
-        if (existing.location === "staging") {
-          state.stagingOrder = state.stagingOrder.filter((id) => id !== courseId);
-        } else {
-          const quarter = existing.location as QuarterId;
-          state.quarterOrder[quarter] = state.quarterOrder[quarter].filter(
-            (id) => id !== courseId
-          );
-        }
+        const quarter = existing.location as QuarterId;
+        state.quarterOrder[quarter] = state.quarterOrder[quarter].filter(
+          (id) => id !== courseId
+        );
 
         delete state.placements[courseId];
         state.isDirty = true;
@@ -224,21 +160,6 @@ export const usePlanStore = create<PlanState>()(
         order.splice(newIndex, 0, moved);
 
         order.forEach((id, i) => {
-          if (state.placements[id]) {
-            state.placements[id].sortOrder = i;
-          }
-        });
-
-        state.isDirty = true;
-      });
-    },
-
-    reorderInStaging: (oldIndex, newIndex) => {
-      set((state) => {
-        const [moved] = state.stagingOrder.splice(oldIndex, 1);
-        state.stagingOrder.splice(newIndex, 0, moved);
-
-        state.stagingOrder.forEach((id, i) => {
           if (state.placements[id]) {
             state.placements[id].sortOrder = i;
           }
@@ -282,12 +203,7 @@ export const usePlanStore = create<PlanState>()(
       );
     },
 
-    getPlacedCourseIds: () => {
-      const state = get();
-      return Object.keys(state.placements).filter(
-        (id) => state.placements[id]?.location !== "staging"
-      );
-    },
+    getPlacedCourseIds: () => Object.keys(get().placements),
 
     getPlacementsArray: () => Object.values(get().placements),
   })),
@@ -295,12 +211,10 @@ export const usePlanStore = create<PlanState>()(
     partialize: (state) => ({
       planId: state.planId,
       placements: state.placements,
-      stagingOrder: state.stagingOrder,
       quarterOrder: state.quarterOrder,
     }),
     equality: (pastState, currentState) =>
       pastState.placements === currentState.placements &&
-      pastState.stagingOrder === currentState.stagingOrder &&
       pastState.quarterOrder === currentState.quarterOrder,
     limit: 50,
   },

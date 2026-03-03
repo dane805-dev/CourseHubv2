@@ -10,8 +10,8 @@ export type QuarterId =
 
 export type SemesterId = "Y1F" | "Y1S" | "Y2F" | "Y2S";
 
-/** Location of a course in the plan: staging area or a specific quarter */
-export type PlanLocation = "staging" | QuarterId;
+/** Location of a course in the plan: a specific quarter */
+export type PlanLocation = QuarterId;
 
 /** A course placed in the plan */
 export interface Placement {
@@ -60,10 +60,10 @@ export const QUARTER_INFO: Record<QuarterId, QuarterInfo> = {
   Y1F_Q2: { id: "Y1F_Q2", label: "Year 1 Fall (Q2)", semester: "Y1F", term: "Fall", year: 1, quarterNumber: 2 },
   Y1S_Q3: { id: "Y1S_Q3", label: "Year 1 Spring (Q3)", semester: "Y1S", term: "Spring", year: 1, quarterNumber: 1 },
   Y1S_Q4: { id: "Y1S_Q4", label: "Year 1 Spring (Q4)", semester: "Y1S", term: "Spring", year: 1, quarterNumber: 2 },
-  Y2F_Q5: { id: "Y2F_Q5", label: "Year 2 Fall (Q5)", semester: "Y2F", term: "Fall", year: 2, quarterNumber: 1 },
-  Y2F_Q6: { id: "Y2F_Q6", label: "Year 2 Fall (Q6)", semester: "Y2F", term: "Fall", year: 2, quarterNumber: 2 },
-  Y2S_Q7: { id: "Y2S_Q7", label: "Year 2 Spring (Q7)", semester: "Y2S", term: "Spring", year: 2, quarterNumber: 1 },
-  Y2S_Q8: { id: "Y2S_Q8", label: "Year 2 Spring (Q8)", semester: "Y2S", term: "Spring", year: 2, quarterNumber: 2 },
+  Y2F_Q5: { id: "Y2F_Q5", label: "Year 2 Fall (Q1)", semester: "Y2F", term: "Fall", year: 2, quarterNumber: 1 },
+  Y2F_Q6: { id: "Y2F_Q6", label: "Year 2 Fall (Q2)", semester: "Y2F", term: "Fall", year: 2, quarterNumber: 2 },
+  Y2S_Q7: { id: "Y2S_Q7", label: "Year 2 Spring (Q3)", semester: "Y2S", term: "Spring", year: 2, quarterNumber: 1 },
+  Y2S_Q8: { id: "Y2S_Q8", label: "Year 2 Spring (Q4)", semester: "Y2S", term: "Spring", year: 2, quarterNumber: 2 },
 };
 
 export const SEMESTER_INFO: Record<SemesterId, { label: string; quarters: [QuarterId, QuarterId] }> = {

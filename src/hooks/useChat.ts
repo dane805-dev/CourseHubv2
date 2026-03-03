@@ -54,14 +54,11 @@ export function useChat() {
     setMessages([...updatedMessages, assistantMsg]);
 
     // Assemble plan context
-    const allCourseIds = Object.keys(placements);
-    const placedCourseIds = allCourseIds.filter(
-      (id) => placements[id]?.location !== "staging"
-    );
+    const courseIds = Object.keys(placements);
 
     const validationResult = validatePlan({
-      placedCourseIds,
-      allCourseIds,
+      placedCourseIds: courseIds,
+      allCourseIds: courseIds,
       quarterOrder,
       majors,
       waivers,

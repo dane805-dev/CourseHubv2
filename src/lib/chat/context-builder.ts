@@ -7,10 +7,10 @@ const QUARTER_LABELS: Record<QuarterId, string> = {
   Y1F_Q2: "Year 1 Fall Q2",
   Y1S_Q3: "Year 1 Spring Q3",
   Y1S_Q4: "Year 1 Spring Q4",
-  Y2F_Q5: "Year 2 Fall Q5",
-  Y2F_Q6: "Year 2 Fall Q6",
-  Y2S_Q7: "Year 2 Spring Q7",
-  Y2S_Q8: "Year 2 Spring Q8",
+  Y2F_Q5: "Year 2 Fall Q1",
+  Y2F_Q6: "Year 2 Fall Q2",
+  Y2S_Q7: "Year 2 Spring Q3",
+  Y2S_Q8: "Year 2 Spring Q4",
 };
 
 const QUARTER_IDS: QuarterId[] = [
@@ -35,7 +35,7 @@ When you recommend plan changes:
 - Explain your reasoning FIRST in plain text
 - Then, if suggesting changes, end your response with an ACTIONS_JSON block
 - Only suggest courses that exist in the catalog provided below
-- Only use valid location IDs: "staging", "Y1F_Q1", "Y1F_Q2", "Y1S_Q3", "Y1S_Q4", "Y2F_Q5", "Y2F_Q6", "Y2S_Q7", "Y2S_Q8"
+- Only use valid location IDs: "Y1F_Q1", "Y1F_Q2", "Y1S_Q3", "Y1S_Q4", "Y2F_Q5", "Y2F_Q6", "Y2S_Q7", "Y2S_Q8"
 - For add_course: only suggest courses NOT already in the plan
 - For move_course: only suggest courses ALREADY in the plan
 - For remove_course: only suggest courses ALREADY in the plan
@@ -72,9 +72,6 @@ CU Load Preference: ${ctx.cuLoadPreference}`);
 
   // ─── Current Plan ───
   const placementMap = new Map(ctx.placements.map((p) => [p.courseId, p]));
-  const stagedCourses = ctx.placements
-    .filter((p) => p.location === "staging")
-    .map((p) => `${p.courseId} (${p.creditUnits.toFixed(1)} CU)`);
 
   const quarterLines: string[] = [];
   for (const qId of QUARTER_IDS) {
@@ -93,8 +90,7 @@ CU Load Preference: ${ctx.cuLoadPreference}`);
 
   sections.push(`--- CURRENT PLAN ---
 ${quarterLines.join("\n")}
-Staging (unscheduled): ${stagedCourses.length > 0 ? stagedCourses.join(", ") : "None"}
-Total CU placed in quarters: ${ctx.totalCU.toFixed(1)} / 19.0–21.0 required`);
+Total CU: ${ctx.totalCU.toFixed(1)} / 19.0–21.0 required`);
 
   // ─── Validation Status ───
   const vr = ctx.validationResult as any;
@@ -107,13 +103,13 @@ Total CU placed in quarters: ${ctx.totalCU.toFixed(1)} / 19.0–21.0 required`);
   const warningLines = warnings.map((w) => `  - [${w.type}] ${w.message ?? w.type}`).join("\n") || "  None";
 
   const coreLines = coreProgress.map((cp) =>
-    `  - ${cp.coreCode}: ${cp.status} (${cp.creditsSatisfied}/${cp.creditsRequired} CU)${
+    `  - ${cp.coreName}: ${cp.status} (${cp.creditsSatisfied}/${cp.creditsRequired} CU)${
       cp.satisfyingCourses?.length ? ` — via ${cp.satisfyingCourses.join(", ")}` : ""
     }`
   ).join("\n") || "  (none)";
 
   const majorLines = majorProgress.map((mp) =>
-    `  - ${mp.majorCode}: ${mp.totalCreditsSatisfied.toFixed(1)}/${mp.totalCreditsRequired.toFixed(1)} CU (${mp.percentComplete.toFixed(0)}%)`
+    `  - ${mp.majorName}: ${mp.totalCreditsSatisfied.toFixed(1)}/${mp.totalCreditsRequired.toFixed(1)} CU (${mp.percentComplete.toFixed(0)}%)`
   ).join("\n") || "  (none)";
 
   sections.push(`--- VALIDATION STATUS ---

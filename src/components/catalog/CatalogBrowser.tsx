@@ -13,7 +13,6 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -46,7 +45,6 @@ function CatalogRow({
   termAvailability: "Fall" | "Spring" | "Both" | null;
 }) {
   const openCourseModal = useUIStore((s) => s.openCourseModal);
-  const addToStaging = usePlanStore((s) => s.addToStaging);
   const addToQuarter = usePlanStore((s) => s.addToQuarter);
   const declaredMajors = useProfileStore((s) => s.majors);
   const coreReqs = findCoreRequirementsForCourse(courseId);
@@ -128,10 +126,6 @@ function CatalogRow({
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-52">
-              <DropdownMenuItem onSelect={() => addToStaging(courseId, creditUnits)}>
-                Add to Staging
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
               <DropdownMenuLabel className="text-xs font-medium text-muted-foreground py-1">
                 {semesterLong ? "Add to Semester" : "Add to Quarter"}
               </DropdownMenuLabel>
