@@ -30,6 +30,7 @@ export function CourseModal() {
   const coreReqs = findCoreRequirementsForCourse(courseId);
   const majorCodes = findMajorsForCourse(courseId);
   const alreadyInPlan = isInPlan(courseId);
+  const isPreTerm = courseId === "MGMT6100";
 
   function handleAddToStaging() {
     addToStaging(courseId!, course!.creditUnits);
@@ -55,8 +56,13 @@ export function CourseModal() {
             </div>
 
             {/* Requirement badges */}
-            {(coreReqs.length > 0 || majorCodes.length > 0) && (
+            {(coreReqs.length > 0 || majorCodes.length > 0 || isPreTerm) && (
               <div className="flex flex-wrap gap-1.5">
+                {isPreTerm && (
+                  <Badge className="bg-blue-600 text-white border-transparent">
+                    Pre-Term
+                  </Badge>
+                )}
                 {coreReqs.map((r) => (
                   <Badge key={r.core_code} variant="secondary">
                     {r.core_type === "fixed" ? "Core" : "Flex"}: {r.core_name}

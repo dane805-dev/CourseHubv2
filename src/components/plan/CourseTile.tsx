@@ -53,6 +53,7 @@ export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
   const courseMajors = findMajorsForCourse(courseId);
   const isForMajor = courseMajors.some((m) => declaredMajors.includes(m as any));
   const isSemester = isSemesterLong(course.creditUnits);
+  const isPreTerm = courseId === "MGMT6100";
 
   const hasWarnings = warnings && warnings.length > 0;
   const highSeverity = hasWarnings && warnings.some((w) => w.severity === "high");
@@ -133,6 +134,11 @@ export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
           {isForMajor && (
             <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
               Major
+            </Badge>
+          )}
+          {isPreTerm && (
+            <Badge className="text-[10px] px-1 py-0 h-4 bg-blue-600 text-white border-transparent">
+              Pre-Term
             </Badge>
           )}
         </div>

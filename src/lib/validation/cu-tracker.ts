@@ -43,10 +43,10 @@ export function trackCreditUnits(input: CUTrackingInput): CUTrackingOutput {
     }
   }
 
-  // Calculate per-semester CU
+  // Calculate per-semester CU (includes pre-term quarters via startsWith match)
   for (const [semId, semInfo] of Object.entries(SEMESTER_INFO)) {
-    const [q1, q2] = semInfo.quarters;
-    const cu = (quarterCU[q1] ?? 0) + (quarterCU[q2] ?? 0);
+    const semQuarterIds = QUARTER_IDS.filter((q) => q.startsWith(semId));
+    const cu = semQuarterIds.reduce((sum, q) => sum + (quarterCU[q] ?? 0), 0);
     semesterCU[semId] = cu;
 
     if (cu > CU_LIMITS.SEMESTER_OVERLOAD_THRESHOLD) {
