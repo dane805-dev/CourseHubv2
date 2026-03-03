@@ -116,6 +116,9 @@ export default function PlanPage() {
       targetContainer = overContainer;
     }
 
+    // Prevent MGMT6100 from leaving Y1F_Q1
+    if (activeIdStr === "MGMT6100" && targetContainer !== "Y1F_Q1") return;
+
     if (activeContainer === targetContainer) {
       // Reorder within same container
       if (targetContainer === "staging") {
