@@ -108,9 +108,44 @@ Total CU: ${ctx.totalCU.toFixed(1)} / 19.0–21.0 required`);
     }`
   ).join("\n") || "  (none)";
 
-  const majorLines = majorProgress.map((mp) =>
-    `  - ${mp.majorName}: ${mp.totalCreditsSatisfied.toFixed(1)}/${mp.totalCreditsRequired.toFixed(1)} CU (${mp.percentComplete.toFixed(0)}%)`
-  ).join("\n") || "  (none)";
+  const MAX_MISSING = 8;
+
+  const majorLines = majorProgress.map((mp) => {
+    const lines: string[] = [
+      `  - ${mp.majorCode} (${mp.majorName}): ${mp.totalCreditsSatisfied.toFixed(1)}/${mp.totalCreditsRequired.toFixed(1)} CU (${mp.percentComplete.toFixed(0)}%)`,
+    ];
+
+    if (mp.requiredCoursesProgress) {
+      const rcp = mp.requiredCoursesProgress;
+      const selNote = rcp.selectionType === "choose" ? " (choose one)" : "";
+      lines.push(`    Required Courses${selNote}: ${rcp.creditsSatisfied.toFixed(1)}/${rcp.creditsRequired.toFixed(1)} CU`);
+      if (rcp.satisfyingCourses.length) lines.push(`      Satisfied by: ${rcp.satisfyingCourses.join(", ")}`);
+      if (rcp.missingCourses.length) lines.push(`      Still needed: ${rcp.missingCourses.join(", ")}`);
+    }
+
+    if (mp.electiveCoursesProgress) {
+      const ecp = mp.electiveCoursesProgress;
+      lines.push(`    Elective Courses: ${ecp.creditsSatisfied.toFixed(1)}/${ecp.creditsRequired.toFixed(1)} CU`);
+      if (ecp.satisfyingCourses.length) lines.push(`      Satisfied by: ${ecp.satisfyingCourses.join(", ")}`);
+    }
+
+    if (mp.pillarProgress?.length) {
+      lines.push(`    Pillar Breakdown:`);
+      for (const pp of mp.pillarProgress) {
+        const codeTag = pp.pillarName.includes(`(${pp.pillarCode})`) ? "" : ` (${pp.pillarCode})`;
+        lines.push(`      ${pp.pillarName}${codeTag}: ${pp.creditsSatisfied.toFixed(1)}/${pp.creditsRequired.toFixed(1)} CU`);
+        if (pp.satisfyingCourses.length) lines.push(`        Satisfied by: ${pp.satisfyingCourses.join(", ")}`);
+        if (pp.missingCourses?.length) {
+          const shown = pp.missingCourses.slice(0, MAX_MISSING);
+          const extra = pp.missingCourses.length - shown.length;
+          const suffix = extra > 0 ? ` (+${extra} more)` : "";
+          lines.push(`        Eligible (not yet in plan): ${shown.join(", ")}${suffix}`);
+        }
+      }
+    }
+
+    return lines.join("\n");
+  }).join("\n") || "  (none)";
 
   sections.push(`--- VALIDATION STATUS ---
 Valid: ${vr?.isValid ?? "unknown"}
