@@ -7,7 +7,6 @@ import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -73,7 +72,7 @@ function CatalogRow({
       className={`flex items-center gap-2 p-2 rounded-md border transition-colors ${
         inPlan
           ? "border-primary/30 bg-primary/5 cursor-default"
-          : "border-transparent hover:border-border hover:bg-accent/50 cursor-grab active:cursor-grabbing"
+          : "border-border hover:bg-accent/50 cursor-grab active:cursor-grabbing"
       }`}
       style={{ opacity: isDragging ? 0.5 : 1 }}
     >
@@ -245,7 +244,7 @@ export function CatalogBrowser() {
         </div>
       </div>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="p-2 space-y-1">
           {filtered.map((course) => (
             <CatalogRow
@@ -258,7 +257,7 @@ export function CatalogBrowser() {
             />
           ))}
         </div>
-      </ScrollArea>
+      </div>
     </div>
   );
 }
