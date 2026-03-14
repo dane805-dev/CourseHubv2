@@ -1,3 +1,20 @@
+export interface PcrInstructorRow {
+  name: string;
+  courseQuality: number | null;
+  instructorQuality: number | null;
+  difficulty: number | null;
+  workRequired: number | null;
+}
+
+/** PCR review metrics returned by /api/pcr/[courseCode] */
+export interface PcrReviews {
+  rCourseQuality: number | null;
+  rDifficulty: number | null;
+  rWorkRequired: number | null;
+  rSemesterCount: number | null;
+  instructors: PcrInstructorRow[];
+}
+
 /** Full course data from the catalog (cleaned_courses.json) */
 export interface CatalogCourse {
   Course_ID: string;
