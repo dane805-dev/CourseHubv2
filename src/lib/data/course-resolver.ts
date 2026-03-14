@@ -132,6 +132,8 @@ function catalogCourseToResolved(c: CatalogCourse): ResolvedCourse {
     canvasUrl: c.Canvas_URL,
     syllabiUrl: c.Syllabi_URL,
     courseLevel: c.Course_Level,
+    attendancePolicy: c.Attendance_Policy ?? null,
+    examPolicy: c.Exam_Policy ?? null,
   };
 }
 

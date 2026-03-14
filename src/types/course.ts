@@ -41,6 +41,8 @@ export interface CatalogCourse {
   Canvas_URL: string | null;
   Syllabi_URL: string | null;
   Course_Level: number;
+  Attendance_Policy: string | null;
+  Exam_Policy: string | null;
 }
 
 /** Lightweight course data from the registry (course_registry.json) */
@@ -90,4 +92,6 @@ export interface ResolvedCourse {
   canvasUrl?: string | null;
   syllabiUrl?: string | null;
   courseLevel?: number;
+  attendancePolicy?: string | null;
+  examPolicy?: string | null;
 }

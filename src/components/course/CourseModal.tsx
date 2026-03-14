@@ -137,6 +137,29 @@ export function CourseModal() {
               </div>
             )}
 
+            {(course.attendancePolicy || course.examPolicy) && (
+              <>
+                <Separator />
+                <div>
+                  <h4 className="text-sm font-medium mb-1">Course Policies</h4>
+                  <div className="space-y-1 text-sm text-muted-foreground">
+                    {course.attendancePolicy && (
+                      <p>
+                        <span className="font-medium text-foreground">Attendance: </span>
+                        {course.attendancePolicy}
+                      </p>
+                    )}
+                    {course.examPolicy && (
+                      <p>
+                        <span className="font-medium text-foreground">Exams: </span>
+                        {course.examPolicy}
+                      </p>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+
             {course.termAvailability && (
               <div>
                 <h4 className="text-sm font-medium mb-1">Term Availability</h4>
