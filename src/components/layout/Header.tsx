@@ -1,7 +1,7 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon, Undo2, Redo2 } from "lucide-react";
+import { Sun, Moon, Undo2, Redo2, MessageCircle, BookOpen, BarChart2, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePlanStore } from "@/stores/plan-store";
 import { useUIStore } from "@/stores/ui-store";
@@ -62,33 +62,33 @@ export function Header() {
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("chat")}
-          className={rightPanelView === "chat" ? "" : "text-muted-foreground"}
+          className={rightPanelView === "chat" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Chat
+          <MessageCircle size={14} /> Chat
         </Button>
         <Button
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("catalog")}
-          className={rightPanelView === "catalog" ? "" : "text-muted-foreground"}
+          className={rightPanelView === "catalog" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Catalog
+          <BookOpen size={14} /> Catalog
         </Button>
         <Button
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("progress")}
-          className={rightPanelView === "progress" ? "" : "text-muted-foreground"}
+          className={rightPanelView === "progress" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Progress
+          <BarChart2 size={14} /> Progress
         </Button>
         <Button
           variant="ghost"
           size="sm"
           onClick={() => setRightPanelView("profile")}
-          className={rightPanelView === "profile" ? "" : "text-muted-foreground"}
+          className={rightPanelView === "profile" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Profile
+          <User size={14} /> Profile
         </Button>
         <Button
           variant="ghost"

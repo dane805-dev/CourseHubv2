@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { useChat } from "@/hooks/useChat";
 import { ChatMessageComponent } from "./ChatMessage";
@@ -64,7 +63,7 @@ export function ChatPanel() {
         )}
       </div>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="p-4 space-y-3">
           {messages.length === 0 && <WelcomeMessage />}
           {messages.map((msg) => (
@@ -75,7 +74,7 @@ export function ChatPanel() {
           )}
           <div ref={messagesEndRef} />
         </div>
-      </ScrollArea>
+      </div>
 
       <ChatInput onSend={sendMessage} disabled={isLoading} />
     </div>

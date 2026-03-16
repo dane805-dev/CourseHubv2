@@ -86,7 +86,7 @@ function CatalogRow({
           </span>
           {coreReqs.length > 0 && (
             <Badge
-              variant="secondary"
+              variant={coreReqs[0].core_type === "fixed" ? "core-fixed" : "core-flex"}
               className="text-[10px] px-1 py-0 h-4"
             >
               {coreReqs[0].core_type === "fixed" ? "Fixed" : "Flex"}
@@ -94,7 +94,7 @@ function CatalogRow({
           )}
           {isForMajor && (
             <Badge
-              variant="secondary"
+              variant="major"
               className="text-[10px] px-1 py-0 h-4"
             >
               Major
@@ -109,12 +109,12 @@ function CatalogRow({
             </Badge>
           )}
         </div>
-        <div className="text-xs text-muted-foreground truncate">
+        <div className="text-xs text-foreground/90 truncate">
           {title}
         </div>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <span className="text-xs font-mono text-muted-foreground">
+        <span className="text-xs font-mono text-foreground/80">
           {creditUnits.toFixed(1)}
         </span>
         {!inPlan && (

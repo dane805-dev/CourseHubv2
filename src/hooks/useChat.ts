@@ -1,9 +1,9 @@
 "use client";
 
-import { useState } from "react";
 import { usePlanStore } from "@/stores/plan-store";
 import { useProfileStore } from "@/stores/profile-store";
 import { useCatalogStore } from "@/stores/catalog-store";
+import { useChatStore } from "@/stores/chat-store";
 import { validatePlan } from "@/lib/validation/engine";
 import type {
   ChatMessage,
@@ -14,8 +14,10 @@ import type {
 } from "@/types/chat";
 
 export function useChat() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [isLoading, setIsLoading] = useState(false);
+  const messages = useChatStore((s) => s.messages);
+  const isLoading = useChatStore((s) => s.isLoading);
+  const { addMessage, updateMessage, setIsLoading, clearMessages } =
+    useChatStore.getState();
 
   // Plan store selectors
   const placements = usePlanStore((s) => s.placements);
@@ -39,8 +41,7 @@ export function useChat() {
       timestamp: Date.now(),
     };
 
-    const updatedMessages = [...messages, userMsg];
-    setMessages(updatedMessages);
+    addMessage(userMsg);
     setIsLoading(true);
 
     const assistantId = crypto.randomUUID();
@@ -51,7 +52,16 @@ export function useChat() {
       status: "streaming",
       timestamp: Date.now(),
     };
-    setMessages([...updatedMessages, assistantMsg]);
+    addMessage(assistantMsg);
+
+    // Snapshot messages for API history (user message already added above)
+    const currentMessages = useChatStore.getState().messages;
+    const historyForAPI: ChatHistoryMessage[] = currentMessages
+      .filter((m) => m.id !== assistantId)
+      .map((m) => ({
+        role: m.role as "user" | "assistant",
+        content: m.content,
+      }));
 
     // Assemble plan context
     const courseIds = Object.keys(placements);
@@ -86,11 +96,6 @@ export function useChat() {
         desc: c.description ?? null,
       })),
     };
-
-    const historyForAPI: ChatHistoryMessage[] = updatedMessages.map((m) => ({
-      role: m.role as "user" | "assistant",
-      content: m.content,
-    }));
 
     let parsedActions: SuggestedAction[] | undefined;
 
@@ -130,13 +135,7 @@ export function useChat() {
 
           if (chunk.type === "text_delta") {
             accumulatedText += chunk.delta;
-            setMessages((prev) =>
-              prev.map((m) =>
-                m.id === assistantId
-                  ? { ...m, content: accumulatedText }
-                  : m
-              )
-            );
+            updateMessage(assistantId, { content: accumulatedText });
           } else if (chunk.type === "actions") {
             parsedActions = chunk.actions;
           } else if (chunk.type === "done" || chunk.type === "error") {
@@ -148,30 +147,17 @@ export function useChat() {
         }
       }
 
-      setMessages((prev) =>
-        prev.map((m) =>
-          m.id === assistantId
-            ? { ...m, status: "complete", suggestedActions: parsedActions }
-            : m
-        )
-      );
+      updateMessage(assistantId, {
+        status: "complete",
+        suggestedActions: parsedActions,
+      });
     } catch (err) {
       const errorMessage =
         err instanceof Error ? err.message : "Something went wrong. Please try again.";
-      setMessages((prev) =>
-        prev.map((m) =>
-          m.id === assistantId
-            ? { ...m, content: errorMessage, status: "error" }
-            : m
-        )
-      );
+      updateMessage(assistantId, { content: errorMessage, status: "error" });
     } finally {
       setIsLoading(false);
     }
-  }
-
-  function clearMessages() {
-    setMessages([]);
   }
 
   return { messages, isLoading, sendMessage, clearMessages };
