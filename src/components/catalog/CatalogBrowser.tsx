@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { useDraggable } from "@dnd-kit/core";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
@@ -173,6 +173,7 @@ function CatalogRow({
 export function CatalogBrowser() {
   const catalogStore = useCatalogStore();
   const isInPlan = usePlanStore((s) => s.isInPlan);
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
 
   // Load courses on mount
   useEffect(() => {
@@ -186,7 +187,18 @@ export function CatalogBrowser() {
   return (
     <div className="flex flex-col h-full">
       <div className="p-4 space-y-3 border-b">
-        <h2 className="text-sm font-semibold">Course Catalog</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold">Course Catalog</h2>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
+          >
+            <X className="size-3.5" />
+          </Button>
+        </div>
         <Input
           placeholder="Search courses..."
           value={catalogStore.searchQuery}

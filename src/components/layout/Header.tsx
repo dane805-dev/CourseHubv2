@@ -12,7 +12,17 @@ export function Header() {
   const isDirty = usePlanStore((s) => s.isDirty);
   const isSaving = usePlanStore((s) => s.isSaving);
   const rightPanelView = useUIStore((s) => s.rightPanelView);
+  const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
   const setRightPanelView = useUIStore((s) => s.setRightPanelView);
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
+
+  function handlePanelNav(view: "chat" | "catalog" | "progress" | "profile") {
+    if (rightPanelView === view && rightPanelOpen) {
+      setRightPanelOpen(false);
+    } else {
+      setRightPanelView(view);
+    }
+  }
   const canUndo = useTemporalStore((s) => s.pastStates.length > 0);
   const canRedo = useTemporalStore((s) => s.futureStates.length > 0);
   const { theme, setTheme } = useTheme();
@@ -61,32 +71,32 @@ export function Header() {
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("chat")}
-          className={rightPanelView === "chat" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("chat")}
+          className={rightPanelView === "chat" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
           <MessageCircle size={14} /> Chat
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("catalog")}
-          className={rightPanelView === "catalog" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("catalog")}
+          className={rightPanelView === "catalog" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
           <BookOpen size={14} /> Catalog
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("progress")}
-          className={rightPanelView === "progress" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("progress")}
+          className={rightPanelView === "progress" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
           <BarChart2 size={14} /> Progress
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("profile")}
-          className={rightPanelView === "profile" ? "bg-primary/10 text-primary" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("profile")}
+          className={rightPanelView === "profile" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
           <User size={14} /> Profile
         </Button>

@@ -31,8 +31,8 @@ const FLEX_CORE_DEFAULTS: { courseId: string; quarter: QuarterId; coreCode: stri
   // WHCP — typically Fall Q2
   { courseId: "WHCP6160", quarter: "Y1F_Q2", coreCode: "WHCP" },
 
-  // Accounting flex — Spring (1.0 CU, semester-long)
-  { courseId: "ACCT6130", quarter: "Y1S_Q3", coreCode: "ACCT_FLEX" },
+  // Accounting flex — Fall (1.0 CU, semester-long; spans Q1+Q2)
+  { courseId: "ACCT6130", quarter: "Y1F_Q1", coreCode: "ACCT_FLEX" },
 
   // FNCE Corp flex — Spring (1.0 CU)
   { courseId: "FNCE6110", quarter: "Y1S_Q3", coreCode: "FNCE_CORP_FLEX" },
@@ -49,9 +49,9 @@ const FLEX_CORE_DEFAULTS: { courseId: string; quarter: QuarterId; coreCode: stri
   // MKTG flex — Spring Q4 (0.5 CU)
   { courseId: "MKTG6120", quarter: "Y1S_Q4", coreCode: "MKTG_FLEX" },
 
-  // OIDD flex — two 0.5 CU courses in Year 2
-  { courseId: "OIDD6110", quarter: "Y2F_Q5", coreCode: "OIDD_FLEX" },
-  { courseId: "OIDD6120", quarter: "Y2S_Q7", coreCode: "OIDD_FLEX" },
+  // OIDD flex — Fall Q2 and Spring Q3
+  { courseId: "OIDD6110", quarter: "Y1F_Q2", coreCode: "OIDD_FLEX" },
+  { courseId: "OIDD6120", quarter: "Y1S_Q3", coreCode: "OIDD_FLEX" },
 ];
 
 interface GeneratePlanInput {

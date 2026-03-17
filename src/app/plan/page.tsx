@@ -31,6 +31,7 @@ import { findCoreRequirementsForCourse, findMajorsForCourse } from "@/lib/data/r
 
 export default function PlanPage() {
   const rightPanelView = useUIStore((s) => s.rightPanelView);
+  const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
   const [activeId, setActiveId] = useState<string | null>(null);
   const planStore = usePlanStore();
   const declaredMajors = useProfileStore((s) => s.majors);
@@ -190,7 +191,7 @@ export default function PlanPage() {
       onDragStart={handleDragStart}
       onDragEnd={handleDragEnd}
     >
-      <AppShell planContent={<PlanGrid />} rightPanel={rightPanel} />
+      <AppShell planContent={<PlanGrid />} rightPanel={rightPanel} rightPanelOpen={rightPanelOpen} />
       <CourseModal />
       <DragOverlay>{renderOverlay()}</DragOverlay>
     </DndContext>

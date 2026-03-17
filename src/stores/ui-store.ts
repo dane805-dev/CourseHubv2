@@ -12,6 +12,7 @@ interface UIState {
 
   // Right panel
   rightPanelView: RightPanelView;
+  rightPanelOpen: boolean;
   progressTab: string;
 
   // Highlighted courses (from progress dashboard clicking)
@@ -29,6 +30,7 @@ interface UIState {
   openCourseModal: (courseId: string) => void;
   closeCourseModal: () => void;
   setRightPanelView: (view: RightPanelView) => void;
+  setRightPanelOpen: (open: boolean) => void;
   setProgressTab: (tab: string) => void;
   setHighlightedCourses: (courseIds: string[]) => void;
   clearHighlights: () => void;
@@ -41,6 +43,7 @@ export const useUIStore = create<UIState>()(
     selectedCourseId: null,
     isCourseModalOpen: false,
     rightPanelView: "catalog",
+    rightPanelOpen: true,
     progressTab: "core",
     highlightedCourseIds: [],
     confirmDialog: {
@@ -65,6 +68,12 @@ export const useUIStore = create<UIState>()(
     setRightPanelView: (view) =>
       set((state) => {
         state.rightPanelView = view;
+        state.rightPanelOpen = true;
+      }),
+
+    setRightPanelOpen: (open) =>
+      set((state) => {
+        state.rightPanelOpen = open;
       }),
 
     setProgressTab: (tab) =>
