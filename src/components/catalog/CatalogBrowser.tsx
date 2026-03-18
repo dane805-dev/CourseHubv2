@@ -174,6 +174,7 @@ export function CatalogBrowser() {
   const catalogStore = useCatalogStore();
   const isInPlan = usePlanStore((s) => s.isInPlan);
   const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
+  const declaredMajors = useProfileStore((s) => s.majors);
 
   // Load courses on mount
   useEffect(() => {
@@ -183,6 +184,12 @@ export function CatalogBrowser() {
   }, [catalogStore.isLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtered = catalogStore.getFilteredCourses();
+  const displayCourses = catalogStore.filters.courseType === "major"
+    ? filtered.filter((course) => {
+        const courseMajors = findMajorsForCourse(course.courseId);
+        return courseMajors.some((m) => declaredMajors.includes(m as any));
+      })
+    : filtered;
 
   return (
     <div className="flex flex-col h-full">
@@ -240,7 +247,7 @@ export function CatalogBrowser() {
               <SelectItem value="Both">Both</SelectItem>
             </SelectContent>
           </Select>
-          {(catalogStore.searchQuery || catalogStore.filters.department || catalogStore.filters.termAvailability) && (
+          {(catalogStore.searchQuery || catalogStore.filters.department || catalogStore.filters.termAvailability || catalogStore.filters.courseType) && (
             <Button
               variant="ghost"
               size="sm"
@@ -251,14 +258,29 @@ export function CatalogBrowser() {
             </Button>
           )}
         </div>
+        <Button
+          variant={catalogStore.filters.courseType === "major" ? "default" : "outline"}
+          size="sm"
+          className="h-8 text-xs w-full"
+          onClick={() =>
+            catalogStore.setFilter(
+              "courseType",
+              catalogStore.filters.courseType === "major" ? null : "major"
+            )
+          }
+          disabled={declaredMajors.length === 0}
+          title={declaredMajors.length === 0 ? "Declare a major in your profile to use this filter" : undefined}
+        >
+          Major Requirements
+        </Button>
         <div className="text-xs text-muted-foreground">
-          {filtered.length} course{filtered.length !== 1 ? "s" : ""}
+          {displayCourses.length} course{displayCourses.length !== 1 ? "s" : ""}
         </div>
       </div>
 
       <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="p-2 space-y-1">
-          {filtered.map((course) => (
+          {displayCourses.map((course) => (
             <CatalogRow
               key={course.courseId}
               courseId={course.courseId}
