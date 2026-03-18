@@ -1,9 +1,11 @@
 "use client";
 
 import { useState } from "react";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { useProfileStore } from "@/stores/profile-store";
+import { useUIStore } from "@/stores/ui-store";
 import { MajorSelector } from "@/components/onboarding/MajorSelector";
 import { WaiverSelector } from "@/components/onboarding/WaiverSelector";
 import { MAJOR_OPTIONS } from "@/types/user";
@@ -11,6 +13,7 @@ import type { MajorCode, WaiverConfig } from "@/types/user";
 
 export function ProfilePanel() {
   const profileStore = useProfileStore();
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
 
   const [isEditing, setIsEditing] = useState(false);
   const [editMajors, setEditMajors] = useState<MajorCode[]>(profileStore.majors);
@@ -35,8 +38,17 @@ export function ProfilePanel() {
   if (isEditing) {
     return (
       <div className="flex flex-col h-full">
-        <div className="p-4 border-b">
+        <div className="p-4 border-b flex items-center justify-between">
           <h2 className="text-sm font-semibold">Edit Profile</h2>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
+          >
+            <X className="size-3.5" />
+          </Button>
         </div>
         <div className="flex-1 overflow-y-auto p-4 space-y-6">
           <section className="space-y-2">
@@ -73,9 +85,20 @@ export function ProfilePanel() {
     <div className="flex flex-col h-full">
       <div className="p-4 border-b flex items-center justify-between">
         <h2 className="text-sm font-semibold">Profile</h2>
-        <Button variant="outline" size="sm" onClick={startEditing}>
-          Edit
-        </Button>
+        <div className="flex items-center gap-1">
+          <Button variant="outline" size="sm" onClick={startEditing}>
+            Edit
+          </Button>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
+          >
+            <X className="size-3.5" />
+          </Button>
+        </div>
       </div>
       <div className="flex-1 overflow-y-auto p-4 space-y-6">
         <section className="space-y-1">

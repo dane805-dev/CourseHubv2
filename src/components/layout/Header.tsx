@@ -1,22 +1,28 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import { Sun, Moon, Undo2, Redo2 } from "lucide-react";
+import { Sun, Moon, Undo2, Redo2, MessageCircle, BookOpen, BarChart2, User } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { usePlanStore } from "@/stores/plan-store";
 import { useUIStore } from "@/stores/ui-store";
 import { useTemporalStore } from "@/hooks/useTemporalStore";
 import { useUndoRedoKeys } from "@/hooks/useUndoRedoKeys";
-import { ExportMenu } from "@/components/export/ExportMenu";
 
 export function Header() {
-  const totalCU = usePlanStore((s) => s.getTotalCU());
   const isDirty = usePlanStore((s) => s.isDirty);
   const isSaving = usePlanStore((s) => s.isSaving);
-  const toggleRightPanel = useUIStore((s) => s.toggleRightPanel);
-  const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
   const rightPanelView = useUIStore((s) => s.rightPanelView);
+  const rightPanelOpen = useUIStore((s) => s.rightPanelOpen);
   const setRightPanelView = useUIStore((s) => s.setRightPanelView);
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
+
+  function handlePanelNav(view: "chat" | "catalog" | "progress" | "profile") {
+    if (rightPanelView === view && rightPanelOpen) {
+      setRightPanelOpen(false);
+    } else {
+      setRightPanelView(view);
+    }
+  }
   const canUndo = useTemporalStore((s) => s.pastStates.length > 0);
   const canRedo = useTemporalStore((s) => s.futureStates.length > 0);
   const { theme, setTheme } = useTheme();
@@ -37,9 +43,6 @@ export function Header() {
     <header className="h-14 border-b flex items-center justify-between px-4 bg-card shrink-0">
       <div className="flex items-center gap-4">
         <h1 className="text-lg font-bold tracking-tight">Course Hub</h1>
-        <span className="text-sm text-muted-foreground font-mono">
-          {totalCU.toFixed(1)} CU
-        </span>
         <span className="text-xs text-muted-foreground">
           {isDirty ? (isSaving ? "Saving..." : "Unsaved changes") : "Saved"}
         </span>
@@ -68,34 +71,34 @@ export function Header() {
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("catalog")}
-          className={rightPanelOpen && rightPanelView === "catalog" ? "" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("chat")}
+          className={rightPanelView === "chat" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Catalog
+          <MessageCircle size={14} /> Chat
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("progress")}
-          className={rightPanelOpen && rightPanelView === "progress" ? "" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("catalog")}
+          className={rightPanelView === "catalog" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Progress
+          <BookOpen size={14} /> Catalog
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("profile")}
-          className={rightPanelOpen && rightPanelView === "profile" ? "" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("progress")}
+          className={rightPanelView === "progress" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Profile
+          <BarChart2 size={14} /> Progress
         </Button>
         <Button
           variant="ghost"
           size="sm"
-          onClick={() => setRightPanelView("chat")}
-          className={rightPanelOpen && rightPanelView === "chat" ? "" : "text-muted-foreground"}
+          onClick={() => handlePanelNav("profile")}
+          className={rightPanelView === "profile" && rightPanelOpen ? "bg-primary/10 text-primary" : "text-muted-foreground"}
         >
-          Chat
+          <User size={14} /> Profile
         </Button>
         <Button
           variant="ghost"
@@ -108,10 +111,6 @@ export function Header() {
           ) : (
             <Moon className="size-4" />
           )}
-        </Button>
-        <ExportMenu />
-        <Button variant="ghost" size="sm" onClick={toggleRightPanel}>
-          {rightPanelOpen ? "Close Panel" : "Open Panel"}
         </Button>
       </div>
     </header>

@@ -8,7 +8,8 @@ import { useProfileStore } from "@/stores/profile-store";
 import { useUIStore } from "@/stores/ui-store";
 import { MAJOR_OPTIONS } from "@/types/user";
 import type { CoreProgress, MajorProgress } from "@/types/validation";
-import { AlertCircle, AlertTriangle, CheckCircle2 } from "lucide-react";
+import { AlertCircle, AlertTriangle, CheckCircle2, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 const CREDITS_TYPE_LABELS: Record<string, string> = {
   minimum: "min",
@@ -19,11 +20,25 @@ const CREDITS_TYPE_LABELS: Record<string, string> = {
 export function ProgressDashboard() {
   const validation = useValidation();
   const majors = useProfileStore((s) => s.majors);
+  const progressTab = useUIStore((s) => s.progressTab);
+  const setProgressTab = useUIStore((s) => s.setProgressTab);
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
 
   return (
     <div className="flex flex-col h-full">
       <div className="p-4 border-b">
-        <h2 className="text-sm font-semibold">Degree Progress</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold">Degree Progress</h2>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
+          >
+            <X className="size-3.5" />
+          </Button>
+        </div>
         <div className="flex items-center gap-2 mt-2">
           <span className="text-xs text-muted-foreground">
             {validation.totalCU.toFixed(1)} / {validation.graduationProgress.minimumCU}-{validation.graduationProgress.maximumCU} CU
@@ -34,18 +49,17 @@ export function ProgressDashboard() {
             </Badge>
           ) : (
             <Badge variant="outline" className="text-[10px] text-destructive">
-              {validation.errors.length} issue{validation.errors.length !== 1 ? "s" : ""}
+              {validation.errors.length + validation.warnings.length} issue{validation.errors.length + validation.warnings.length !== 1 ? "s" : ""}
             </Badge>
           )}
         </div>
       </div>
 
-      <Tabs defaultValue="core" className="flex-1 flex flex-col">
+      <Tabs value={progressTab} onValueChange={setProgressTab} className="flex-1 flex flex-col">
         <div className="px-4 pt-2">
           <TabsList className="w-full justify-start">
             <TabsTrigger value="core" className="text-xs">Core</TabsTrigger>
             {majors.map((code) => {
-              const name = MAJOR_OPTIONS.find((m) => m.code === code)?.name ?? code;
               return (
                 <TabsTrigger key={code} value={code} className="text-xs">
                   {code}

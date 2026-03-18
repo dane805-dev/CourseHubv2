@@ -1,6 +1,6 @@
 import type { QuarterId } from "@/types/plan";
 import type { GraduationProgress, ValidationWarning } from "@/types/validation";
-import { QUARTER_IDS, SEMESTER_INFO } from "@/types/plan";
+import { QUARTER_IDS, QUARTER_INFO, SEMESTER_INFO } from "@/types/plan";
 import { CU_LIMITS, QUARTER_TO_TERM } from "@/lib/data/constants";
 import { getCreditUnits, resolveCourse } from "@/lib/data/course-resolver";
 
@@ -37,7 +37,7 @@ export function trackCreditUnits(input: CUTrackingInput): CUTrackingOutput {
     if (cu > CU_LIMITS.QUARTER_OVERLOAD_THRESHOLD) {
       warnings.push({
         type: "quarter_overload",
-        message: `${qId} has ${cu} CU, which exceeds the recommended ${CU_LIMITS.QUARTER_OVERLOAD_THRESHOLD} CU per quarter`,
+        message: `${QUARTER_INFO[qId].label} has ${cu} CU, which exceeds the recommended ${CU_LIMITS.QUARTER_OVERLOAD_THRESHOLD} CU per quarter`,
         severity: "medium",
       });
     }

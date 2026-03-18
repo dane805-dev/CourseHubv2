@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { ScrollArea } from "@/components/ui/scroll-area";
+import { X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useUIStore } from "@/stores/ui-store";
 import { useChat } from "@/hooks/useChat";
 import { ChatMessageComponent } from "./ChatMessage";
 import { ChatInput } from "./ChatInput";
@@ -42,6 +43,7 @@ function TypingIndicator() {
 
 export function ChatPanel() {
   const { messages, isLoading, sendMessage, clearMessages } = useChat();
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -52,19 +54,30 @@ export function ChatPanel() {
     <div className="flex flex-col h-full">
       <div className="px-4 py-3 border-b flex items-center justify-between shrink-0">
         <h2 className="text-sm font-semibold">AI Advisor</h2>
-        {messages.length > 0 && (
+        <div className="flex items-center gap-1">
+          {messages.length > 0 && (
+            <Button
+              variant="ghost"
+              size="sm"
+              onClick={clearMessages}
+              className="text-xs text-muted-foreground h-7 px-2"
+            >
+              Clear
+            </Button>
+          )}
           <Button
             variant="ghost"
-            size="sm"
-            onClick={clearMessages}
-            className="text-xs text-muted-foreground h-7 px-2"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
           >
-            Clear
+            <X className="size-3.5" />
           </Button>
-        )}
+        </div>
       </div>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="p-4 space-y-3">
           {messages.length === 0 && <WelcomeMessage />}
           {messages.map((msg) => (
@@ -75,7 +88,7 @@ export function ChatPanel() {
           )}
           <div ref={messagesEndRef} />
         </div>
-      </ScrollArea>
+      </div>
 
       <ChatInput onSend={sendMessage} disabled={isLoading} />
     </div>

@@ -1,19 +1,17 @@
 "use client";
 
 import { useEffect } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, X } from "lucide-react";
 import { useDraggable } from "@dnd-kit/core";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuShortcut,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
@@ -46,7 +44,6 @@ function CatalogRow({
   termAvailability: "Fall" | "Spring" | "Both" | null;
 }) {
   const openCourseModal = useUIStore((s) => s.openCourseModal);
-  const addToStaging = usePlanStore((s) => s.addToStaging);
   const addToQuarter = usePlanStore((s) => s.addToQuarter);
   const declaredMajors = useProfileStore((s) => s.majors);
   const coreReqs = findCoreRequirementsForCourse(courseId);
@@ -75,7 +72,7 @@ function CatalogRow({
       className={`flex items-center gap-2 p-2 rounded-md border transition-colors ${
         inPlan
           ? "border-primary/30 bg-primary/5 cursor-default"
-          : "border-transparent hover:border-border hover:bg-accent/50 cursor-grab active:cursor-grabbing"
+          : "border-border hover:bg-accent/50 cursor-grab active:cursor-grabbing"
       }`}
       style={{ opacity: isDragging ? 0.5 : 1 }}
     >
@@ -89,7 +86,7 @@ function CatalogRow({
           </span>
           {coreReqs.length > 0 && (
             <Badge
-              variant="secondary"
+              variant={coreReqs[0].core_type === "fixed" ? "core-fixed" : "core-flex"}
               className="text-[10px] px-1 py-0 h-4"
             >
               {coreReqs[0].core_type === "fixed" ? "Fixed" : "Flex"}
@@ -97,7 +94,7 @@ function CatalogRow({
           )}
           {isForMajor && (
             <Badge
-              variant="secondary"
+              variant="major"
               className="text-[10px] px-1 py-0 h-4"
             >
               Major
@@ -112,12 +109,12 @@ function CatalogRow({
             </Badge>
           )}
         </div>
-        <div className="text-xs text-muted-foreground truncate">
+        <div className="text-xs text-foreground/90 truncate">
           {title}
         </div>
       </div>
       <div className="flex items-center gap-2 shrink-0">
-        <span className="text-xs font-mono text-muted-foreground">
+        <span className="text-xs font-mono text-foreground/80">
           {creditUnits.toFixed(1)}
         </span>
         {!inPlan && (
@@ -128,10 +125,6 @@ function CatalogRow({
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="w-52">
-              <DropdownMenuItem onSelect={() => addToStaging(courseId, creditUnits)}>
-                Add to Staging
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
               <DropdownMenuLabel className="text-xs font-medium text-muted-foreground py-1">
                 {semesterLong ? "Add to Semester" : "Add to Quarter"}
               </DropdownMenuLabel>
@@ -180,6 +173,8 @@ function CatalogRow({
 export function CatalogBrowser() {
   const catalogStore = useCatalogStore();
   const isInPlan = usePlanStore((s) => s.isInPlan);
+  const setRightPanelOpen = useUIStore((s) => s.setRightPanelOpen);
+  const declaredMajors = useProfileStore((s) => s.majors);
 
   // Load courses on mount
   useEffect(() => {
@@ -189,11 +184,28 @@ export function CatalogBrowser() {
   }, [catalogStore.isLoaded]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const filtered = catalogStore.getFilteredCourses();
+  const displayCourses = catalogStore.filters.courseType === "major"
+    ? filtered.filter((course) => {
+        const courseMajors = findMajorsForCourse(course.courseId);
+        return courseMajors.some((m) => declaredMajors.includes(m as any));
+      })
+    : filtered;
 
   return (
     <div className="flex flex-col h-full">
       <div className="p-4 space-y-3 border-b">
-        <h2 className="text-sm font-semibold">Course Catalog</h2>
+        <div className="flex items-center justify-between">
+          <h2 className="text-sm font-semibold">Course Catalog</h2>
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setRightPanelOpen(false)}
+            className="size-7 text-muted-foreground"
+            title="Close panel"
+          >
+            <X className="size-3.5" />
+          </Button>
+        </div>
         <Input
           placeholder="Search courses..."
           value={catalogStore.searchQuery}
@@ -235,7 +247,7 @@ export function CatalogBrowser() {
               <SelectItem value="Both">Both</SelectItem>
             </SelectContent>
           </Select>
-          {(catalogStore.searchQuery || catalogStore.filters.department || catalogStore.filters.termAvailability) && (
+          {(catalogStore.searchQuery || catalogStore.filters.department || catalogStore.filters.termAvailability || catalogStore.filters.courseType) && (
             <Button
               variant="ghost"
               size="sm"
@@ -246,14 +258,29 @@ export function CatalogBrowser() {
             </Button>
           )}
         </div>
+        <Button
+          variant={catalogStore.filters.courseType === "major" ? "default" : "outline"}
+          size="sm"
+          className="h-8 text-xs w-full"
+          onClick={() =>
+            catalogStore.setFilter(
+              "courseType",
+              catalogStore.filters.courseType === "major" ? null : "major"
+            )
+          }
+          disabled={declaredMajors.length === 0}
+          title={declaredMajors.length === 0 ? "Declare a major in your profile to use this filter" : undefined}
+        >
+          Major Requirements
+        </Button>
         <div className="text-xs text-muted-foreground">
-          {filtered.length} course{filtered.length !== 1 ? "s" : ""}
+          {displayCourses.length} course{displayCourses.length !== 1 ? "s" : ""}
         </div>
       </div>
 
-      <ScrollArea className="flex-1">
+      <div className="flex-1 min-h-0 overflow-y-auto">
         <div className="p-2 space-y-1">
-          {filtered.map((course) => (
+          {displayCourses.map((course) => (
             <CatalogRow
               key={course.courseId}
               courseId={course.courseId}
@@ -264,7 +291,7 @@ export function CatalogBrowser() {
             />
           ))}
         </div>
-      </ScrollArea>
+      </div>
     </div>
   );
 }

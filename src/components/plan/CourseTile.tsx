@@ -59,12 +59,18 @@ export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
   const highSeverity = hasWarnings && warnings.some((w) => w.severity === "high");
   const warningColor = highSeverity ? "#ef4444" : "#f59e0b";
 
+  const categoryBorderColor = isCore
+    ? isFlex ? "#6a9bcc" : "#d97757"
+    : isForMajor ? "#788c5d"
+    : undefined;
+  const leftBorderColor = hasWarnings ? warningColor : categoryBorderColor;
+
   return (
     <div
       ref={setNodeRef}
       style={{
         ...style,
-        ...(hasWarnings ? { borderLeftWidth: 3, borderLeftColor: warningColor } : {}),
+        ...(leftBorderColor ? { borderLeftWidth: 3, borderLeftColor: leftBorderColor } : {}),
       }}
       {...attributes}
       {...listeners}
@@ -127,12 +133,12 @@ export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
             </Badge>
           )}
           {isCore && (
-            <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+            <Badge variant={isFlex ? "core-flex" : "core-fixed"} className="text-[10px] px-1 py-0 h-4">
               {isFlex ? "Flex" : "Fixed"}
             </Badge>
           )}
           {isForMajor && (
-            <Badge variant="secondary" className="text-[10px] px-1 py-0 h-4">
+            <Badge variant="major" className="text-[10px] px-1 py-0 h-4">
               Major
             </Badge>
           )}
@@ -142,11 +148,11 @@ export function CourseTile({ courseId, isStaging, warnings }: CourseTileProps) {
             </Badge>
           )}
         </div>
-        <div className="text-xs text-muted-foreground truncate">
+        <div className="text-xs text-foreground/90 truncate">
           {course.title}
         </div>
       </div>
-      <span className="text-xs font-mono text-muted-foreground shrink-0">
+      <span className="text-[10px] font-mono text-foreground/80 shrink-0">
         {course.creditUnits.toFixed(1)}
       </span>
     </div>

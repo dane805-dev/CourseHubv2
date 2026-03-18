@@ -41,7 +41,7 @@ export function QuarterColumn({ quarterId }: QuarterColumnProps) {
     <div className="flex-1 min-w-0">
       <div className="mb-2 px-1">
         <span className="text-xs font-medium text-muted-foreground">
-          Q{info.quarterNumber}
+          Q{info.term === "Spring" ? info.quarterNumber + 2 : info.quarterNumber}
         </span>
       </div>
       <div

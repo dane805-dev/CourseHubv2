@@ -1,3 +1,20 @@
+export interface PcrInstructorRow {
+  name: string;
+  courseQuality: number | null;
+  instructorQuality: number | null;
+  difficulty: number | null;
+  workRequired: number | null;
+}
+
+/** PCR review metrics returned by /api/pcr/[courseCode] */
+export interface PcrReviews {
+  rCourseQuality: number | null;
+  rDifficulty: number | null;
+  rWorkRequired: number | null;
+  rSemesterCount: number | null;
+  instructors: PcrInstructorRow[];
+}
+
 /** Full course data from the catalog (cleaned_courses.json) */
 export interface CatalogCourse {
   Course_ID: string;
@@ -24,6 +41,8 @@ export interface CatalogCourse {
   Canvas_URL: string | null;
   Syllabi_URL: string | null;
   Course_Level: number;
+  Attendance_Policy: string | null;
+  Exam_Policy: string | null;
 }
 
 /** Lightweight course data from the registry (course_registry.json) */
@@ -66,11 +85,11 @@ export interface ResolvedCourse {
   meetingTimesSpring?: string | null;
   locationsFall?: string | null;
   locationsSpring?: string | null;
-  averageRatingFall?: number | null;
-  averageRatingSpring?: number | null;
   isCrosslisted?: boolean;
   crosslistWith?: string | null;
   canvasUrl?: string | null;
   syllabiUrl?: string | null;
   courseLevel?: number;
+  attendancePolicy?: string | null;
+  examPolicy?: string | null;
 }

@@ -21,15 +21,15 @@ export interface ChatMessage {
 export interface AddCourseAction {
   type: "add_course";
   courseId: string;
-  location: "staging" | QuarterId;
+  location: QuarterId;
   reason: string;
 }
 
 export interface MoveCourseAction {
   type: "move_course";
   courseId: string;
-  fromLocation: "staging" | QuarterId;
-  toLocation: "staging" | QuarterId;
+  fromLocation: QuarterId;
+  toLocation: QuarterId;
   reason: string;
 }
 
