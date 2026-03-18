@@ -85,8 +85,6 @@ export interface ResolvedCourse {
   meetingTimesSpring?: string | null;
   locationsFall?: string | null;
   locationsSpring?: string | null;
-  averageRatingFall?: number | null;
-  averageRatingSpring?: number | null;
   isCrosslisted?: boolean;
   crosslistWith?: string | null;
   canvasUrl?: string | null;

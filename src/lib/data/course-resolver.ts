@@ -125,8 +125,6 @@ function catalogCourseToResolved(c: CatalogCourse): ResolvedCourse {
     meetingTimesSpring: c.Meeting_Times_Spring,
     locationsFall: c.Locations_Fall,
     locationsSpring: c.Locations_Spring,
-    averageRatingFall: c.Average_Rating_Fall ? Number(c.Average_Rating_Fall) : null,
-    averageRatingSpring: c.Average_Rating_Spring ? Number(c.Average_Rating_Spring) : null,
     isCrosslisted: c.Is_Crosslisted,
     crosslistWith: c.Crosslist_With,
     canvasUrl: c.Canvas_URL,

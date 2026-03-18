@@ -181,19 +181,6 @@ export function CourseModal() {
               </div>
             )}
 
-            {(course.averageRatingFall != null || course.averageRatingSpring != null) && (
-              <div>
-                <h4 className="text-sm font-medium mb-1">Ratings</h4>
-                <div className="flex gap-4 text-sm text-muted-foreground">
-                  {course.averageRatingFall != null && (
-                    <span>Fall: {course.averageRatingFall.toFixed(2)}/4.0</span>
-                  )}
-                  {course.averageRatingSpring != null && (
-                    <span>Spring: {course.averageRatingSpring.toFixed(2)}/4.0</span>
-                  )}
-                </div>
-              </div>
-            )}
 
             {(pcrLoading || pcr) && (
               <>
